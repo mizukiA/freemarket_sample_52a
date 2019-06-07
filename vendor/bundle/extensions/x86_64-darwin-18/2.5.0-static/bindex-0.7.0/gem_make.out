@@ -1,0 +1,15 @@
+current directory: /Users/mizuki/projects/freemarket_sample_52a/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+/Users/mizuki/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190607-44815-hkovhi.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mizuki/projects/freemarket_sample_52a/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/mizuki/projects/freemarket_sample_52a/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/cruby.bundle
+
+current directory: /Users/mizuki/projects/freemarket_sample_52a/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190607-44815-q4uzli/skiptrace
