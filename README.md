@@ -15,14 +15,14 @@
 |child_brand_id|integer|foreign_key: true|
 
 ### Association
-- has_many :goods
+- has_many :likes
 - has_many :comments
-- has_many :images
+- has_many :item_images
 - belongs_to :child_brand
 - belongs_to :baby_category
 - belongs_to :user
 
-## imagesテーブル
+## item_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer| |
@@ -32,7 +32,7 @@
 ### Association
 - belongs_to :item
 
-## goodsテーブル
+## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer| |
@@ -139,4 +139,4 @@
 ### Association
 - has_many :items
 - has_many :comments
-- has_many :goods
+- has_many :likes
