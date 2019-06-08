@@ -18,8 +18,8 @@
 - has_many :goods
 - has_many :comments
 - has_many :images
-- belongs_to :child_brands
-- belongs_to :baby_categories
+- belongs_to :child_brand
+- belongs_to :baby_category
 - belongs_to :user
 
 ## imagesテーブル
@@ -27,7 +27,7 @@
 |------|----|-------|
 |id|integer| |
 |image_url|string||
-|iten_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -37,7 +37,7 @@
 |------|----|-------|
 |id|integer| |
 |user_id|integer|foreign_key: true|
-|iten_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -49,33 +49,33 @@
 |id|integer| |
 |comment|text|null: false|
 |user_id|integer|foreign_key: true|
-|iten_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :item
 
 
-##parent_brands
-|Column|Type|Options|
-|------|----|-------|
-|id|integer||
-|bland|string|null: false|
-
-### Association
-- has_many :child_brands
-
-###child_brands
+## parent_brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
 |brand|string|null: false|
-|parent_brand_id|int|foreign_key: true|
+
+### Association
+- has_many :child_brands
+
+## child_brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer||
+|brand|string|null: false|
+|parent_brand_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :parent_brand
 
-###parent_categories
+## parent_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
@@ -85,7 +85,7 @@
 - has_many :child_categories
 - has_many :baby_categories
 
-###child_categories
+## child_categoriesテーブル
 |Column|Type|Option|
 |------|----|------|
 |id|integer||
@@ -96,7 +96,7 @@
 - has_many :baby_categories
 - belongs_to :parent_category
 
-###baby_categories
+## baby_categoriesテーブル
 |Column|Type|Option|
 |------|----|------|
 |id|integer||
