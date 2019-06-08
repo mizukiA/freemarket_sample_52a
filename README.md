@@ -18,8 +18,8 @@
 - has_many :likes
 - has_many :comments
 - has_many :item_images
-- belongs_to :child_brand
-- belongs_to :baby_category
+- belongs_to :brand
+- belongs_to :category
 - belongs_to :user
 
 ## item_imagesテーブル
@@ -56,57 +56,25 @@
 - belongs_to :item
 
 
-## parent_brandsテーブル
+## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
+|parent_id||
 |brand|string|null: false|
 
 ### Association
-- has_many :child_brands
+- has_many :items
 
-## child_brandsテーブル
+## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
-|brand|string|null: false|
-|parent_brand_id|integer|foreign_key: true|
-
-### Association
-- belongs_to :parent_brand
-
-## parent_categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|id|integer||
+|parent_id|integer||
 |category|string|null: false|
 
 ### Association
-- has_many :child_categories
-- has_many :baby_categories
-
-## child_categoriesテーブル
-|Column|Type|Option|
-|------|----|------|
-|id|integer||
-|category|string|null: false|
-|parent_category_id|integer|foreign_key: true|
-
-### Association
-- has_many :baby_categories
-- belongs_to :parent_category
-
-## baby_categoriesテーブル
-|Column|Type|Option|
-|------|----|------|
-|id|integer||
-|category|string|null: false|
-|child_category|integer|foreign_key: true|
-|parent_category|integer|foreign_key: true|
-
-### Association
-- belongs_to :parent_category
-- belongs_to :child_category
+- has_many :items
 
 ## usersテーブル
 |Column|Type|Options|
@@ -122,7 +90,7 @@
 - has_many :comments
 - has_many :likes
 - has_one :profile
-- has_one :adress
+- has_one :address
 - has_one :card
 
 ## profilesテーブル
@@ -141,7 +109,7 @@
 ### Association
 - belongs_to :user
 
-## adressesテーブル
+## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |tel|string|null: false|
