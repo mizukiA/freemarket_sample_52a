@@ -116,6 +116,18 @@
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |password_confirmation|string|null: false|
+
+### Association
+- has_many :items
+- has_many :comments
+- has_many :likes
+- has_one :profile
+- has_one :adress
+- has_one :card
+
+## profilesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |family_name|string|null: false|
 |last_name|string|null: false|
 |family_name_kana|string|null: false|
@@ -123,20 +135,32 @@
 |birth_year|string|null: false|
 |birth_month|string|null: false|
 |birth_day|string|null: false|
+|avatar|string||
+|profile|text||
+
+### Association
+- belongs_to :user
+
+## adressesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |tel|string|null: false|
 |postal_code|string|null: false|
 |prefecture|string|null: false|
 |city|string|null: false|
 |address|string|null: false|
 |building|string||
-|avatar|string||
-|profile|text||
+
+### Association
+- belongs_to :user
+
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
 |card_number|integer|null: false, unique: true|
 |expiration_year|string|null: false|
 |expiration_month|string|null: false|
 |security_code|string|null: false|
 
 ### Association
-- has_many :items
-- has_many :comments
-- has_many :likes
+- belongs_to :user
