@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "./reset";
+ @import "./config/variable";
+ @import "font-awesome";
+ @import "./modules/*";
+ @import "./mixin/*"
+
