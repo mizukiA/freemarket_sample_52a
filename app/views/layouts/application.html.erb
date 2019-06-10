@@ -833,11 +833,12 @@
       </div>
     </header>
     <%= yield %>
-    <footer class = “footer”>
+
+<footer class = “footer”>
  <nav class = “clearfix”>
    <div class = “footer__cell”>
-     <h2 class = “footer__head”>メルカリについて</h2>
-     <ul class = ‘menu’>
+     <h2 class = “footer__cell__head”>メルカリについて</h2>
+     <ul class = ‘footer__cell__menu’>
        <li class = ‘menu__list’><a href = “”>会社概要</a></li>
        <li class = ‘menu__list’><a href = “”>採用情報</a></li>
        <li class = ‘menu__list’><a href = “”>プレスリリース</a></li>
@@ -845,18 +846,18 @@
        <li class = ‘menu__list’><a href = “”>メルカリロゴ利用ガイドライン</a></li>
        <li class = ‘menu__social-link’>
          <a href = “” target = “”>
-           <i class = “menu__social-link__icon-twitter”>::before</i>
+           <i class = “menu__social-link__icon-twitter”></i>
          </a>
        </li>
        <li class = ‘menu__social-link’>
            <a href = “” target = “_blank”>
-             <i class = “menu__social-link__icon-facebook”>::before</i>
+             <i class = “menu__social-link__icon-facebook”></i>
            </a>
        </li>
      </ul>
    </div>
    <div class = “footer__cell”>
-       <h2 class = “footer__head”>ヘルプ＆ガイド</h2>
+       <h2 class = “footer__cell__head”>ヘルプ＆ガイド</h2>
        <ul class = ‘menu’>
          <li class = ‘menu__list’><a href = “”>メルカリガイド</a></li>
          <li class = ‘menu__list’><a href = “”>らくらくメルカリ便</a></li>
@@ -868,9 +869,9 @@
          <li class = ‘menu__list’><a href = “”>メルカリボックス</a></li>
        </ul>
      </div>
-     <div class = “wide-footer-cell”>
-         <h2 class = “wide-footer-cell__head”>プライバシーと利用規約</h2>
-         <div class = “wide-footer-cell__inner”>
+     <div class = “footer__wide-cell”>
+         <h2 class = “footer__wide-cell__head”>プライバシーと利用規約</h2>
+         <div class = “footer__wide-cell__inner”>
          <ul class = ‘inner__menu’>
            <li class = ‘menu__list’><a href = “”>プライバシーポリシー</a></li>
            <li class = ‘menu__list’><a href = “”>メルカリ利用規約</a></li>
@@ -878,7 +879,7 @@
            <li class = ‘menu__list’><a href = “”>コンプライアンスポリシー</a></li>
          </ul>
          </div>
-         <div class = “wide-footer-cell__inner”>
+         <div class = “footer__wide-cell__inner”>
          <ul class = ‘inner__menu’>
            <li class = ‘menu__list’><a href = “”>個人データの安全管理に係る基本方針</a></li>
            <li class = ‘menu__list’><a href = “”>特定商取引に関する表記</a></li>
@@ -888,28 +889,26 @@
          </ul>
          </div>
      </div>
-     <div class = “footer-cell-nav-lang”>
-         <h2 class = “footer-cell-nav-lang__head”>国</h2>
-         <ul>
-           <li class = ‘footer-cell-nav-lang__list’><a href = “”>日本</a></li>
-           <li class = ‘footer-cell-nav-lang__list’><a href = “”>United States</a></li>
+     <div class = “footer__nav-lang”>
+         <h2 class = “footer__nav-lang__head”>国</h2>
+         <ul class = 'nav-lang__menu'>
+           <li class = ‘nav-lang__menu__list’><a href = “”>日本</a></li>
+           <li class = ‘nav-lang__menu__list’><a href = “”>United States</a></li>
          </ul>
      </div>
-     <%# ::after %>
-     </nav>
+ </nav>
      <div class = “footer-bottom”>
        <span class = “footer-bottom__logo”><a href = “” >
          <img src = “”>
        </a></span>
-     <span class = “footer-copyright”>
+     <span class = “footer-bottom__copyright”>
 <small>©︎2019 Mercari</small>
      </span>
      </div>
 </footer>
  <a class = “footer-sell-btn” href = “”>
    <div>出品</div>
-   <i class = “icon-camera”>
-     <%# ::before %>
+   <i class = “footer-sell-btn__icon-camera”>
    </i>
  </a>
   </body>
