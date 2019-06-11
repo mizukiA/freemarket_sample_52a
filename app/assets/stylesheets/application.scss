@@ -1,3 +1,6 @@
- @import "./reset";
- @import "./config/variable";
- @import "./modules/*"
+@import "./reset";
+@import "./config/variable";
+@import "./mixin/*";
+@import "./modules/*";
+@import "owl.carousel";
+@import "owl.theme.default";

@@ -1,0 +1,67 @@
+.slide-banner {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  &__link {
+    display: block;
+    &--img1 {
+      @include slide-banner-owl-item-background("banner-natsukashi.jpg");
+    }
+    &--img2 {
+      @include slide-banner-owl-item-background("main_bg_pc.jpg");
+      background-size: cover;
+    }
+    &--img3 {
+      @include slide-banner-owl-item-background("banner-camp.jpg");
+    }
+  }
+  & .owl-nav {
+    color: transparent;
+  }
+  & .owl-prev {
+    @include slide-banner-owl-nav-btn("carousel-prev.png");
+    left: 60px;
+  }
+  & .owl-next {
+    @include slide-banner-owl-nav-btn("carousel-next.png");
+    right: 60px;
+  }
+  & .owl-dots {
+    // ネガティブマージンで表示位置を調整。
+    margin: -30px;
+    text-align: center;
+  }
+  & .owl-dot {
+    position: relative;
+    background: white !important;
+    opacity: 0.4;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    // min-heightの値を上書き
+    min-height: 12px;
+    margin-right: 15px;
+    &.active {
+      opacity: 1;
+      background: rgba(0,0,0,0.5) !important;
+    }
+  }
+  & .owl-stage-outer, .owl-stage, .owl-item, .owl-item>a {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1068px) {
+  .slide-banner {
+    height: 390px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1068px) {
+  .slide-banner {
+    height: 290px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slide-banner .owl-dots {
+    display: none;
+  }
+}

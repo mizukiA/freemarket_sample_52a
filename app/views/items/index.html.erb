@@ -1,5 +1,8 @@
 <main>
   <section class="owl-carousel slide-banner">
+    <a href="#" class="slide-banner__link slide-banner__link--img1"></a>
+    <a href="#" class="slide-banner__link slide-banner__link--img2"></a>
+    <a href="#" class="slide-banner__link slide-banner__link--img3"></a>
   </section>
   
   <section class="pickup-container">
@@ -9,24 +12,10 @@
         <a href="#">新着アイテム</a>
       </h3>
       <div class="pickup-container__items__content clearfix">
-        <section class="items-box">
-          <a href="#">
-            <figure class="items-box__figure">
-              <img class="items-box__figure__img">
-            </figure>
-            <div class="items-box__text">
-              <h3 class="items-box__text__name">バッグ</h3>
-              <div class="items-box__text__num">
-                <div class="items-box__text__num__price">¥ 5000</div>
-                <div class="items-box__text__num__likes">
-                  <i class="icon-like-border"></i>
-                  <span>5</span>
-                </div>
-              </div>
-              <p class="items-box__text__tax">(税込)</p>
-            </div>
-          </a>
-        </section>
+        <%= render partial: 'item' %>
+        <%= render partial: 'item' %>
+        <%= render partial: 'item' %>
+        <%= render partial: 'item' %>
       </div>
       <div class="pickup-container__items__more">
         <a href="#">すべての商品を見る</a>
