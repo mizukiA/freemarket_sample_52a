@@ -1,0 +1,147 @@
+*{
+    text-decoration: none;
+}
+header{
+    .header-inner{
+        width:700px;
+        margin:0 auto;
+        .header-top{
+            display: flex;
+            margin-bottom: 5px;
+            form{
+                width:100%;
+                input{
+                    width:80%;
+                    background-color:#f5f5f5;
+                }
+                i{
+                    color:white;
+                    background-color: rgb(102,102,102);
+                    padding:8px;
+                    font-size: 8px;
+                }
+            }
+        }
+        .header-navi{
+            width:100%;
+            .navi-left{
+                float: left;
+                .navi-left__section{
+                    
+                    .navi-left__menu{
+                        width:150px;
+                        display: inline-block;
+                        list-style-type: none;
+                        position: relative;
+                        
+                        h2{
+                            font-size: 14px;
+                            font-weight: 400;
+                            a{
+                                font-weight: bold;
+                                color: black;
+                                display: block;
+                                
+                                i{
+                                    color: red;
+                                }
+                            }
+                            a:hover{
+                                color:#0099e8;
+                            }
+                        }
+                        .navi-left__brand-list{
+                            display: none;
+                        }
+                    }
+                    .navi-left__menu:hover .navi-left__brand-list{
+                        display: block;
+                    }
+                    .navi-left__brand-list:hover a{
+                       color: white;
+                    }
+             
+                }
+            }
+            .navi-right{
+                float: right;
+                .header-user__login-menu{
+                    list-style: none;
+                    li{
+                        display: inline-block;
+                        .header-user__signup{
+                            background-color:#ea352d;
+                            border:1px solid #ea352d;
+                            color: white;
+                            padding:8px 6px;
+                            border-radius: 5px;
+                            font-size: 14px;
+                        }
+                        .header-user__signin{
+                            background-color: #fff;
+                            border: 1px solid #0099e8;
+                            color: #0099e8;
+                            padding:8px 6px;
+                            border-radius: 5px;
+                            margin-left: 5px;
+                            transition: 0.7s;
+                            font-size: 14px;
+                        }
+                        .header-user__signin:hover{
+                            color: white;
+                            background-color: #0099e8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.navi-left__section ul{
+    // 親、子、孫すべて
+    height:500px;
+    margin: 0px;
+    padding:0px;
+    display: none;
+    position: absolute;
+    background-color:white;
+    font-size: 12px;
+    border-bottom: 1px solid pink;
+    border-left: 1px solid pink;
+    border-right: 1px solid pink;
+}
+.navi-left__section li:hover > ul{
+    display: block;
+}
+.navi-left__section ul li{
+    // 親、子、孫すべて
+    width:200px;
+    a{
+        line-height: 35px;
+        text-align: left;
+        font-weight: normal;
+        color: black;
+    }
+}
+.navi-left__section ul li:hover{
+    // 親
+    background-color: red;
+    .white{
+        color: white;
+    }
+}
+
+.navi-left__section ul ul{
+    // 子、孫
+    margin: 0px;
+    padding:0px;
+    display: none;
+    position: absolute;
+    top:-1px;
+    left:100%;
+    
+}
+.navi-left__section ul ul li:hover{
+    // 子、孫
+    background-color:#f5f5f5;
+}
