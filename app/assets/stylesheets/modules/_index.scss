@@ -22,7 +22,7 @@ main{
         text-align: center;
         font-weight: bold;
         a{
-          color: #0099e8;
+          color: $link-blue;
           text-decoration: none;
         }
       }
@@ -35,10 +35,10 @@ main{
           width: 213px;
           position: relative;
           float: left;
-          background: #fff;
+          background: $white;
           a{
             display: block;
-            color: #333;
+            color: $black;
             text-decoration: none;
             .items-box__figure{
               width: 100%;
@@ -74,7 +74,7 @@ main{
                 word-break: break-word;
                 white-space: normal;
                 font-size: 16px;
-                color: #333;
+                color: $black;
                 &:after{
                   display: block;
                   content: '';
@@ -83,7 +83,7 @@ main{
                   right: 0;
                   width: 50%;
                   height: 1.5em;
-                  background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
+                  background: linear-gradient(to right, rgba(255,255,255,0), $white 72%);
                 }
               }
               &__num{
@@ -100,12 +100,15 @@ main{
                 &__price{
                   font-size: 14px;
                   font-weight: 600;
-                  color: #333;
+                  color: $black;
                 }
                 &__likes{
                   font-size: 14px;
                   font-weight: 400;
-                  color: #333;
+                  color: $black;
+                  i{
+                    color: #ccc;
+                  }
                 }
               }
               &__tax{
@@ -116,25 +119,21 @@ main{
         }
       }
       .clearfix:after{
-        content: '';
-        display: block;
-        clear: both;
+        @include clearfix;
       }
       &__more{
         padding: 20px 0 30px;
         width: 99.5%;
         text-align: right;
         a{
-          color: #0099e8;
+          color: $link-blue;
           text-decoration: none;
           font-size: 14px;
         }
       }
     }
     .clearfix:after{
-      content: '';
-      display: block;
-      clear: both;
+      @include clearfix;
     }
   }
 }
