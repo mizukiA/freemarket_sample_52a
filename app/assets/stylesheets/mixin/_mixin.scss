@@ -1,3 +1,9 @@
+@mixin clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 @mixin slide-banner-owl-item-background($background-image) {
   background: image_url($background-image);
   background-size: auto 100%;
