@@ -1,0 +1,148 @@
+.single-container {
+  padding: 0;
+  height: 100vh;
+  .single-header {
+    text-align: center;
+    height: 128px;
+    background-color: #f5f5f5;
+    h1{
+      display: inline-block;
+      margin: 40px 0 0;
+      a{
+        display: inline-block;
+        margin: 0 8px 0 0;
+        color: #0099e8;
+        text-decoration: none;
+        width: 185px;
+        height: 49px;
+        line-height: 49px;
+        img{
+          width: 185px;
+          height: 49px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .single-main{
+    display: block;
+    &__container{
+      width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      &__h2{
+        line-height: 1.5;
+        text-align: center;
+        padding: 32px 16px;
+        font-size: 22px;
+        font-weight: bold;
+        color: rgb(51, 51, 51);
+      }
+      &__inner{
+        border-top: 1px solid #f5f5f5;
+        padding: 64px;
+        &__content{
+          max-width: 320px;
+          margin: 0 auto;
+          &__btn{
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 12px;
+            border: 1px solid transparent;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+          }
+          .btn-mail{
+            position: relative;
+            background: #eee;
+            color: #000;
+            .fa-envelope{
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+              color: #ccc;
+              font-size: 16px;
+            }
+          }
+          .btn-facebook{
+            position: relative;
+            margin: 16px 0 0;
+            background: #385185;
+            color: #fff;
+            .fa-facebook-square{
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+              color: #fff;
+              background: #385185;
+              font-size: 26px;
+            }
+          }
+          .btn-google{
+            margin: 16px 0 0;
+            background: #fff url("google.svg") no-repeat 3px top;
+            border: #979797 solid 1px;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  .single-footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding: 100px 0 0;
+    text-align: center;
+    width: 456px;
+    margin: 0 auto;
+    nav{
+      ul{
+        font-size: 0;
+        list-style: none;
+        li{
+          display: inline-block;
+          margin: 0 0 0 16px;
+          font-size: 12px;
+          &:first-child{
+            margin: 0;
+          }
+          a{
+            display: block;
+            color: #333;
+            text-decoration: none;
+          }
+        }
+      }
+      .clearfix:after{
+        @include clearfix;
+      }
+    }
+    &__logo{
+      display: block;
+      color: #333;
+      width: 80px;
+      height: 65px;
+      margin: 40px auto 0;
+      text-decoration: none;
+      img{
+        vertical-align: middle;
+      }
+    }
+    p{
+      margin: 8px 0 0;
+      small{
+        font-size: 13px;
+      }
+    }
+  }
+}
