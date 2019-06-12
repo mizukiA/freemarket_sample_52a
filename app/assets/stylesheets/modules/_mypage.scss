@@ -1,0 +1,46 @@
+
+main{
+    width:1020px;
+    margin:40px auto 0;
+    .user-side{
+        float: left;
+        .navi-list{
+            width:250px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 4px;
+            margin-bottom: 45px;
+            li{
+                height: 45px;
+                border-bottom: 1px solid rgb(245, 245, 245);
+                padding: 5px 0 5px 15px;
+                a{
+                    position: relative;
+                    font-size: 14px;
+                    line-height: 45px;
+                    display: block;
+                    i{
+                        position: absolute;
+                        top: 40%;
+                        right: 16px;
+                        color: gray;
+                    }
+                }
+            }
+            li:hover{
+                background-color: #eee;
+                i{
+                    position: absolute;
+                    top:40%;
+                    right: 10px;
+                    color: black;
+                    transition:0.3s;
+
+                }
+            }
+        }
+    }
+    .user-main{
+       
+    }
+}
