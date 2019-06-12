@@ -1,0 +1,22 @@
+@mixin clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@mixin slide-banner-owl-item-background($background-image) {
+  background: image_url($background-image);
+  background-size: auto 100%;
+  background-position: center;
+}
+
+@mixin slide-banner-owl-nav-btn($background-image) {
+  background-image: image_url($background-image) !important;
+  cursor: pointer;
+  height: 46px;
+  width: 31px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-23px);
+  transform: translateY(-23px);
+}

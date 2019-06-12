@@ -43,6 +43,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -69,3 +70,4 @@ gem 'fog-aws'
 gem 'devise'
 
 gem 'haml-rails'
+gem 'owlcarousel-rails'
