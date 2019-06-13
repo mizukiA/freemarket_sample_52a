@@ -1,17 +1,90 @@
-// * {
-//   margin: 0;
-//   border-style: solid;
-//   border-width: 0;
-  // font-size: inherit;
-  // line-height: inherit;
-//   // box-sizing: inherit;
-// }
-
+.app-banner{
+    background-image: url(https://files.slack.com/files-pri/TBRRYLL4Q-FKGA19R96/download_bg_pc.jpg);
+    background-position: center;
+    background-size: cover;
+    display: block;
+  .app-banner-pc{
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    height: 200px;
+    margin: 0 auto;
+    color: $white;
+    padding: 0;
+    .app-banner-pc-inner{
+      left: 0;
+      top: 50%;
+      margin: 0;
+      padding: 0;
+      h2{
+        text-shadow: 0 0 5px rgba(0,0,0,4);
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.4;
+        padding: 0;
+        font-weight: bold;
+        position: absolute;
+      }
+      p{
+        text-shadow: 0 0 5px rgba(0,0,0,4);
+        font-size: 30px;
+        margin: 20px 0 0;
+        padding: 0;
+        position: absolute;
+      }
+      .app-banner-icon.clearfix:after{
+        @include clearfix;
+      }
+        .app-banner-pc-inner.figure img{
+            position: absolute;
+          }
+        .app-banner-icon ul{
+          float: left;
+          margin: 0 0 0 50px;
+          line-height: 50px;
+          display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          padding-inline-start: 40px;
+          color: $white;
+        }
+          .app-banner-icon.clearfix:after{
+            @include clearfix;
+          }
+          .app-banner-icon li{
+            float: left;
+            margin: 0;
+            padding: 0;
+            display: list-item;
+            list-style: none;
+          }
+    }      
+            // figure img{
+            //   position: absolute;
+            //   width: 100%;
+            //   float: right;
+            //   margin: 0;
+            //   padding: 0;
+            //   display: block;
+            // }
+  }
+}  
 .wrapper{
   min-height: 100vh;
   box-sizing: border-box;
-  }
+}
   .footer{
+    a{
+      color: $white;
+    }
+    ul{
+      font-size: 10px;
+      line-height: 2;
+      font-weight: normal;
+    }
+    margin: 0 auto;
     padding: 0 20px 10px 20px;
     background-color: $black;
     color: $white;
@@ -25,188 +98,97 @@
       margin-top: 18px;
       &__head {
       font-size: 16px;
-      font-weight: 100;
+      font-weight: bold;
       line-height: 1.4;
       padding: 0;
-  ////       margin-block-start: 0.83em;
-  ////       margin-block-end: 0.83em;
-  ////       margin-inline-start: 0px;
-  ////       margin-inline-end: 0px;
       }
-    }
-  //   }
       &__menu{
       list-style: none;
-  // //       margin: 0;
-  // //       padding: 0;
-  // //       display: block;
-  // //       margin-block-start: 1em;
-  // //       margin-block-end: 1em;
-  // //       margin-inline-start: 0px;
-  // //       margin-inline-end: 0px;
         &__list {
         margin: 16px 0 0;
         display: list-item;
-        // text-align: -webkit-match-parent;
         }
       }
         &__social-link{
-        float: left;
-  // //         margin: 14px 0 0;
-  // //         // display: inline-block;
-  // //         // text-align: -webkit-match-parent;
+        margin: 14px 0 0;
+        font-size: 26px;
+        display: inline-block;
           &__icon-twitter{
-  // //           font-family: 'icon-font';
-  // //           speak: none;
-  // //           font-style: normal;
-  // //           text-transform: none;
+          font-style: normal;
           line-height: 1;
-  // //           -webkit-font-smoothing: antialiased;
-  // //           background: transparent;
-  // //           margin: 16px 18px 0 0;
-  // //           font-size: 24px;
-  // //           text-align: -webkit-match-parent;
+          margin: 16px 18px 0 0;
           }
           &__icon-facebook{
-  // //           font-family: 'icon-font';
-  // //           speak: none;
-  // //           font-style: normal;
-  // //           font-weight: 400;
-  // //           font-variant: normal;
-  // //           text-transform: none;
+          font-style: normal;
+          font-weight: 400;
           line-height: 1;
-  // //           -webkit-font-smoothing: antialiased;
-  // //           background: transparent;
-  // //           margin: 16px 18px 0 0;
-  // //           font-size: 26px;
-  // //           text-align: -webkit-match-parent;
+          margin: 16px 18px 0 0;
           }
         }
-  // //     }
-  // //   }
+    }
+    .short{
+      width:18%;
+    }
     &__wide-cell{
     padding: 0 20px 0 0;
-    width: 42%;
     float: left;
-    margin-top: 18px;
-    margin: 0;
-    vertical-align: top;
-    margin: 15px 0 0;
-      &__head{
-      font-size: 16px;
-      font-weight: 100;
-  // //     line-height: 1.4;
-  // //     margin: 0;
-  // //     padding: 0;
-  // //     margin-block-start: 0.83em;
-  // //     margin-block-end: 0.83em;
-  // //     margin-inline-start: 0px;
-  // //     margin-inline-end: 0px;
-      }
-    }  
-  // //   &__inner{
-  // //     padding: 0 10px 0 0;
-  // //     float: left;
-  // //     vertical-align: top;
-  // //     width: 50%;
-  // //     margin: 0;
-  // //     &__menu{
-  // //       list-style: none;
-  // //       margin: 0;
-  // //       padding: 0;
-  // //       display: block;
-  // //       margin-block-start: 1em;
-  // //       margin-block-end: 1em;
-  // //       margin-inline-start: 0px;
-  // //       margin-inline-end: 0px;
-  // //       &__list {
-  // //         margin: 16px 0 0;
-  // //         display: list-item;
-  // //         text-align: -webkit-match-parent;
-  // //       }
-  // //     }
-  // //   }
-  // //   }
-    &__nav-lang{
-    padding: 0 20px 0 0;
-    width: 20%;
-    vertical-align: top;
-    float: left;
-    margin-top: 18px;
-  // //     margin: 0;
-      &__head{
-      font-size: 16px;
-      font-weight: 100;
-  // //       line-height: 1.4;
-  // //       margin: 0;
-    }
-        &__menu{
-        list-style: none;
+    display: block;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 34px;
+    line-height: 2;
+      &__menu{
+      list-style: none;
+        &__list {
         margin: 16px 0 0;
-  // //       margin: 0;
-  // //       padding: 0;
-  // //       margin-block-start: 1em;
-  // //       margin-block-end: 1em;
-  // //       margin-inline-start: 0px;
-  // //       margin-inline-end: 0px;
-  // //       padding-inline-start: 40px; 
+        display: list-item;
         }
+      }
     }
-    .footer__bottom{
-  // //   margin: 30px auto 20px;
-  // //   width: 1020px;
-  // //   padding: 0;
-  // //   // display: block;
+    nav.clearfix:after{
+    @include clearfix;
+    }
+    &__bottom{
+    margin: 30px auto 20px;
+    width: 1020px;
+    padding: 0;
+    display: block;
       &__logo{
       clear: both;
-  // //     font-size: 12px;
-  // //     line-height: 1.5em;
-  // //     display: inline-block;
-  // //     margin-right: 10px;
-  // //     width: auto;
-  // //     text-decoration: none;
-  // //     touch-action: manipulation;
-  // //     margin: 0;
+      font-size: 12px;
       }
-  // //   &__copyright{
-  // //     float: left;
-  // //     width: 745px;
-  // //     display: inline-block;
-  // //     margin: 8px 0 0;
-  // //     text-align: center;
-  // //     vertical-align: sub;
-  // //   }
+      &__copyright{
+        &__small{
+      width: 745px;
+      margin: 8px 0 0;
+      text-align: center;
+      font-size: 1px;
+        }
       }
-    .footer-sell-btn{
-    position: fixed;
-  //     float: right;
-  //     bottom: 32px;
-  //     right: 32px;
-  // //    padding: 0;  
-  // //   border-radius: 50%;
-    background-color: $main-red;
-  // //   margin: 0;
-    width: 160px;
-    height: 160px;
-    font-size: 22px;
-    z-index: 1000;
-    text-align: center;
-    font-weight: 400;
-  // //   text-decoration: none;
-  // //   touch-action: manipulation;
-      &__icon-camera{
-  // //     margin: 8px 0 0;
-      font-size: 54px;
-  // //     display: inline-block;
-  // //     font-family: icon-font;
-  // //     speak: none;
-  // //     font-style: normal;
-      font-weight: 400;
-  // //     // font-variant: normal;
-  // //     // text-transform: none;
-  //        line-height: 1;
-  // //     -webkit-font-smoothing: antialiased;
     }
+  }    
+.footer-sell-btn{
+  a {
+  color: $white;
   }
-  }
-  
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  padding: 0;  
+  border-radius: 50%;
+  background-color: $main-red;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  z-index: 1000;
+  text-align: center;
+  font-weight: 400;
+  touch-action: manipulation;
+    &__icon-camera{
+    margin: 8px 0 0;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1;
+    }
+}
+
