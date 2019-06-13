@@ -1,4 +1,5 @@
 .app-banner{
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
     background-image: url(https://files.slack.com/files-pri/TBRRYLL4Q-FKGA19R96/download_bg_pc.jpg);
     background-position: center;
     background-size: cover;
@@ -6,8 +7,8 @@
   .app-banner-pc{
     overflow: hidden;
     position: relative;
-    width: 750px;
-    height: 200px;
+    width: 550px;
+    height: 190px;
     margin: 0 auto;
     color: $white;
     padding: 0;
@@ -18,7 +19,7 @@
       padding: 0;
       h2{
         text-shadow: 0 0 5px rgba(0,0,0,4);
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
         line-height: 1.4;
         padding: 0;
@@ -27,7 +28,7 @@
       }
       p{
         text-shadow: 0 0 5px rgba(0,0,0,4);
-        font-size: 30px;
+        font-size: 26px;
         margin: 20px 0 0;
         padding: 0;
         position: absolute;
@@ -50,9 +51,6 @@
           padding-inline-start: 40px;
           color: $white;
         }
-          .app-banner-icon.clearfix:after{
-            @include clearfix;
-          }
           .app-banner-icon li{
             float: left;
             margin: 0;
@@ -60,15 +58,17 @@
             display: list-item;
             list-style: none;
           }
-    }      
-            // figure img{
-            //   position: absolute;
-            //   width: 100%;
-            //   float: right;
-            //   margin: 0;
-            //   padding: 0;
-            //   display: block;
-            // }
+    }
+  // figure img{
+  //   .app-banner-icon.clearfix:after{
+  //     @include clearfix;
+  //   }
+  //   position: absolute;
+  //   width: 30%;
+  //   float: right;
+  //   margin: 0;
+  //   padding:0 0 0 50px;
+  // }
   }
 }  
 .wrapper{
@@ -84,6 +84,7 @@
       line-height: 2;
       font-weight: normal;
     }
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
     margin: 0 auto;
     padding: 0 20px 10px 20px;
     background-color: $black;
@@ -168,27 +169,28 @@
     }
   }    
 .footer-sell-btn{
-  a {
   color: $white;
-  }
   position: fixed;
   bottom: 32px;
   right: 32px;
   padding: 0;  
   border-radius: 50%;
   background-color: $main-red;
-  width: 160px;
-  height: 160px;
-  font-size: 22px;
+  width: 110px;
+  height: 110px;
+  font-size: 13px;
   z-index: 1000;
   text-align: center;
-  font-weight: 400;
+  font-weight: 280;
   touch-action: manipulation;
-    &__icon-camera{
+  .footer-sell-btn{
+    content:"\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+    color: $white;
     margin: 8px 0 0;
-    font-size: 54px;
-    font-weight: 400;
-    line-height: 1;
+    font-size: 50px;
+    font-weight: 280;
     }
 }
 
