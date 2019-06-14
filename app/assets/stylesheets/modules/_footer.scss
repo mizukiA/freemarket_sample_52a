@@ -87,11 +87,10 @@
     padding: 0 20px 10px 20px;
     background-color: $black;
     color: $white;
-    margin: 0;
     display: block;
     &__cell {
-      padding: 0 20px 0 0;
-      width: 20%;
+      padding: 0 10px 0 0px;
+      width: 19%;
       vertical-align: top;
       float: left;
       margin-top: 18px;
@@ -102,28 +101,29 @@
       padding: 0;
       }
       &__menu{
-      list-style: none;
+        list-style: none;
         &__list {
         margin: 16px 0 0;
         display: list-item;
         }
-      }
         &__social-link{
         margin: 14px 0 0;
-        font-size: 26px;
         display: inline-block;
           &__icon-twitter{
           font-style: normal;
           line-height: 1;
           margin: 16px 18px 0 0;
+          font-size:20px;
           }
           &__icon-facebook{
           font-style: normal;
           font-weight: 400;
           line-height: 1;
           margin: 16px 18px 0 0;
+          font-size:20px;
           }
         }
+      }
     }
     .short{
       width:18%;
@@ -134,7 +134,7 @@
     display: block;
     font-size: 16px;
     line-height: 1.4;
-    margin-top: 34px;
+    margin-top: 40px;
     line-height: 2;
       &__menu{
       list-style: none;
@@ -147,25 +147,29 @@
     nav.clearfix:after{
     @include clearfix;
     }
-    &__bottom{
-    margin: 30px auto 20px;
-    width: 1020px;
-    padding: 0;
-    display: block;
-      &__logo{
-      clear: both;
-      font-size: 12px;
-      }
-      &__copyright{
-        &__small{
-      width: 745px;
-      margin: 8px 0 0;
-      text-align: center;
-      font-size: 1px;
-        }
-      }
+    nav.clearfix{
+      width: 1020px;
+      margin: 0 auto;
     }
-  }    
+}
+.footer-bottom{
+  width: 1020px;
+  margin: 0 auto;
+  &__logo{
+    padding: 0;
+    display: inline-block;
+    clear: both;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .footer-bottom__copyright{
+    width: 745px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1px;
+    display: block;
+  }
+}
 .footer-sell-btn{
   color: $white;
   position: fixed;
@@ -200,3 +204,16 @@
   font-size:50px;
 }
 
+.menu__social-link{
+  a{
+    .menu__social-link__icon-twitter{
+      font-size:30px;
+      margin-right:10px;
+      margin-top:10px;
+    }
+    .menu__social-link__icon-facebook{
+      font-size:30px;
+      margin-top:10px;
+    }
+  }
+}
