@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, except: :signup
  
   def show
   end
@@ -12,6 +13,12 @@ class UsersController < ApplicationController
   end
 
   def update
+  end
+
+  def logout
+  end
+
+  def signup
   end
 
   private

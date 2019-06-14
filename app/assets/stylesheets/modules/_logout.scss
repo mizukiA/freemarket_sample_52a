@@ -1,0 +1,15 @@
+.user-main-inner{
+  padding: 64px;
+  background-color: $white;
+  a{
+    margin: 0 auto;
+    max-width: 320px;
+    text-align: center;
+    line-height: 48px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: $white;
+    display: block;
+    font-size: 14px;
+  }
+}

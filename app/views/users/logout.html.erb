@@ -1,0 +1,10 @@
+<%= render partial: 'header' %>
+<main>
+  <%= render partial: 'side-bar' %>
+  <div class="user-main">
+    <div class="user-main-inner">
+      <%= link_to 'ログアウト', "/users/sign_out", method: :delete %>
+    </div>
+  </div>
+</main>
+<%= render partial: 'footer' %>
