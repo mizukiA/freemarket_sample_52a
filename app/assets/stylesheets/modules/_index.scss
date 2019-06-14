@@ -1,11 +1,11 @@
+.owl-carousel{
+  height: 390px;
+  overflow: hidden;
+  position: relative;
+}
 main{
-  .owl-carousel{
-    height: 390px;
-    overflow: hidden;
-    position: relative;
-  }
   .pickup-container{
-    padding: 40px 0 0 0;
+    padding: 0;
     background-color: #f5f5f5;
     &__h2{
       font-size: 28px;

@@ -20,3 +20,16 @@ $(function(){
     $(this).click();
   }, function() {});
 });
+
+$(function(){
+  $(".item-slide_banner.owl-carousel").owlCarousel({
+    // 1枚目→2枚目→3枚目→1枚目→2枚目→3枚目→1枚目...みたいにループさせる。
+    loop:true,
+    //次へボタン（owl-next）、前へボタン（owl-prev）をクリックすると画像が切り替わるようにする。
+    nav:true,
+    // 一度に表示するowl-itemの数を1つにする。
+    items:1,
+    //画像の切り替わりにかかる秒数を1秒に設定。
+    smartSpeed: 1000
+  });
+});
