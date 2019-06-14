@@ -726,7 +726,7 @@
               </ul>
             </li>
             <li>
-              <a href="###" class="header-user__menu">
+              <a href="/users/<%= current_user.id %>" class="header-user__menu">
                 <figure>
                   <div>
                     <img src="###">
@@ -814,10 +814,10 @@
         <% else %>
           <ul class="header-user__login-menu">
             <li>
-              <a href="###" class="header-user__signup">新規会員登録</a>
+              <a href="/users/signup" class="header-user__signup">新規会員登録</a>
             </li>
             <li>
-              <a href="###" class="header-user__signin">ログイン</a>
+              <a href="/users/sign_in" class="header-user__signin">ログイン</a>
             </li>
           </ul>
         <% end %>
