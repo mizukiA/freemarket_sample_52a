@@ -15,7 +15,7 @@
     .app-banner-pc-inner{
       left: 0;
       top: 50%;
-      margin: 0;
+      margin-top: 30px;
       padding: 0;
       h2{
         text-shadow: 0 0 5px rgba(0,0,0,4);
@@ -33,42 +33,40 @@
         padding: 0;
         position: absolute;
       }
-      .app-banner-icon.clearfix:after{
-        @include clearfix;
-      }
-        .app-banner-pc-inner.figure img{
-            position: absolute;
-          }
-        .app-banner-icon ul{
+      .app-banner-icon{
+        padding-top: 65px;
+        display: inline-block;
+        figure{
+          margin:0 !important;
+          img{
+          position: absolute;
           float: left;
-          margin: 0 0 0 50px;
-          line-height: 50px;
-          display: block;
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 0px;
-          margin-inline-end: 0px;
-          padding-inline-start: 40px;
-          color: $white;
+          }
         }
-          .app-banner-icon li{
+        ul{
+          float: left;
+          margin: 8px 0 0 65px;
+          line-height: 50px;
+          color: $white;
+          li{
             float: left;
             margin: 0;
             padding: 0;
-            display: list-item;
+            display: inline-block;
             list-style: none;
+            margin-right: 10px;
           }
+        }
+      }
+      .clearfix:after{
+        @include clearfix;
+      }
+  }
+    .right-icon figure img{
+     position: absolute;
+     top: 0;
+     right:0;
     }
-  // figure img{
-  //   .app-banner-icon.clearfix:after{
-  //     @include clearfix;
-  //   }
-  //   position: absolute;
-  //   width: 30%;
-  //   float: right;
-  //   margin: 0;
-  //   padding:0 0 0 50px;
-  // }
   }
 }  
 .wrapper{
@@ -191,6 +189,14 @@
     margin: 8px 0 0;
     font-size: 50px;
     font-weight: 280;
+    &__div{
+      font-size:17px;
+      margin: 15px 0 0;
     }
+  }
+}
+
+.footer-sell-btn__icon-camera{
+  font-size:50px;
 }
 

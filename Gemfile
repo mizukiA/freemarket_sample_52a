@@ -71,3 +71,4 @@ gem 'devise'
 
 gem 'haml-rails'
 gem 'owlcarousel-rails'
+
