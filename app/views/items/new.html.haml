@@ -1,0 +1,156 @@
+.single-container
+  = render partial: 'single-header'
+  %main.single-main
+    %section.single-main__container
+      .sell-container
+        .sell-container__inner
+          %h2.sell-container__inner__h2 商品情報を入力
+          %form.sell-container__inner__form
+            .sell-container__inner__form__uploader-box
+              %h3.sell-container__inner__form__uploader-box__h3
+                出品画像
+                %span 必須
+              %p 最大10枚までアップロードできます
+              .sell-container__inner__form__uploader-box__container.clearfix
+                .sell-container__inner__form__uploader-box__container__item
+                  %input{name: "image", type: "file"}/
+                  %pre
+                    ドラッグアンドドロップ
+                    %br>/
+                    またはクリックしてファイルをアップロード
+            .sell-container__inner__form__content
+              .sell__form-group
+                %label
+                  商品名
+                  %span 必須
+                %div
+                  %input{placeholder: "商品名(必須 40文字まで)"}/
+              .sell__form-group
+                %label
+                  商品の説明
+                  %span 必須
+                %textarea{placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+            .sell-container__inner__form__content.clearfix
+              %h3.sell-container__inner__form__content__h3 商品の詳細
+              .sell-container__inner__form__content__form-box
+                .sell__form-group
+                  %label
+                    カテゴリー
+                    %span 必須
+                  %div
+                    .select-wrap
+                      %select.select-wrap__default
+                        %option{value: ""} ---
+                        %option{value: "1"} レディース
+                        %option{value: "2"} メンズ
+                        %option{value: "3"} ベビー・キッズ
+                        %option{value: "4"} インテリア・住まい・小物
+                        %option{value: "5"} 本・音楽・ゲーム
+                      %i.fas.fa-chevron-down
+                    .select-wrap
+                      %select.select-wrap__default
+                        %option{value: ""} ---
+                        %option{value: "6"} トップス
+                        %option{value: "7"} ジャケット/アウター
+                        %option{value: "8"} パンツ
+                        %option{value: "9"} スカート
+                        %option{value: "10"} ワンピース
+                      %i.fas.fa-chevron-down
+                    .select-wrap
+                      %select.select-wrap__default
+                        %option{value: ""} ---
+                        %option{value: "11"} Tシャツ/カットソー(半袖/袖なし)
+                        %option{value: "12"} Tシャツ/カットソー(七分/長袖)
+                        %option{value: "13"} シャツ/ブラウス(半袖/袖なし)
+                        %option{value: "14"} シャツ/ブラウス(七分/長袖)
+                        %option{value: "15"} ポロシャツ
+                      %i.fas.fa-chevron-down
+                .sell__form-group
+                  %label
+                    商品の状態
+                    %span 必須
+                  .select-wrap
+                    %select.select-wrap__default
+                      %option{value: ""} ---
+                      %option{value: "1"} 新品、未使用
+                      %option{value: "2"} 未使用に近い
+                      %option{value: "3"} 目立った傷や汚れなし
+                      %option{value: "4"} やや傷や汚れあり
+                      %option{value: "5"} 傷や汚れあり
+                      %option{value: "6"} 全体的に状況が悪い
+                    %i.fas.fa-chevron-down
+            .sell-container__inner__form__content.clearfix
+              %h3.sell-container__inner__form__content__h3 配送について
+              %a.sell-container__inner__form__content__question{href: "#", target: "_blanck"} ?
+              .sell-container__inner__form__content__form-box
+                .sell__form-group
+                  %label
+                    配送料の負担
+                    %span 必須
+                  .select-wrap
+                    %select.select-wrap__default
+                      %option{value: ""} ---
+                      %option{value: "2"} 送料込み(出品者負担)
+                      %option{value: "1"} 着払い(購入者負担)
+                    %i.fas.fa-chevron-down
+                .sell__form-group
+                  %label
+                    発送元の地域
+                    %span 必須
+                  .select-wrap
+                    %select.select-wrap__default
+                      %option{value: ""} ---
+                      %option{value: "1"} 北海道
+                      %option{value: "2"} 青森県
+                      %option{value: "3"} 岩手県
+                      %option{value: "4"} 宮城県
+                      %option{value: "5"} 秋田県
+                    %i.fas.fa-chevron-down
+                .sell__form-group
+                  %label
+                    発送までの日数
+                    %span 必須
+                  .select-wrap
+                    %select.select-wrap__default
+                      %option{value: ""} ---
+                      %option{value: "1"} 1~2日で発送
+                      %option{value: "2"} 2~3日で発送
+                    %i.fas.fa-chevron-down
+            .sell-container__inner__form__content.clearfix
+              %h3.sell-container__inner__form__content__h3 販売価格(300〜9,999,999)
+              %a.sell-container__inner__form__content__question{href: "#", target: "_blanck"} ?
+              .sell-container__inner__form__content__form-box
+                %ul.sell-container__inner__form__content__form-box__ul
+                  %li.sell__form-group
+                    .clearfix
+                      %label.l-left
+                        価格
+                        %span 必須
+                      .l-right
+                        ¥
+                        %div
+                          %input.l-right__input{placeholder: "例)300"}/
+                  %li.clearfix
+                    .l-left 販売手数料 (10%)
+                    .l-right -
+                  %li.clearfix.bold
+                    .l-left 販売利益
+                    .l-right -
+            .sell-container__inner__form__content.sell-btn-box
+              %div
+                %p
+                  %a{href: "#"}> 禁止されている出品
+                  、
+                  %a{href: "#"}> 行為
+                  を必ずご確認ください。
+                %p
+                  またブランド品でシリアルナンバー等がある場合はご記載ください。
+                  %a{href: "#"}> 偽ブランドの販売
+                  は犯罪であり処罰される可能性があります。
+                %p
+                  また、出品をもちまして
+                  %a{href: "#"}> 加盟店規約
+                  に同意したことになります。
+              %button.sell-btn-box__btn{type: "submit"} 出品する
+              %a.sell-btn-box__gray-btn{href: ""} もどる
+  = render partial: 'single-footer'
