@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'logout'
       get 'signup'
       get 'profile'
+      get 'identification'
     end
   end
 end
