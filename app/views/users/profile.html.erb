@@ -1,0 +1,20 @@
+<%= render partial: 'header' %>
+<main>
+  <%= render partial: 'side-bar' %>
+  <div class="user-main">
+    <h2 class="user-main__h2">プロフィール</h2>
+    <form action="" method="" class="user-main__form">
+      <section class="user-main__form__icon">
+        <figure>
+          <img src="../assets/member_photo_noimage_thumb">
+        </figure>
+        <input type="text" value="mizuki" name="nickname" placeholder="例）AYA" class="user-main__form__icon__input">
+      </section>
+      <section class="user-main__form__content">
+        <textarea name="profile" placeholder="例）こんにちは。ご覧いただきありがとうございます。" class="user-main__form__content__textarea"></textarea>
+        <button type="submit" class="user-main__form__content__submit">変更する</button>
+      </section>
+    </form>
+  </div>
+</main>
+<%= render partial: 'footer' %>
