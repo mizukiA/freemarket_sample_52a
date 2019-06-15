@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: :signup
+  # before_action :authenticate_user!, except: :signup
  
   def show
   end
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    Users.create(user_params)
+    @user = Users.create(user_params)
     redirect_to root_path
   end
 
