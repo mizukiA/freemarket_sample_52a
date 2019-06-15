@@ -81,7 +81,7 @@
                     %i.fas.fa-chevron-down
             .sell-container__inner__form__content.clearfix
               %h3.sell-container__inner__form__content__h3 配送について
-              %a.sell-container__inner__form__content__question{href: "#", target: "_blanck"} ?
+              =link_to "?", '#', class: "sell-container__inner__form__content__question", target: "_blanck"
               .sell-container__inner__form__content__form-box
                 .sell__form-group
                   %label
@@ -118,7 +118,7 @@
                     %i.fas.fa-chevron-down
             .sell-container__inner__form__content.clearfix
               %h3.sell-container__inner__form__content__h3 販売価格(300〜9,999,999)
-              %a.sell-container__inner__form__content__question{href: "#", target: "_blanck"} ?
+              =link_to "?", '#', class: "sell-container__inner__form__content__question", target: "_blanck"
               .sell-container__inner__form__content__form-box
                 %ul.sell-container__inner__form__content__form-box__ul
                   %li.sell__form-group
@@ -139,18 +139,18 @@
             .sell-container__inner__form__content.sell-btn-box
               %div
                 %p
-                  %a{href: "#"}> 禁止されている出品
+                  =link_to "禁止されている出品", '#'
                   、
-                  %a{href: "#"}> 行為
+                  =link_to "行為", '#'
                   を必ずご確認ください。
                 %p
                   またブランド品でシリアルナンバー等がある場合はご記載ください。
-                  %a{href: "#"}> 偽ブランドの販売
+                  =link_to "偽ブランドの販売", '#'
                   は犯罪であり処罰される可能性があります。
                 %p
                   また、出品をもちまして
-                  %a{href: "#"}> 加盟店規約
+                  =link_to "加盟店規約", '#'
                   に同意したことになります。
               %button.sell-btn-box__btn{type: "submit"} 出品する
-              %a.sell-btn-box__gray-btn{href: ""} もどる
+              =link_to "もどる", '#', class: "sell-btn-box__gray-btn"
   = render partial: 'single-footer'
