@@ -3,12 +3,12 @@
   = render partial: 'side-bar'
   .user-main
     %h2.user-main__h2 プロフィール
-    %form.user-main__form{:action => "", :method => ""}
+    %form.user-main__form{action: "", method: ""}
       %section.user-main__form__icon
         %figure
-          %img{:src => "../assets/member_photo_noimage_thumb"}/
-        %input.user-main__form__icon__input{:name => "nickname", :placeholder => "例）AYA", :type => "text", :value => "mizuki"}/
+          %img{src: "../assets/member_photo_noimage_thumb"}/
+        %input.user-main__form__icon__input{name: "nickname", placeholder: "例）AYA", type: "text", value: "mizuki"}/
       %section.user-main__form__content
-        %textarea.user-main__form__content__textarea{:name => "profile", :placeholder => "例）こんにちは。ご覧いただきありがとうございます。"}
-        %button.user-main__form__content__submit{:type => "submit"} 変更する
+        %textarea.user-main__form__content__textarea{name: "profile", placeholder: "例）こんにちは。ご覧いただきありがとうございます。"}
+        %button.user-main__form__content__submit{type: "submit"} 変更する
 = render partial: 'footer'
