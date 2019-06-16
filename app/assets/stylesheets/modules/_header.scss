@@ -87,6 +87,214 @@ header{
             }
             .navi-right{
                 float: right;
+                .header-user__content{
+                    .header-user__content-li{
+                        height: 40px;
+                        position: relative;
+                        float: left;
+                        margin: 0 10px;
+                        .color-change:hover{
+                            color: #0099e8;
+                        }
+                        a{
+                           height: 44px;
+                           color: black;
+                           i{
+                            color: #ccc;
+                            font-size: 20px;
+                            
+                           }
+                           span{
+                               font-size: 14px;
+                               font-weight: normal;
+                           }
+                           .header-user__icon{
+                               border-radius: 50%;
+                               width: 25px;
+                               margin-right: 5px;
+                           }
+                        }
+                        .header-user__content-list{
+                            position: absolute;
+                            top: 38px;
+                            z-index: 100;
+                            background-color: white;
+                            li{
+                                width: auto;
+                                .user-main__list-link{
+                                    display: block;
+                                    min-height: 60px;
+                                    height: auto;
+                                    padding: 16px;
+                                    width: 320px;
+                                    position: relative;
+                                    border-bottom: 1px solid #eee;
+                                    figure{
+                                        position: relative;
+                                        float: left;
+                                        width: 48px;
+                                        height: 48px;
+                                        overflow: hidden;
+                                        img{
+                                            position: absolute;
+                                            top:0;
+                                            right: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            width: 100%;
+                                        }
+                                    }
+                                    .user-main__item{
+                                        margin: 0 40px 0 68px; 
+                                        .user-main__text{
+                                            font-size: 14px;
+                                            display: block;
+                                        }
+                                        time{
+                                            display: inline-block;
+                                            color: #888;
+                                            i{
+                                                margin:0 3px 0 0;
+                                            }
+                                        }
+                                    }
+                                    .fa-chevron-right{
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 16px;
+                                    }
+                                }
+                            }
+                            .user-main__list-link:hover{
+                                background-color: #f5f5f5;
+                            }
+                        }
+                        .to-do-list{
+                            left: -55%;
+                            .nothing{
+                                width: 320px;
+                                padding: 160px 0 60px;
+                                background: url(logo-gray.svg);
+                                background-repeat: no-repeat;
+                                background-position: center 40px;
+                                background-size: 78px 85px;
+                                text-align: center;
+                                font-size: 16px;
+                                color: #ccc;
+                                
+                            }
+                        }
+                    }
+                    .header-user__menu{
+                     display: flex;
+                     span{
+                         line-height: 2;
+                     }
+                    }
+                    .header-user__menu-box{
+                        position: absolute;
+                        top:40px;
+                        right: 35%;
+                        z-index: 100;
+                        width:320px;
+                        background-color: white;
+                        .header-user__menu-box-center{
+                            text-align: center;
+                            figure{
+                                padding: 28px 0 0;
+                                height: 80px;
+                                background-image: url(user-bg.jpg);
+                                background-repeat: no-repeat;
+                                background-size: 320px 80px;
+                                div{
+                                    width: 60px;
+                                    height: 60px;
+                                    margin: 0 auto;
+                                    overflow: hidden;
+                                    border-radius: 50%;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                figcaption{
+                                    margin: 8px 0 0;
+                                    padding: 0 8px;
+                                    font-size: 16px;
+                                }
+                            }
+                            .user-review{
+                                margin: 10px auto 0;
+                                padding: 8px 8px 0;
+                                text-align: center;
+                                display: inline-flex;
+                                li{
+                                    display: block;
+                                    margin: 0 auto;
+                                    width: auto;
+                                    margin:5px;
+                                    a{
+                                        font-size:14px;
+                                        color: black;
+                                    }
+                                }
+                            }
+                            .user-sales__point{
+                                width: 300px;
+                                margin: 10px auto;
+                                background-color: #fafafa;
+                                border: 1px solid #eee;
+                                display: inline-block;
+                                li{
+                                    float: none;
+                                    width: 95%;
+                                    border-top: 1px solid #eee;
+                                    a{
+                                    padding: 0 8px;
+                                    line-height: 40px;
+                                    display: block;
+                                    width: 100%;
+                                    font-size: 14px;
+                                    .user-sales__point-left{
+                                        float: left;
+                                    }   
+                                    .user-sales__point-right{
+                                        float: right;
+                                    }
+                                    }
+                                }
+                            }
+                        }
+                        .header-user__menu-list{
+                            li{
+                                width: 100%;
+                                border-top: 1px solid #eee;
+                                display: inline-block;
+                                box-sizing: border-box;
+                                
+                                a{
+                                    width: 100%;
+                                    position: relative;
+                                    display: block;
+                                    min-height: 48px;
+                                    padding: 16px 23px;
+                                    background-color: #fff;
+                                    font-size: 14px;
+                                    color: black;
+                                    box-sizing: border-box;
+                                    i{
+                                        position: absolute;
+                                        top:40%;
+                                        right: 16px;
+                                        color: #ccc;
+                                    }
+                                }
+                            }
+                            li :hover{
+                                background-color: #eee;
+                            }
+                        }
+                    }
+                }
                 .header-user__login-menu{
                     list-style: none;
                     li{
@@ -170,4 +378,20 @@ header{
 .navi-left__section ul ul li:hover{
     // 子、孫
     background-color:#f5f5f5;
+}
+
+.header-user__content ul{
+    display: none;
+}
+.header-user__content li:hover > ul{
+    display: block;
+}
+.header-user__menu-box{
+    display: none;
+}
+.header-user__content li:hover .header-user__menu-box{
+    display: block;
+}
+.header-user__content li:hover .header-user__menu-list{
+    display: block;
 }
