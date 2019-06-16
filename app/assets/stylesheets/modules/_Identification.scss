@@ -11,24 +11,22 @@
     padding: 64px;
     font-size: 14px;
     .user-main__form{
-      div{
-        p{
-          margin: 8px 0 0;
-          line-height: 1.5;
-        }
-        .user-main__form__upload{
-          text-align: right;
-          a{
-            color: #0099e8;
-            text-decoration: none;
-            .fa-chevron-right{
-              display: inline-block;
-              font-style: normal;
-              font-variant: normal;
-              text-transform: none;
-              line-height: 1;
-              -webkit-font-smoothing: antialiased;
-            }
+      p{
+        margin: 8px 0 0;
+        line-height: 1.5;
+      }
+      &__upload{
+        text-align: right;
+        a{
+          color: #0099e8;
+          text-decoration: none;
+          .fa-chevron-right{
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
           }
         }
       }
