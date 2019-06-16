@@ -27,6 +27,9 @@ class UsersController < ApplicationController
   def identification
   end
 
+  def card
+  end
+
   private
   def user_params
     params.require(:user).permit(:nickname, :email)

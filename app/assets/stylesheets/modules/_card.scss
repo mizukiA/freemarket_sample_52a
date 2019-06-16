@@ -1,0 +1,51 @@
+.right-content{
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  margin: 0 0 0 50px;
+  height: 360px;
+  background-color: $white;
+  float: left;
+  width: 70%;
+  .right-content-top{
+    &__head{
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+      border-bottom: 2px solid #f5f5f5;
+      padding: 15px 0 15px 0;
+    }
+  }
+  .right-content-middle{
+    &__head{
+      font-weight: bold;
+      font-size: 15px;
+      margin-left: 20%;
+      margin-top: 30px;
+    }
+    &__btn{
+      a{
+      display: inline-block;
+      color: $white;
+      margin: 13px auto;
+      }
+      height: 50px;
+      font-size: 15px;
+      margin-left: 20%;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      background: $main-red;
+      border: 1px solid $main-red;
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .right-content-bottom{
+    border-top: 2px solid #f5f5f5;    
+    width: 100%;
+    span{
+      color: #0099e8;
+      float: right;
+      padding: 45px 45px 15px 0;
+      font-size: 15px;
+    }
+  }
+}
