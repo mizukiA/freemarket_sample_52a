@@ -1,0 +1,16 @@
+= render partial: 'header'
+%main
+  = render partial: 'side-bar'
+  .right-content
+    %section.right-content-top
+      %h2.right-content-top__head 支払い方法
+    %section.right-content-middle
+      %h3.right-content-middle__head
+        クレジットカード一覧
+      .right-content-middle__btn
+        %a{:href => ""}
+          クレジットカードを追加する
+      .right-content-bottom
+        %a{:href => "", :target => "_blank"}
+          %span 支払い方法について
+= render partial: 'footer'
