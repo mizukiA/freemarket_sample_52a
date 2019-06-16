@@ -9,10 +9,11 @@
 |area|string|null: false|
 |delivery_date|string|null: false|
 |price|integer|null: false|
-|user_id|integer|foreign_key: true|
-|baby_category_id|integer|foreign_key: true|
+|buyer_id|integer|foreign_key: true|
+|saler_id|integer|foreign_key: true|
+|category_id|integer|foreign_key: true|
+|brand_id|integer|foreign_key: true|
 |size|string|null: false|
-|child_brand_id|integer|foreign_key: true|
 
 ### Association
 - has_many :likes
@@ -60,7 +61,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
-|parent_id||
+|parent_id|integer||
 |brand|string|null: false|
 
 ### Association
