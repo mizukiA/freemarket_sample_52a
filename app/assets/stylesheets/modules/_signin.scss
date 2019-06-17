@@ -54,12 +54,18 @@
             background: #385185;
             font-size: 26px;
           }
+          a{
+            color: white;
+          }
         }
         .btn-google{
           margin: 16px 0 0;
           background: #fff url("google.svg") no-repeat 3px top;
           border: #979797 solid 1px;
           color: #333;
+          a{
+            color: black;
+          }
         }
       }
       form{

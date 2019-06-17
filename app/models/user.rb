@@ -16,12 +16,31 @@ class User < ApplicationRecord
 
   has_many :items
   
-  def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.nickname = auth.info.name
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
-      # user.avatar = auth.info.image
+  def self.find_for_google_oauth2(auth)
+    user = User.where(email: auth.info.email).first
+    unless user
+      user = User.create(nickname:     auth.info.name,
+                         provider: auth.provider,
+                         uid:      auth.uid,
+                         email:    auth.info.email,
+                         password: Devise.friendly_token[0, 20])
     end
+    user
+  end
+
+  def self.find_for_oauth(auth)
+    user = User.where(uid: auth.uid, provider: auth.provider).first
+
+    unless user
+      user = User.create(
+        uid:      auth.uid,
+        provider: auth.provider,
+        email:    auth.info.email,
+        nickname:  auth.info.name,
+        password: Devise.friendly_token[0, 20],
+        
+      )
+    end
+    user
   end
 end
