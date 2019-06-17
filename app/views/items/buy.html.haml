@@ -6,7 +6,7 @@
         購入内容の確認
       .single-main__container__inner
         .single-main__container__inner__content
-          %img{src: ""}/
+          = image_tag ""
           %span.single-main__container__inner__content__item-name
             ワンピース
           .single-main__container__inner__content__item-price
@@ -24,20 +24,17 @@
           .single-main__container__inner__content__alert
             配送先と支払い方法の入力を完了してください。
           %button.single-main__container__inner__content__buy-btn
-            %a{href: "", target: ""}
-              購入する
+            =link_to "購入する", '#', target: "_blank"
           .single-main__container__inner__content__address
             配送先
           .single-main__container__inner__content__address__user-address
             大阪府　大阪市
           .single-main__container__inner__content__address__sub
-            %a{href: "", target: ""}
-              変更する
+            =link_to "変更する", '#', target: "_blank"
           .single-main__container__inner__content__pay
             支払い方法
           .single-main__container__inner__content__pay__user-pay
             カード情報
           .single-main__container__inner__content__pay__sub
-            %a{href: "", target: ""}
-              変更する
+            =link_to "変更する", '#', target: "_blank"
   = render partial: 'single-footer'
