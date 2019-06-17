@@ -2,10 +2,10 @@
   <nav class="navi">
     <ul class="navi-list">
       <li>
-        <a class="navi-list-item">
+        <%= link_to user_path(current_user.id), class: "navi-list-item" do %>
           マイページ
           <i class="fas fa-chevron-right"></i>
-        </a>
+        <% end %>
       </li>
       <li>
         <a class="navi-list-item">
@@ -104,10 +104,10 @@
     <h3>設定</h3>
     <ul class="navi-list">
       <li>
-        <a class="navi-list-item">
+        <%= link_to profile_users_path, class: "navi-list-item" do %>
           プロフィール
           <i class="fas fa-chevron-right"></i>
-        </a>
+        <% end %>
       </li>
       <li>
         <a class="navi-list-item">
@@ -116,10 +116,10 @@
         </a>
       </li>
       <li>
-        <a class="navi-list-item">
+        <%= link_to card_users_path, class: "navi-list-item" do %>
           支払い方法
           <i class="fas fa-chevron-right"></i>
-        </a>
+        <% end %>
       </li>
       <li>
         <a class="navi-list-item">
@@ -128,10 +128,10 @@
         </a>
       </li>
       <li>
-        <a class="navi-list-item">
+        <%= link_to identification_users_path, class: "navi-list-item" do %>
           本人情報
           <i class="fas fa-chevron-right"></i>
-        </a>
+        <% end %>
       </li>
       <li>
         <a class="navi-list-item">

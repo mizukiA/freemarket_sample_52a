@@ -2,9 +2,9 @@
   <div class="header-inner">
     <div class="header-top">
       <h1>
-        <a href="###">
+        <%= link_to root_path do %>
           <img src="../assets/logo.svg">
-        </a>
+        <% end %>
       </h1>
       <form>
         <input type="search" name="keyword" placeholder="何かお探しですか？" class="form-search">
@@ -693,7 +693,7 @@
                   </li>
                   <li class="navi-left__brand-list">
                     <h3>
-                      <a href="">ブランド一覧</a>
+                      <a href="###">ブランド一覧</a>
                     </h3>
                   </li> 
             </ul>
@@ -701,35 +701,89 @@
       <div class="navi-right">
         <% if user_signed_in? %>
           <ul class="header-user__content">
-            <li>
-              <a href="###">
+            <li class="header-user__content-li">
+              <a href="###" class="color-change" >
                 <i class="far fa-bell"></i>
                 <span>お知らせ</span>
                 <div class="count">
                 </div>
               </a>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+        <ul class="header-user__content-list">
+          <li>
+            <a class="user-main__list-link" href="###">
+              <figure>
+                <img src="../assets/mercari_profile">
+              </figure>
+              <div class="user-main__item">
+                <div class="user-main__text">
+                  事務局から個別メッセージ「ログイン通知」
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    2時間前
+                  </span>
+                </time>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a class="user-main__list-link" href="###">
+              <figure>
+                <img src="../assets/mercari_profile">
+              </figure>
+              <div class="user-main__item">
+                <div class="user-main__text">
+                  事務局から個別メッセージ「売上金の残高があります」
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    20時間前
+                  </span>
+                </time>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a class="user-main__list-link" href="###">
+              <figure>
+                <img src="../assets/mercari_profile">
+              </figure>
+              <div class="user-main__item">
+                <div class="user-main__text">
+                  《今月は手数料無料!》「メルペイあと払い」なら、チャージ不要で日々のお買い物がスムーズに!
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    1日前
+                  </span>
+                </time>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </li>
               </ul>
             </li>
-            <li>
-              <a href="###">
+            <li class="header-user__content-li">
+              <a href="###" class="color-change">
                 <i class="fas fa-check"></i>
                 <span>やることリスト</span>
               </a>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+              <ul class="header-user__content-list to-do-list" >
+                <li class="nothing">
+                  現在、やることリストはありません
+                </li>
               </ul>
             </li>
-            <li>
-              <a href="/users/<%= current_user.id %>" class="header-user__menu">
+            <li class="header-user__content-li">
+              <a href="/users/<%= current_user.id %>" class="header-user__menu color-change">
                 <figure>
                   <div>
-                    <img src="../assets/member_photo_noimage_thumb.png">
+                    <img src="../assets/member_photo_noimage_thumb.png" class="header-user__icon">
                   </div>
                 </figure>
                   <span>マイページ</span>
@@ -738,40 +792,46 @@
                 <div class="header-user__menu-box-center">
                   <figure>
                     <div>
-                      <img src="">
+                      <img src="../assets/member_photo_noimage_thumb.png">
                     </div>
                     <figcaption>
-                      <%# <%= current_user.name%>
+                      <%= current_user.nickname %>
                     </figcaption>
                   </figure>
                   <ul class="user-review">
                     <li>
                       <a href="###">
-                        <%# 評価:<%= %>
+                        評価:0
                       </a>
                     </li>
                     <li>
                       <a href="###">
-                        <%# 出品数<%= %>
+                        出品数:100
                       </a>
                     </li>
                   </ul>
                   <ul class="user-sales__point">
                     <li>
-                      <div class="user-sales__point-left">
-                        売上金
-                      </div>
-                      <div class="user-sales__point-right">
-                        <%# ¥<%= %>
-                      </div>
+                      <a href="###">
+                        <div class="user-sales__point-left">
+                          売上金
+                        </div>
+                        <div class="user-sales__point-right">
+                          ¥4,200
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </a>
                     </li>
                     <li>
-                      <div class="user-sales__point-left">
-                        ポイント
-                      </div>
-                      <div class="user-sales__point-right">
-                        <%# P<%=%>
-                      </div>
+                      <a href="###">
+                        <div class="user-sales__point-left">
+                          ポイント
+                        </div>
+                        <div class="user-sales__point-right">
+                          P:100
+                          <i class="fas fa-chevron-right"></i>
+                        </div>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -779,31 +839,37 @@
                     <li>
                       <a href="###" class="header-user__menu-list-item">
                         いいね！一覧
+                        <i class="fas fa-chevron-right"></i>
                       </a>
                     </li>
                     <li>
                       <a href="###" class="header-user__menu-list-item">
                         出品した商品-出品中
+                        <i class="fas fa-chevron-right"></i>
                       </a>
                     </li>
                     <li>
                       <a href="###" class="header-user__menu-list-item">
                         出品した商品-取引中
+                        <i class="fas fa-chevron-right"></i>
                       </a>
                     </li>
                     <li>
                       <a href="###" class="header-user__menu-list-item">
                         出品した商品-売却済み
+                        <i class="fas fa-chevron-right"></i>
                       </a>
                     </li>
                     <li>
                       <a href="###" class="header-user__menu-list-item">
                         購入した商品-取引中
+                        <i class="fas fa-chevron-right"></i>
                       </a>
                     </li>
                     <li>
                       <a href="###" class="header-user__menu-list-item">
                         購入した商品-過去の取引
+                        <i class="fas fa-chevron-right"></i>
                       </a>
                     </li>
                   </ul>
