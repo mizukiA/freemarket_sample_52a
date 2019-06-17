@@ -20,33 +20,31 @@
           &__content{
             max-width: 320px;
             margin: 0 auto;
+            text-align: center;
             img{
               width: 148px;
               height: 160px;
-              text-align: center;
+              margin: 0 auto;
             }
             &__item-name{
               display: block;
               width: 100%;
               line-height: 48px;
-              font-size: 22px;
+              font-size: 15px;
               border: 1px solid transparent;
-              text-align: center;
               text-decoration: none;
+              font-weight: bold;
             }
             &__item-price{
               display: block;
-              width: 100%;
               line-height: 48px;
-              font-size: 22px;
               border: 1px solid transparent;
-              text-decoration: none;
               &__price{
                 font-size: 22px;
-                float: left;
                 &__sub{
                   font-size: 12px;
                   float: right;
+                  margin:0 60px 0 0;
                 }
               }
             }
@@ -58,47 +56,77 @@
               font-size: 12px;
             }
             &__total-price{
-              font-size: 30px;
-              &__sub{
-                font-size: 22px;
-                float: right;
+              font-weight: bold;
+              display: block;
+              line-height: 48px;
+              margin-top: 20px;
+              &__price{
+                font-size: 25px;
+                float: left;
               }
+                span {
+                  display: inline-block;
+                  font-size: 20px; 
+                  float: right;
+                }
             }
             &__alert{
               font-size: 12px;
               color: $main-red;
+              margin-top: 80px;
             }
             &__buy-btn{
+              a{
+                color: $white;
+              }
               margin: 16px 0 0;
               background:rgb(92, 90, 90);
-              color: $white;
               top: 50%;
               left: 16px;
               font-weight: bold;
-              // background: #385185;
               display: block;
               line-height: 48px;
-              font-size: 12px;
+              font-size: 18px;
               width: 100%;
               border-block-end: rgb(92, 90, 90);
             }
             &__address{
               width: 100%;
               border-top: 1px solid #f5f5f5;
-              margin: 15px;
+              margin: 30px 0 0 0;
               height: 100px;
-              &__sub{
+              text-align: left;
+              position: relative;
+              &__user-address{
                 font-size: 12px;
+                position: absolute;
+              }
+              &__sub{
+                a{
+                  color: #0099e8;
+                  display: block;
+                  margin-bottom: 20px;
+                }
+                font-size: 14px;
                 float: right;
               }
             }
             &__pay{
               width: 100%;
               border-top: 1px solid #f5f5f5;
-              margin: 15px;
+              margin: 30px 0 30px 0;
               height: 100px;
-              &__sub{
+              text-align: left;
+              position: relative;
+              &__user-pay{
                 font-size: 12px;
+                position: absolute;
+              }
+              &__sub{
+                a{
+                  color: #0099e8;
+                }
+                font-size: 14px;
                 float: right;
               }
             }
