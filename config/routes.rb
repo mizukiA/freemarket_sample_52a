@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       get 'signup'
       get 'profile'
       get 'identification'
+      get 'card'
     end
   end
 end

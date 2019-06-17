@@ -43,6 +43,44 @@ ActiveRecord::Schema.define(version: 20190616075242) do
     t.string   "tel",              null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+ActiveRecord::Schema.define(version: 20190616075641) do
+
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "brand",      null: false
+    t.integer  "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "category",   null: false
+    t.integer  "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image_url"
+    t.integer  "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                        null: false
+    t.text     "description",   limit: 65535, null: false
+    t.string   "condition",                   null: false
+    t.string   "delivery_fee",                null: false
+    t.string   "area",                        null: false
+    t.string   "delivery_date",               null: false
+    t.integer  "price",                       null: false
+    t.integer  "buyer_id"
+    t.integer  "saler_id"
+    t.string   "size",                        null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "category_id"
+    t.integer  "brand_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

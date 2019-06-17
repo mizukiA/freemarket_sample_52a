@@ -9,10 +9,11 @@
 |area|string|null: false|
 |delivery_date|string|null: false|
 |price|integer|null: false|
-|user_id|integer|foreign_key: true|
-|baby_category_id|integer|foreign_key: true|
+|buyer_id|integer|foreign_key: true|
+|saler_id|integer|foreign_key: true|
+|category_id|integer|foreign_key: true|
+|brand_id|integer|foreign_key: true|
 |size|string|null: false|
-|child_brand_id|integer|foreign_key: true|
 
 ### Association
 - has_many :likes
@@ -20,7 +21,8 @@
 - has_many :item_images
 - belongs_to :brand
 - belongs_to :category
-- belongs_to :user
+- belongs_to :saler, class_name: "User"
+- belongs_to :buyer, class_name: "User"
 
 ## item_imagesテーブル
 |Column|Type|Options|
@@ -60,7 +62,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
-|parent_id||
+|parent_id|integer||
 |brand|string|null: false|
 
 ### Association
