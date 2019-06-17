@@ -23,7 +23,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     callback_for(:facebook)
   end
 
-
   def facebook
     callback_from :facebook
   end
