@@ -1,0 +1,173 @@
+.single-container {
+  padding: 0;
+  .single-main{
+    display: block;
+    &__container{
+      width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      &__h2{
+        line-height: 1.5;
+        text-align: center;
+        padding: 32px 16px;
+        font-size: 22px;
+        font-weight: bold;
+        color: rgb(51, 51, 51);
+      }
+        &__inner{
+          border-top: 1px solid #f5f5f5;
+          padding: 64px;
+          &__content{
+            max-width: 320px;
+            margin: 0 auto;
+            img{
+              width: 148px;
+              height: 160px;
+              text-align: center;
+            }
+            &__item-name{
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 22px;
+              border: 1px solid transparent;
+              text-align: center;
+              text-decoration: none;
+            }
+            &__item-price{
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 22px;
+              border: 1px solid transparent;
+              text-decoration: none;
+              &__price{
+                font-size: 22px;
+                float: left;
+                &__sub{
+                  font-size: 12px;
+                  float: right;
+                }
+              }
+            }
+            &__point{
+              background: #eee;
+              color: #000;
+              display: block;
+              line-height: 48px;
+              font-size: 12px;
+            }
+            &__total-price{
+              font-size: 30px;
+              &__sub{
+                font-size: 22px;
+                float: right;
+              }
+            }
+            &__alert{
+              font-size: 12px;
+              color: $main-red;
+            }
+            &__buy-btn{
+              margin: 16px 0 0;
+              background:rgb(92, 90, 90);
+              color: $white;
+              top: 50%;
+              left: 16px;
+              font-weight: bold;
+              // background: #385185;
+              display: block;
+              line-height: 48px;
+              font-size: 12px;
+              width: 100%;
+              border-block-end: rgb(92, 90, 90);
+            }
+            &__address{
+              width: 100%;
+              border-top: 1px solid #f5f5f5;
+              margin: 15px;
+              height: 100px;
+              &__sub{
+                font-size: 12px;
+                float: right;
+              }
+            }
+            &__pay{
+              width: 100%;
+              border-top: 1px solid #f5f5f5;
+              margin: 15px;
+              height: 100px;
+              &__sub{
+                font-size: 12px;
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+//           .btn-mail{
+//             
+//           }
+
+//           .btn-google{
+//             margin: 16px 0 0;
+//             background: #fff url("google.svg") no-repeat 3px top;
+//             border: #979797 solid 1px;
+//             color: #333;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .single-footer {
+//     position: absolute;
+//     right: 0;
+//     left: 0;
+//     z-index: 1;
+//     padding: 65px 0 0;
+//     text-align: center;
+//     width: 456px;
+//     margin: 0 auto;
+//     nav{
+//       ul{
+//         font-size: 0;
+//         list-style: none;
+//         li{
+//           display: inline-block;
+//           margin: 0 0 0 16px;
+//           font-size: 12px;
+//           &:first-child{
+//             margin: 0;
+//           }
+//           a{
+//             display: block;
+//             color: #333;
+//             text-decoration: none;
+//           }
+//         }
+//       }
+//       .clearfix:after{
+//         @include clearfix;
+//       }
+//     }
+//     &__logo{
+//       display: block;
+//       color: #333;
+//       width: 80px;
+//       height: 65px;
+//       margin: 40px auto 0;
+//       text-decoration: none;
+//       img{
+//         vertical-align: middle;
+//       }
+//     }
+//     p{
+//       margin: 8px 0 0;
+//       small{
+//         font-size: 13px;
+//       }
+//     }
+//   }
+// }
