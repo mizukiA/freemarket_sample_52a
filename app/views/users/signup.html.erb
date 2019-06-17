@@ -7,7 +7,7 @@
         <div class="single-main__container__inner__content">
           <a class="single-main__container__inner__content__btn btn-mail" href="/users/sign_up"><i class="far fa-envelope"></i>メールアドレスで登録</a>
           <button class="single-main__container__inner__content__btn btn-facebook"><i class="fab fa-facebook-square"></i><%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path %></button>
-          <button class="single-main__container__inner__content__btn btn-google">Googleで登録</button>
+          <button class="single-main__container__inner__content__btn btn-google"><%= link_to 'Signin with Google', user_google_oauth2_omniauth_authorize_path %></button>
         </div>
       </div>
     </section>
