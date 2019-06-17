@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'buy'
     end
   end
+
   resources :users do
     collection do
       get 'logout'
