@@ -161,10 +161,9 @@
               %span.form-group-name 日
             %span.form-message-bottom ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .form-group
-            .g-recaptcha.signup-recaptcha{"data-sitekey" => ""}
-              %div{:style => "width: 304px; height: 78px;"}
-                %iframe{:frameborder => "0", :height => "78", :name => "a-pyadwnkfzq0l", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1559543665173&size=normal&cb=9umcotx4gjzo", :width => "304"}
-                %textarea#g-recaptcha-response.g-recaptcha-response{:name => "g-recaptcha-response", :style => "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
+            .g-recaptcha.signup-recaptcha
+              -# TODO: reCAPTCHAの実装、現在は代替でイメージを表示
+              = image_tag "440px-RecaptchaLogo.svg.png", size: "200x200" 
           .form-confirmation 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
           .single-main__container__form__content
             %button.single-main__container__form__content__btn{type: "submit"} 次へ進む
