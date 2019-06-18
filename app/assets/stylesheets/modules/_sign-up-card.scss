@@ -1,0 +1,225 @@
+.single-container{
+    &__header{
+      height: 128px;
+      text-align: center;
+      background-color: #f5f5f5;
+      h1{
+        margin: 40px 0 0;
+        display: inline-block;
+        a{
+          width: 185px;
+          height: 49px;
+          line-height: 49px;
+          display: inline-block;
+          margin: 0 8px 0 0;
+          color: #0099e8;
+          text-decoration: none;
+          img{
+            width: 185px;
+            height: 49px;
+            vertical-align: middle;
+          }
+        }
+      }
+      &__nav{
+        padding: 40px 0 0 44px;
+        border: 0;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+        text-align: center;
+        ol{
+          margin: 0;
+          list-style: none;
+          li{
+            min-width: 60px;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin: 0 40px 0 0;
+            font-size: 12px;
+            color: #888;
+            &:last-child {
+              margin: 0;
+            }
+            .progress-status{
+              width: 12px;
+              height: 12px;
+              margin: 8px auto 0;
+              background: #ccc;
+              border-radius: 50%;
+              &:before{
+                position: absolute;
+                bottom: 5px;
+                z-index: -1;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                right: 50%;
+              }
+              &:after{
+                position: absolute;
+                bottom: 5px;
+                z-index: -1;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                left: 50%;
+              }
+            }
+            .progress-status__first:before{
+              display: none;
+            }
+            .progress-status__last:after{
+              display: none;
+            }
+          }
+          .active{
+            font-weight: 600;
+            color: $main-red;
+          }
+          .active .progress-status{
+            background: #ea352d;
+          }
+        }
+        .clearfix:after{
+          @include clearfix;
+        }
+      }
+    }
+    .signup-page__header{
+      margin-top: 0;
+    }
+    .single-main{
+      &__container{
+        &__h2{
+          padding: 32px 16px;
+          font-size: 22px;
+          line-height: 1.5;
+          text-align: center;
+        }
+        &__form{
+          padding: 40px 16px;
+          border-top: 1px solid #f5f5f5;
+          &__content{
+            max-width: 320px;
+            margin: 0 auto;
+            .form-group{
+              margin: 40px 0 0;
+              &:first-child {
+                margin: 0;
+              }
+              label{
+                font-weight: 600;
+                font-size: 14px;
+                display: inline-block;
+              }
+              &__require{
+                background: $main-red;
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 2px;
+                color: $white;
+                font-size: 12px;
+                vertical-align: baseline;
+              }
+              &__input{
+                width: 100%;
+                margin: 8px 0 0;
+                height: 48px;
+                padding: 10px 16px 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: $white;
+                line-height: 1.5;
+                font-size: 16px;
+                box-sizing: border-box;
+              }
+              &__ul{
+                  display:block;
+                  margin: 8px 0 0;
+                  li{
+                      display: inline-block;
+                  }
+              }
+              &__text{
+                  
+                  text-align: right;
+                  color: #0099e8;
+                  font-size: 14px;
+                  span{
+                      background-color: #0099e8;
+                      border-radius: 50%;
+                      width: 14px;
+                      height: 14px;
+                      font-size: 12px;
+                      line-height: 14px;
+                      color: white;
+                      text-align: center;
+                      display: inline-block;
+                  }
+              }
+              .select-wrap{
+                margin: 8px 0 0;
+                position: relative;
+                background: #fff;
+                display: inline-block;
+                width: 35%;
+                &__default{
+                  width: 100%;
+                  position: relative;
+                  z-index: 2;
+                  height: 48px;
+                  padding: 0 16px;
+                  border-radius: 4px;
+                  border: 1px solid #ccc;
+                  background: 0;
+                  font-size: 16px;
+                  line-height: 1.5;
+                  cursor: pointer;
+                  -webkit-appearance: none;
+                }
+                .fa-chevron-down{
+                  position: absolute;
+                  right: 16px;
+                  top: 50%;
+                  z-index: 2;
+                  color: #888;
+                  font-size: 20px;
+                  -webkit-transform: translate(0, -50%);
+                  transform: translate(0, -50%);
+                  display: inline-block;
+                  font-style: normal;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+                  -webkit-font-smoothing: antialiased;
+                }
+              }
+            }
+            &__btn{
+              margin: 40px 0 0;
+              background: $main-red;
+              border: 1px solid $main-red;
+              color: $white;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              -webkit-transition: all ease-out .3s;
+              transition: all ease-out .3s;
+              cursor: pointer;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sign-up__addresses{
+    height: 1210px !important;
+  }
