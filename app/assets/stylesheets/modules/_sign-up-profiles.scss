@@ -1,0 +1,255 @@
+.single-container{
+  &__header{
+    height: 128px;
+    text-align: center;
+    background-color: #f5f5f5;
+    h1{
+      margin: 40px 0 0;
+      display: inline-block;
+      a{
+        width: 185px;
+        height: 49px;
+        line-height: 49px;
+        display: inline-block;
+        margin: 0 8px 0 0;
+        color: #0099e8;
+        text-decoration: none;
+        img{
+          width: 185px;
+          height: 49px;
+          vertical-align: middle;
+        }
+      }
+    }
+    &__nav{
+      padding: 40px 0 0 44px;
+      border: 0;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+      text-align: center;
+      ol{
+        margin: 0;
+        list-style: none;
+        li{
+          min-width: 60px;
+          position: relative;
+          z-index: 1;
+          display: inline-block;
+          margin: 0 40px 0 0;
+          font-size: 12px;
+          color: #888;
+          &:last-child {
+            margin: 0;
+          }
+          .progress-status{
+            width: 12px;
+            height: 12px;
+            margin: 8px auto 0;
+            background: #ccc;
+            border-radius: 50%;
+            &:before{
+              position: absolute;
+              bottom: 5px;
+              z-index: -1;
+              display: block;
+              content: '';
+              width: 100%;
+              height: 2px;
+              background: #ccc;
+              right: 50%;
+            }
+            &:after{
+              position: absolute;
+              bottom: 5px;
+              z-index: -1;
+              display: block;
+              content: '';
+              width: 100%;
+              height: 2px;
+              background: #ccc;
+              left: 50%;
+            }
+            &__first:before{
+              display: none;
+            }
+            &__last:after{
+              display: none;
+            }
+          }
+
+        .active{
+          font-weight: 600;
+          color: $main-red;
+        }
+        .active .progress-status{
+          background: #ea352d;
+        }
+      }
+      .clearfix:after{
+        @include clearfix;
+      }
+    }
+  }
+}
+  .signup-page__header{
+    margin-top: 0;
+  }
+  .single-main{
+    &__container{
+      &__h2{
+        padding: 32px 16px;
+        font-size: 22px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      &__form{
+        padding: 40px 16px;
+        border-top: 1px solid #f5f5f5;
+        &__content{
+          max-width: 320px;
+          margin: 0 auto;
+          .form-message{
+            margin: 40px 0 0;
+            h2{
+              font-weight: 600;
+              font-size: 14px;
+              display: inline-block;
+            }
+            span{
+              font-size: 12px;
+              display: inline-block;
+            }
+          }
+          .form-message-bottom{
+            margin: 10px 0 0;
+              color: #888;
+              font-size: 13px;
+              display: inline-block;
+            
+          }
+          .form-group{
+            margin: 40px 0 0;
+            &:first-child {
+              margin: 0;
+            }
+            label{
+              font-weight: 600;
+              font-size: 14px;
+              display: inline-block;
+            }
+            &__require{
+              background: $main-red;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: $white;
+              font-size: 12px;
+              vertical-align: baseline;
+            }
+            &__arbitrary{
+              background: #ccc;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: $white;
+              font-size: 12px;
+              vertical-align: baseline;
+            }
+            &__input{
+              width: 100%;
+              margin: 8px 0 0;
+              height: 48px;
+              padding: 10px 16px 8px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: $white;
+              line-height: 1.5;
+              font-size: 16px;
+              box-sizing: border-box;
+            }
+            .select-wrap{
+              margin: 8px 0 0;
+              position: relative;
+              background: #fff;
+              &__default{
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: 0;
+                font-size: 16px;
+                line-height: 1.5;
+                cursor: pointer;
+                -webkit-appearance: none;
+              }
+            }
+            .select-wrap-birth{
+              margin: 8px 0 0;
+              background: #fff;
+              position: relative;
+              &__default{
+                margin: 0 auto;
+                width: 25%;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: 0;
+                font-size: 10px;
+                line-height: 1.5;
+                cursor: pointer;
+                -webkit-appearance: none;
+              }
+            }
+              .form-group-name{
+                span{
+                  font-size: 12px;
+                }
+              }
+            }
+  i.fas.fa-chevron-down{
+    position: absolute;
+    font-size: 20px;
+    margin-left: -35px;
+    margin-top: 15px;
+    color: #888;
+  }
+  .g-recaptcha.signup-recaptcha{
+      margin-top: 0;
+    }
+  .form-confirmation{
+    margin: 30px 0;
+    font-size: 12px;
+  }
+            &__btn{
+            margin: 40px 0 0;
+            background: $main-red;
+            border: 1px solid $main-red;
+            color: $white;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+          }
+  .form-information{
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    margin: 10px 0 0;
+    color: $link-blue;
+  }
+        }
+      }
+    }
+  }
+}
