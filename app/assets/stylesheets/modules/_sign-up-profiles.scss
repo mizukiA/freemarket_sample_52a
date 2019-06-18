@@ -70,14 +70,14 @@
               background: #ccc;
               left: 50%;
             }
+            &__first:before{
+              display: none;
+            }
+            &__last:after{
+              display: none;
+            }
           }
-          .progress-status__first:before{
-            display: none;
-          }
-          .progress-status__last:after{
-            display: none;
-          }
-        }
+
         .active{
           font-weight: 600;
           color: $main-red;
@@ -91,6 +91,7 @@
       }
     }
   }
+}
   .signup-page__header{
     margin-top: 0;
   }
@@ -219,8 +220,7 @@
     margin-top: 15px;
     color: #888;
   }
-  .g-recaptcha.signup-recaptcha
-    {
+  .g-recaptcha.signup-recaptcha{
       margin-top: 0;
     }
   .form-confirmation{
