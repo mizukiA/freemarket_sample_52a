@@ -33,6 +33,8 @@ class UsersController < ApplicationController
   def sms
   end
 
+  def success
+  end
   private
   def user_params
     params.require(:user).permit(:nickname, :email)
