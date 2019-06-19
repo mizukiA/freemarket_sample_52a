@@ -30,6 +30,9 @@ class UsersController < ApplicationController
   def card
   end
 
+  def sms
+  end
+
   private
   def user_params
     params.require(:user).permit(:nickname, :email)
