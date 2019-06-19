@@ -1,0 +1,12 @@
+%section.items-box
+  = link_to item_path(item.id), method: :get do
+    %figure.items-box__figure
+      = image_tag item.item_images.first.image_url, class: "items-box__figure__img"
+    .items-box__text
+      %h3.items-box__text__name= item.name
+      .items-box__text__num
+        .items-box__text__num__price= converting_to_jpy(item.price)
+        .items-box__text__num__likes
+          %i.far.fa-heart
+          %span 5
+      %p.items-box__text__tax (税込)

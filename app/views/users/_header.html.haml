@@ -1,0 +1,806 @@
+%body
+  %header
+    .header-inner
+      .header-top
+        %h1
+          = link_to root_path do
+            %img{:src => "/assets/logo.svg"}/
+        %form
+          %input.form-search{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search"}/
+          %i.fas.fa-search
+      .header-navi
+        %nav.navi-left
+          %ul.navi-left__section
+            %li.navi-left__menu
+              %h2
+                %a{:href => "###"}
+                  %i.fas.fa-list
+                  カテゴリから探す
+              %ul.navi-left__parent-wrapper
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      レディース
+                  %ul.navi-left__child-wrapper
+                    %li.navi-left__child-list
+                      %a{:href => "###"} トップス
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} Tシャツ/カットソー(七分/長袖)
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} シャツ/ブラウス(七分/長袖)
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ジャケット/アウター
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ノーカラージャケット
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} レザージャケット
+                    %li.navi-left__child-list
+                      %a{:href => "###"} パンツ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ショートパンツ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ハーフパンツ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} スカート
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ひざ丈スカート
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} キュロット
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ワンピース
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ひざ丈ワンピース
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} その他
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      メンズ
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} トップス
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} Tシャツ/カットソー(七分/長袖)
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ポロシャツ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ジャケット/アウター
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ノーカラージャケット
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} レザージャケット
+                    %li.navi-left__child-list
+                      %a{:href => "###"} パンツ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ワークパンツ/カーゴパンツ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} チノパン
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 靴
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} サンダル
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} モカシン
+                    %li.navi-left__child-list
+                      %a{:href => "###"} バッグ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} トートバッグ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} リュック/バックパック
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      ベビー・キッズ
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ベビー服（女の子用）~95cm
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} アウター
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} スカート
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ベビー服（男の子用）~95cm
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} アウター
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} おくるみ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ベビー服(男女兼用)~95cm
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} アウター
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} おくるみ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} キッズ服（女の子用）100cm~
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ジャケット/上着
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} トップス(トレーナー)
+                    %li.navi-left__child-list
+                      %a{:href => "###"} キッズ服（男の子用）100cm~
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ジャケット/上着
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} トップス(トレーナー)
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      インテリア・住まい・小物
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} キッチン/食器
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 調理器具
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 弁当用品
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ベッド/マットレス
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} シングルベッド
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ダブルベッド
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ソファ/ソファベッド
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} シングルソファ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} トリプルソファ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 椅子/チェア
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} スツール
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ハイバックチェア
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 机/テーブル
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} カウンターテーブル
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} センターテーブル
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      本・音楽・ゲーム
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 本
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 人文/社会
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 地図/旅行ガイド
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 漫画
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 少年漫画
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 青年漫画
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 雑誌
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ファッション
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 趣味/スポーツ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} CD
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 洋楽
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} クラシック
+                    %li.navi-left__child-list
+                      %a{:href => "###"} DVD/ブルーレイ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 日本映画
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} TVドラマ
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      おもちゃ・ホビー・グッズ
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} おもちゃ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ぬいぐるみ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 模型/プラモデル
+                    %li.navi-left__child-list
+                      %a{:href => "###"} タレントグッズ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ミュージーシャン
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} スポーツ選手
+                    %li.navi-left__child-list
+                      %a{:href => "###"} コミック/アニメグッズ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} キーホルダー
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} カード
+                    %li.navi-left__child-list
+                      %a{:href => "###"} トレーディングカード
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} マジック:ザ・ギャザリング
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} プリパラ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} フィギュア
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} マジック:ザ・ギャザリング
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} デュエルマスターズ
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      コスメ・香水：美容
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ベースメイク
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 化粧下地
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} BBクリーム
+                    %li.navi-left__child-list
+                      %a{:href => "###"} メイクアップ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 口紅
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} リップライナー
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ネイルケア
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} カラージェル
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ネイルアート用品
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 香水
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 香水(男性用)
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ボディミスト
+                    %li.navi-left__child-list
+                      %a{:href => "###"} スキンケア／基礎化粧品
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 乳液/ミルク
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} フェイスクリーム
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      家電・スマホ・カメラ
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} スマートフォン/携帯電話
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} バッテリー/充電器
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} PHS本体
+                    %li.navi-left__child-list
+                      %a{:href => "###"} スマホアクセサリー
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} iPhone用ケース
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} イヤホンジャック
+                    %li.navi-left__child-list
+                      %a{:href => "###"} PC/タブレット
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ノートPC
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ディスプレイ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} カメラ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ビデオカメラ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} レンズ(ズーム)
+                    %li.navi-left__child-list
+                      %a{:href => "###"} テレビ/映像機器
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} プロジェクター
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} DVDレコード
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      スポーツ・レジャー
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ゴルフ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ウエア(男性用)
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} バッグ
+                    %li.navi-left__child-list
+                      %a{:href => "###"} フィッシング
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} リール
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ウエア
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 自転車
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ウエア
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} アクセサリー
+                    %li.navi-left__child-list
+                      %a{:href => "###"} トレーニング／エクササイズ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ウォーキング
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} トレーニング用品
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 野球
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} シューズ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} バット
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      ハンドメイド
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} アクセサリー(女性用)
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} イヤリング
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ブレスレット
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ファッション/ 小物
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} バッグ(男性用)
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 財布(男性用)
+                    %li.navi-left__child-list
+                      %a{:href => "###"} アクセサリー/時計
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 時計(女性用)
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} その他
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 日用品／インテリア
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 家具
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} アート/写真
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 趣味／おもちゃ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} おもちゃ/人形
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} クラフト/布製品
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      チケット
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 音楽
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 女性アイドル
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 国内アーティスト
+                    %li.navi-left__child-list
+                      %a{:href => "###"} スポーツ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 野球
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 格闘技/プロレス
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 演劇/芸能
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 演劇
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 落語
+                    %li.navi-left__child-list
+                      %a{:href => "###"} イベント
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 洋画
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 邦画
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 映画
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 美術館/博物館
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ゴルフ場
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      自動車・オートバイ
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 自動車本体
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} タイヤ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} その他
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 自動車タイヤ/ホイール
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} タイヤ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} その他
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 自動車パーツ
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ブレーキ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ライト
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 自動車アクセサリー
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} カーナビ
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 車外アクセサリー
+                    %li.navi-left__child-list
+                      %a{:href => "###"} オートバイ車体
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                %li.navi-left__parent-list
+                  %h3
+                    %a.white{:href => "###"}
+                      その他
+                  %ul
+                    %li.navi-left__child-list
+                      %a{:href => "###"} まとめ売り
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                    %li.navi-left__child-list
+                      %a{:href => "###"} ペット用品
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 犬用品
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 魚用品/水草
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 食品
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 米
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 果物
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 飲料/酒
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} ソフトドリンク
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 茶
+                    %li.navi-left__child-list
+                      %a{:href => "###"} 日用品/生活雑貨/旅行
+                      %ul.navi-left__grandchild-wrapper
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} すべて
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 日用品/生活雑貨
+                        %li.navi-left__grandchild-list
+                          %a{:href => "###"} 旅行用品
+                %li.navi-left__child-list
+                  %a.white{:href => "###"}
+                    カテゴリー一覧
+            %li.navi-left__menu
+              %h2
+                %a{:href => "###"}
+                  %i.fas.fa-tag
+                  ブランドから探す
+              %ul
+                %li.navi-left__brand-list
+                  %h3
+                    %a{:href => "###"} シャネル
+                %li.navi-left__brand-list
+                  %h3
+                    %a{:href => "###"} ナイキ
+                %li.navi-left__brand-list
+                  %h3
+                    %a{:href => "###"} ルイヴィトン
+                %li.navi-left__brand-list
+                  %h3
+                    %a{:href => "###"} シュプリーム
+                %li.navi-left__brand-list
+                  %h3
+                    %a{:href => "###"} アディダス
+                %li.navi-left__brand-list
+                  %h3
+                    %a{:href => "###"} ブランド一覧
+        .navi-right
+          - if user_signed_in?
+            %ul.header-user__content
+              %li.header-user__content-li
+                %a.color-change{:href => "###"}
+                  %i.far.fa-bell
+                  %span お知らせ
+                  .count
+                %ul.header-user__content-list
+                  %li
+                    %a.user-main__list-link{:href => "###"}
+                      %figure
+                        %img{:src => "../assets/mercari_profile"}/
+                      .user-main__item
+                        .user-main__text
+                          事務局から個別メッセージ「ログイン通知」
+                        %time
+                          %i.far.fa-clock
+                          %span
+                            2時間前
+                      %i.fas.fa-chevron-right
+                  %li
+                    %a.user-main__list-link{:href => "###"}
+                      %figure
+                        %img{:src => "../assets/mercari_profile"}/
+                      .user-main__item
+                        .user-main__text
+                          事務局から個別メッセージ「売上金の残高があります」
+                        %time
+                          %i.far.fa-clock
+                          %span
+                            20時間前
+                      %i.fas.fa-chevron-right
+                  %li
+                    %a.user-main__list-link{:href => "###"}
+                      %figure
+                        %img{:src => "../assets/mercari_profile"}/
+                      .user-main__item
+                        .user-main__text
+                          《今月は手数料無料!》「メルペイあと払い」なら、チャージ不要で日々のお買い物がスムーズに!
+                        %time
+                          %i.far.fa-clock
+                          %span
+                            1日前
+                      %i.fas.fa-chevron-right
+              %li.header-user__content-li
+                %a.color-change{:href => "###"}
+                  %i.fas.fa-check
+                  %span やることリスト
+                %ul.header-user__content-list.to-do-list
+                  %li.nothing
+                    現在、やることリストはありません
+              %li.header-user__content-li
+                %a.header-user__menu.color-change{:href => "/users/#{current_user.id}"}
+                  %figure
+                    %div
+                      %img.header-user__icon{:src => "../assets/member_photo_noimage_thumb.png"}/
+                  %span マイページ
+                .header-user__menu-box
+                  .header-user__menu-box-center
+                    %figure
+                      %div
+                        %img{:src => "../assets/member_photo_noimage_thumb.png"}/
+                      %figcaption
+                        = current_user.nickname
+                    %ul.user-review
+                      %li
+                        %a{:href => "###"}
+                          評価:0
+                      %li
+                        %a{:href => "###"}
+                          出品数:100
+                    %ul.user-sales__point
+                      %li
+                        %a{:href => "###"}
+                          .user-sales__point-left
+                            売上金
+                          .user-sales__point-right
+                            ¥4,200
+                            %i.fas.fa-chevron-right
+                      %li
+                        %a{:href => "###"}
+                          .user-sales__point-left
+                            ポイント
+                          .user-sales__point-right
+                            P:100
+                            %i.fas.fa-chevron-right
+                  %ul.header-user__menu-list
+                    %li
+                      %a.header-user__menu-list-item{:href => "###"}
+                        いいね！一覧
+                        %i.fas.fa-chevron-right
+                    %li
+                      %a.header-user__menu-list-item{:href => "###"}
+                        出品した商品-出品中
+                        %i.fas.fa-chevron-right
+                    %li
+                      %a.header-user__menu-list-item{:href => "###"}
+                        出品した商品-取引中
+                        %i.fas.fa-chevron-right
+                    %li
+                      %a.header-user__menu-list-item{:href => "###"}
+                        出品した商品-売却済み
+                        %i.fas.fa-chevron-right
+                    %li
+                      %a.header-user__menu-list-item{:href => "###"}
+                        購入した商品-取引中
+                        %i.fas.fa-chevron-right
+                    %li
+                      %a.header-user__menu-list-item{:href => "###"}
+                        購入した商品-過去の取引
+                        %i.fas.fa-chevron-right
+          - else
+            %ul.header-user__login-menu
+              %li
+                %a.header-user__signup{:href => "/users/signup"} 新規会員登録
+              %li
+                %a.header-user__signin{:href => "/users/sign_in"} ログイン

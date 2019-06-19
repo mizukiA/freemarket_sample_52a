@@ -1,0 +1,16 @@
+= render partial: 'header'
+%section.owl-carousel.slide-banner
+  %a.slide-banner__link.slide-banner__link--img1{:href => "#"}
+  %a.slide-banner__link.slide-banner__link--img2{:href => "#"}
+  %a.slide-banner__link.slide-banner__link--img3{:href => "#"}
+%main
+  %section.pickup-container
+    %h2.pickup-container__h2 ピックアップカテゴリー
+    %section.pickup-container__items.clearfix
+      %h3.pickup-container__items__h3
+        %a{:href => "#"} 新着アイテム
+      .pickup-container__items__content.clearfix
+        = render @items
+      .pickup-container__items__more
+        %a{:href => "#"} すべての商品を見る
+= render partial: 'footer'
