@@ -217,8 +217,10 @@
     position: absolute;
     font-size: 20px;
     margin-left: -35px;
-    margin-top: 15px;
     color: #888;
+  }
+  .signup-profile-down{
+    margin-top: 15px;
   }
   .g-recaptcha.signup-recaptcha{
       margin-top: 0;
@@ -252,4 +254,7 @@
       }
     }
   }
+}
+.sign-up__profiles{
+  height: 2200px !important;
 }
