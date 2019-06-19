@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       get 'identification'
       get 'card'
       get 'sms'
+      get 'success'
     end
   end
 end

@@ -1,0 +1,117 @@
+.single-container{
+    &__header{
+        height: 128px;
+        text-align: center;
+        background-color: #f5f5f5;
+        h1{
+        margin: 40px 0 0;
+        display: inline-block;
+        a{
+            width: 185px;
+            height: 49px;
+            line-height: 49px;
+            display: inline-block;
+            margin: 0 8px 0 0;
+            color: #0099e8;
+            text-decoration: none;
+            img{
+            width: 185px;
+            height: 49px;
+            vertical-align: middle;
+            }
+        }
+        }
+        &__nav{
+        padding: 40px 0 0 44px;
+        border: 0;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+        text-align: center;
+        ol{
+            margin: 0;
+            list-style: none;
+            li{
+            min-width: 60px;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin: 0 40px 0 0;
+            font-size: 12px;
+            color: #888;
+            &:last-child {
+                margin: 0;
+            }
+            .progress-status{
+                width: 12px;
+                height: 12px;
+                margin: 8px auto 0;
+                background: #ccc;
+                border-radius: 50%;
+                &:before{
+                position: absolute;
+                bottom: 5px;
+                z-index: -1;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                right: 50%;
+                }
+                &:after{
+                position: absolute;
+                bottom: 5px;
+                z-index: -1;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                left: 50%;
+                }
+            }
+            &__first:before{
+                display: none;
+            }
+            &__last:after{
+                display: none;
+            }
+            }
+            .active{
+            font-weight: 600;
+            color: $main-red;
+            }
+            .active .progress-status{
+            background: #ea352d;
+            }
+        }
+        .clearfix:after{
+            @include clearfix;
+        }
+        }
+    }
+    .signup-page__header{
+        margin-top: 0;
+    }
+    .single-main{
+        &__container{
+        &__h2{
+            padding: 32px 16px;
+            font-size: 22px;
+            line-height: 1.5;
+            text-align: center;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        &__sec{
+            padding: 40px 16px;
+            p{
+                text-align: center;
+            }
+        }
+        }
+    }
+}
+  .sign-up__addresses{
+    height: 1210px !important;
+  }
