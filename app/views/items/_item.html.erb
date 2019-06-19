@@ -1,12 +1,12 @@
 <section class="items-box">
-  <a href="#">
+  <%= link_to item_path(item.id), method: :get do %>
     <figure class="items-box__figure">
-      <img class="items-box__figure__img" src="../assets/m73628829419_1.jpg">
+      <%= image_tag item.item_images.first.image_url, class: "items-box__figure__img" %>
     </figure>
     <div class="items-box__text">
-      <h3 class="items-box__text__name">sampleasamplesamplesamplesample</h3>
+      <h3 class="items-box__text__name"><%= item.name %></h3>
       <div class="items-box__text__num">
-        <div class="items-box__text__num__price">¥ 5,000</div>
+        <div class="items-box__text__num__price"><%= converting_to_jpy(item.price) %></div>
         <div class="items-box__text__num__likes">
           <i class="far fa-heart"></i>
           <span>5</span>
@@ -14,5 +14,5 @@
       </div>
       <p class="items-box__text__tax">(税込)</p>
     </div>
-  </a>
+  <% end %>
 </section>

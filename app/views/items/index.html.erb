@@ -12,10 +12,9 @@
         <a href="#">新着アイテム</a>
       </h3>
       <div class="pickup-container__items__content clearfix">
-        <%= render partial: 'item' %>
-        <%= render partial: 'item' %>
-        <%= render partial: 'item' %>
-        <%= render partial: 'item' %>
+        <% @items.each do |item| %>
+          <%= render partial: 'item', locals: {item:item} %>
+        <% end %>
       </div>
       <div class="pickup-container__items__more">
         <a href="#">すべての商品を見る</a>
