@@ -1,0 +1,15 @@
+.single-container.signup-container
+  = render partial: 'single-header'
+  %main.single-main
+    %section.single-main__container
+      %h2.single-main__container__h2 新規会員登録
+      .single-main__container__inner
+        .single-main__container__inner__content
+          %a.single-main__container__inner__content__btn.btn-mail{:href => "/users/sign_up"}
+            %i.far.fa-envelope>
+            メールアドレスで登録
+          %button.single-main__container__inner__content__btn.btn-facebook
+            %i.fab.fa-facebook-square
+            = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path
+          %button.single-main__container__inner__content__btn.btn-google= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path
+  = render partial: 'single-footer'

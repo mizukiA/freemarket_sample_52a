@@ -1,0 +1,128 @@
+= render partial: 'header'
+%main
+  = render partial: 'side-bar'
+  .user-main
+    %section.user-main-icon
+      %a{:href => ""}
+        %figure
+          %img{:src => "../assets/member_photo_noimage_thumb"}/
+        %h2
+          = current_user.nickname
+        .user-main-icon__under
+          %div
+            評価
+            %span 99
+          %div
+            出品数
+            %span 192
+    %section.user-main-content
+      %ul.user-main__tab
+        %li.a.active
+          %h3
+            %div
+              お知らせ
+        %li.b
+          %h3
+            %div
+              やることリスト
+      .user-main__content-main
+        %ul#user-main__content-todo.user-main__list
+          %li
+            %a.user-main__list-link{:href => "###"}
+              %figure
+                %img{:src => "../assets/mercari_profile"}/
+              .user-main__item
+                .user-main__text
+                  事務局から個別メッセージ「ログイン通知」
+                %time
+                  %i.far.fa-clock
+                  %span
+                    2時間前
+              %i.fas.fa-chevron-right
+          %li
+            %a.user-main__list-link{:href => "###"}
+              %figure
+                %img{:src => "../assets/mercari_profile"}/
+              .user-main__item
+                .user-main__text
+                  事務局から個別メッセージ「売上金の残高があります」
+                %time
+                  %i.far.fa-clock
+                  %span
+                    20時間前
+              %i.fas.fa-chevron-right
+          %li
+            %a.user-main__list-link{:href => "###"}
+              %figure
+                %img{:src => "../assets/mercari_profile"}/
+              .user-main__item
+                .user-main__text
+                  《今月は手数料無料!》「メルペイあと払い」なら、チャージ不要で日々のお買い物がスムーズに!
+                %time
+                  %i.far.fa-clock
+                  %span
+                    1日前
+              %i.fas.fa-chevron-right
+          %li.user-main__list-all
+            %a{:href => "###"}
+              一覧を見る
+        %ul#user-main__content-notification.user-main__list
+          %li.nothing
+            現在、やることリストはありません
+    %section.user-main__bought
+      %h2.user-main__bought-head
+        購入した商品
+      %ul.user-main__tab
+        %li.c
+          %h3
+            %div
+              取引中
+        %li.d.active
+          %h3
+            %div
+              過去の取引
+      .user-main__content
+        %ul#user-main__content-deal.user-main__list
+          %li.nothing
+            取引中の商品はありません
+        %ul#user-main__content-old.user-main__list
+          %li
+            %a.user-main__list-link{:href => "###"}
+              %figure
+                %img{:src => "../assets/m36367856020_1"}/
+              .user-main__item
+                .user-main__text
+                  「本格ビジネスサイトを作りながら学ぶWordPressの教科書」を購入しました。
+                  %span
+                    取引が完了しました
+                .user-main__item-status
+                  取引完了
+              %i.fas.fa-chevron-right
+          %li
+            %a.user-main__list-link{:href => "###"}
+              %figure
+                %img{:src => "../assets/m22576455196_1"}/
+              .user-main__item
+                .user-main__text
+                  「マイク付きイヤホン ブラック」を購入しました。
+                  %span
+                    取引が完了しました
+                .user-main__item-status
+                  取引完了
+              %i.fas.fa-chevron-right
+          %li
+            %a.user-main__list-link{:href => "###"}
+              %figure
+                %img{:src => "../assets/m873408328_1"}/
+              .user-main__item
+                .user-main__text
+                  「iphoneケーブル3本&amp;充電器」を購入しました。
+                  %span
+                    取引が完了しました
+                .user-main__item-status
+                  取引完了
+              %i.fas.fa-chevron-right
+          %li.user-main__list-all
+            %a{:href => "###"}
+              一覧を見る
+= render partial: 'footer'
