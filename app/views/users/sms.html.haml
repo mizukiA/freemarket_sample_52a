@@ -1,0 +1,20 @@
+.single-container.sign-up__addresses
+  = render partial: 'single-header2'
+  %main.single-main.signup-page__header
+    %section.single-main__container
+      %h2.single-main__container__h2 電話番号の確認
+      %form.single-main__container__form{action: "#", method: "", novalidate: "novalidate"}
+        .single-main__container__form__content
+          .form-group
+            %label{for: "phone_number"} 携帯電話の番号
+            %input.form-group__input{name: "postal_code", placeholder: "携帯電話の番号を入力", type: "text", value: ""}/
+            %p
+              本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+        .single-main__container__form__content
+          %button.single-main__container__form__content__btn{type: "submit"} SMSを送信する
+          %p
+            ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          .form-group__text.phone_number
+            電話番号の確認が必要な理由
+            %i.fas.fa-chevron-right>
+  = render partial: 'single-footer'
