@@ -106,7 +106,7 @@
                 %option{value: "58"} 2017
                 %option{value: "59"} 2018
                 %option{value: "60"} 2019
-              %i.fas.fa-chevron-down
+              %i.fas.fa-chevron-down.signup-profile-down
               %span.form-group-name 年
               %select.select-wrap-birth__default{name: "birth_month"}
                 %option{value: ""} --
@@ -122,7 +122,7 @@
                 %option{value: "10"} 10
                 %option{value: "11"} 11
                 %option{value: "12"} 12
-              %i.fas.fa-chevron-down
+              %i.fas.fa-chevron-down.signup-profile-down
               %span.form-group-name 月
               %select.select-wrap-birth__default{name: "birth_day"}
                 %option{value: ""} --
@@ -157,13 +157,13 @@
                 %option{value: "29"} 29
                 %option{value: "30"} 30
                 %option{value: "31"} 31
-              %i.fas.fa-chevron-down
+              %i.fas.fa-chevron-down.signup-profile-down
               %span.form-group-name 日
             %span.form-message-bottom ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .form-group
             .g-recaptcha.signup-recaptcha
               -# TODO: reCAPTCHAの実装、現在は代替でイメージを表示
-              = image_tag "440px-RecaptchaLogo.svg.png", size: "200x200" 
+              = image_tag "20190202205039.png", style: "width:100%;"
           .form-confirmation 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
           .single-main__container__form__content
             %button.single-main__container__form__content__btn{type: "submit"} 次へ進む

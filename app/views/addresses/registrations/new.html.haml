@@ -6,11 +6,11 @@
       %form.single-main__container__form{action: "#", method: "", novalidate: "novalidate"}
         .single-main__container__form__content
           .form-group
-            %label{for: "nickname"} 郵便番号
+            %label{for: "postal_code"} 郵便番号
             %span.form-group__require 必須
             %input.form-group__input{name: "postal_code", placeholder: "例) 123-4567", type: "text", value: ""}/
           .form-group
-            %label{for: "email"} 都道府県
+            %label{for: "prefecture"} 都道府県
             %span.form-group__require 必須
             .select-wrap
               %select.select-wrap__default{name: "prefecture"}
@@ -22,15 +22,15 @@
                 %option{value: "5"} 秋田県
               %i.fas.fa-chevron-down
           .form-group
-            %label{for: "password"} 市区町村
+            %label{for: "city"} 市区町村
             %span.form-group__require 必須
             %input.form-group__input{name: "city", placeholder: "例) 横浜市緑区", type: "text"}/
           .form-group
-            %label{for: "password"} 番地
+            %label{for: "address"} 番地
             %span.form-group__require 必須
             %input.form-group__input{name: "address", placeholder: "例)青山1-1-1", type: "text"}/
           .form-group
-            %label{for: "family_name_kanji"} 建物名
+            %label{for: "building"} 建物名
             %span.form-group__arbitrary 任意
             %input.form-group__input{name: "building", placeholder: "例) 柳ビル103", type: "text", value: ""}/
         .single-main__container__form__content
