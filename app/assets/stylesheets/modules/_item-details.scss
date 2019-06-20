@@ -17,7 +17,7 @@
       float: left;
       min-width: 300px;
       max-width: 300px;
-      min-height: 420px;
+      min-height: 360px;
       position: relative;
       margin: 0 auto;
       background: #fafafa;
@@ -25,6 +25,15 @@
         position: relative;
         height: 300px;
         overflow: hidden;
+        &__main-image{
+          width: 100%;
+        }
+        &-small{
+          &__sub{
+            width: 20%;
+            float: left;
+          }
+        }
         &__link {
           display: block;
           &__img1{

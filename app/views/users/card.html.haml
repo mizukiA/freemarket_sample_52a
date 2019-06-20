@@ -8,9 +8,9 @@
       %h3.right-content-middle__head
         クレジットカード一覧
       .right-content-middle__btn
-        %a{:href => ""}
+        = link_to "#" do
           クレジットカードを追加する
       .right-content-bottom
-        %a{:href => "", :target => "_blank"}
+        = link_to "#", target: "_blank" do
           %span 支払い方法について
 = render partial: 'footer'

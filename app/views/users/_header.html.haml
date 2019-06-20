@@ -4,7 +4,7 @@
       .header-top
         %h1
           = link_to root_path do
-            %img{:src => "/assets/logo.svg"}/
+            = image_tag "/assets/logo.svg"
         %form
           %input.form-search{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search"}/
           %i.fas.fa-search
@@ -698,7 +698,7 @@
                   %li
                     %a.user-main__list-link{:href => "###"}
                       %figure
-                        %img{:src => "../assets/mercari_profile"}/
+                        = image_tag "/assets/mercari_profile"
                       .user-main__item
                         .user-main__text
                           事務局から個別メッセージ「ログイン通知」
@@ -710,7 +710,7 @@
                   %li
                     %a.user-main__list-link{:href => "###"}
                       %figure
-                        %img{:src => "../assets/mercari_profile"}/
+                        = image_tag "/assets/mercari_profile"
                       .user-main__item
                         .user-main__text
                           事務局から個別メッセージ「売上金の残高があります」
@@ -722,7 +722,7 @@
                   %li
                     %a.user-main__list-link{:href => "###"}
                       %figure
-                        %img{:src => "../assets/mercari_profile"}/
+                        = image_tag "/assets/mercari_profile"
                       .user-main__item
                         .user-main__text
                           《今月は手数料無料!》「メルペイあと払い」なら、チャージ不要で日々のお買い物がスムーズに!
@@ -742,13 +742,13 @@
                 %a.header-user__menu.color-change{:href => "/users/#{current_user.id}"}
                   %figure
                     %div
-                      %img.header-user__icon{:src => "../assets/member_photo_noimage_thumb.png"}/
+                      = image_tag "/assets/member_photo_noimage_thumb.png", class: "header-user__icon"
                   %span マイページ
                 .header-user__menu-box
                   .header-user__menu-box-center
                     %figure
                       %div
-                        %img{:src => "../assets/member_photo_noimage_thumb.png"}/
+                        = image_tag "/assets/member_photo_noimage_thumb.png"
                       %figcaption
                         = current_user.nickname
                     %ul.user-review
