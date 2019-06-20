@@ -3,16 +3,20 @@
   %h1.item-box__h1 ワンピース
   .item-box__content.clearfix
     .item-box__content__img
-      .owl-carousel.item-slide_banner
-        %a.item-slide_banner__link.item-slide_banner__link__img1{:href => "#"}
-        %a.item-slide_banner__link.item-slide_banner__link__img2{:href => "#"}
-        %a.item-slide_banner__link.item-slide_banner__link__img3{:href => "#"}
+      .item-slide_banner
+        = image_tag "/assets/m73628829419_1.jpg", class: "item-slide_banner__main-image"
+      .item-slide_banner-small
+        = image_tag "/assets/m73628829419_1.jpg", class: "item-slide_banner-small__sub"
+        = image_tag "/assets/m73628829419_1.jpg", class: "item-slide_banner-small__sub"
+        = image_tag "/assets/m73628829419_1.jpg", class: "item-slide_banner-small__sub"
+        = image_tag "/assets/m73628829419_1.jpg", class: "item-slide_banner-small__sub"
+        = image_tag "/assets/m73628829419_1.jpg", class: "item-slide_banner-small__sub"
     %table.item-box__content__table
       %tbody
         %tr
           %th 出品者
           %td
-            %a{:href => "#"} 名前
+            = link_to "名前", "#"
             %div
               .item-box__content__table__rating
                 %i.fas.fa-laugh
@@ -26,20 +30,20 @@
         %tr
           %th カテゴリー
           %td
-            %a{:href => "#"}
+            = link_to "#" do
               %div 親カテゴリー
-            %a{:href => ""}
+            = link_to "#" do
               .item-box__content__table__category
                 %i.fas.fa-chevron-right>
                 子カテゴリー
-            %a{:href => ""}
+            = link_to "#" do
               .item-box__content__table__category
                 %i.fas.fa-chevron-right>
                 孫カテゴリー
         %tr
           %th ブランド
           %td
-            %a{:href => "#"}
+            = link_to "#" do
               %div ブランド名
         %tr
           %th 商品のサイズ
@@ -56,7 +60,7 @@
         %tr
           %th 配送元地域
           %td
-            %a{:href => "#"}
+            = link_to "#" do
               %div 東京都
         %tr
           %th 発送日の目安
@@ -72,52 +76,52 @@
       ワンピースです。ご不明点があればコメントよろしくお願いいたします。
   .item-box__btn.clearfix
     .item-box__btn__left
-      %button.item-box__btn__left__like{:name => "like", :type => "button"}
+      %button.item-box__btn__left__like{name: "like", type: "button"}
         %i.far.fa-heart
         %span いいね!
         %span.like-count 0
-      %a.item-box__btn__left__report.clearfix{:href => "#"}
+      = link_to "#", class: "item-box__btn__left__report clearfix" do
         %i.far.fa-flag
         %span 不適切な商品の報告
     .item-box__btn__right
-      %a{:href => "#"}
+      = link_to "#" do
         %i.fas.fa-lock
         %span あんしん・あんぜんへの取り組み
 .item-message
   .item-message__container
     .item-message__container__inner
-      %form.item-message__container__inner__message-form{:action => "", :method => ""}
+      %form.item-message__container__inner__message-form{action: "", method: ""}
         %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-        %textarea.item-message__container__inner__message-form__textarea{:name => "body", :type => "text"}
-        %button.item-message__container__inner__message-form__submit{:type => "submit"}
+        %textarea.item-message__container__inner__message-form__textarea{name: "body", type: "text"}
+        %button.item-message__container__inner__message-form__submit{type: "submit"}
           %span コメントする
 %ul.item-prev-next.clearfix
   %li.item-prev-next__prev
-    %a{:href => "#"}
+    = link_to "#" do
       %i.fas.fa-chevron-left>
       ピアス
   %li.item-prev-next__next
-    %a{:href => "#"}
+    = link_to "#" do
       %i.fas.fa-chevron-right>
       シャツ
 .item-sns
   %ul.item-sns__btn
     %li
-      %a{:href => "#"}
+      = link_to "#" do
         %i.fab.fa-facebook-square
     %li
-      %a{:href => "#"}
+      = link_to "#" do
         %i.fab.fa-twitter
     %li
-      %a{:href => "#"}
+      = link_to "#" do
         %i.fab.fa-pinterest
 .item-relation
   %section.item-relation__items__container.clearfix
     %h2.item-relation__items__container__h2
-      %a{:href => "#"} 〇〇さんのその他の出品
+      = link_to "〇〇さんのその他の出品", "#"
     .item-relation__items__container__content.clearfix
-      = render partial: 'item'
-      = render partial: 'item'
-      = render partial: 'item'
-      = render partial: 'item'
+      = render partial: 'item2'
+      = render partial: 'item2'
+      = render partial: 'item2'
+      = render partial: 'item2'
 = render partial: 'footer'
