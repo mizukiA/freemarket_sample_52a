@@ -30,6 +30,9 @@ class UsersController < ApplicationController
   def card
   end
 
+  def addcard
+  end
+
   def sms
   end
 
