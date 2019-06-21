@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       get 'profile'
       get 'identification'
       get 'card'
+      get 'addcard'
       get 'sms'
       get 'success'
     end
