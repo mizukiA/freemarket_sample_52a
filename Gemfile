@@ -78,6 +78,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'owlcarousel-rails'
+
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
