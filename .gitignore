@@ -17,4 +17,3 @@
 .byebug_history
 
 config/secrets.yml
-public/
