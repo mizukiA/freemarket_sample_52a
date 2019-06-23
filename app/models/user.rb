@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :password, presence: true, length: { minimum: 6 }
   validates :email, presence: true
+
   
   def self.find_for_google_oauth2(auth)
     user = User.where(email: auth.info.email).first

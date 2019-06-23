@@ -34,6 +34,40 @@
           display: block;
           width: 620px;
           margin: 16px auto 0;
+          .image-box{
+            .image-box-list{
+              li{
+                width: 112px;
+                margin: 0 5px 10px 5px;
+                background-color: #f5f5f5;
+                border: 1px solid #eee;
+                float: left;
+                figure{
+                  height: 116px;
+                  width: auto;
+                  line-height: 116px;
+                  img{
+                    width: 100%;
+                    max-height: 120px;
+                    vertical-align: middle;
+                  }
+                }
+                div{
+                  a{
+                    display: inline-block;
+                    width: 49%;
+                    line-height: 44px;
+                    text-align: center;
+                    color: #0099e8;
+                    cursor: pointer;
+                  }
+                  .border{
+                    border-right: 1px solid #eee;
+                  }
+                }
+              }
+            }
+          }
           &__item{
             width: 100%;
             margin-left: 0;
@@ -53,6 +87,10 @@
             box-sizing: border-box;
             input{
               display: none;
+            }
+            img{
+              height: 150px;
+              width: auto;
             }
             pre{
               position: absolute;
@@ -300,4 +338,10 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
   }
+}
+.sell-container__inner__form__uploader-box__container__item{
+  display: none;
+}
+.sell-container__inner__form__uploader-box__container__item:nth-of-type(1){
+  display: block;
 }
