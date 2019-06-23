@@ -1,0 +1,44 @@
+.single-container.sign-up__addresses
+  = render partial: 'single-header'
+  %main.single-main.signup-page__header
+    %section.single-main__container
+      %h2.single-main__container__h2 住所入力
+      %form.single-main__container__form{action: "#", method: "", novalidate: "novalidate"}
+        .single-main__container__form__content
+          .form-group
+            %label{for: "postal_code"} 郵便番号
+            %span.form-group__require 必須
+            %input.form-group__input{name: "postal_code", placeholder: "例) 123-4567", type: "text", value: ""}/
+          .form-group
+            %label{for: "prefecture"} 都道府県
+            %span.form-group__require 必須
+            .select-wrap
+              %select.select-wrap__default{name: "prefecture"}
+                %option{value: ""} ---
+                %option{value: "1"} 北海道
+                %option{value: "2"} 青森県
+                %option{value: "3"} 岩手県
+                %option{value: "4"} 宮城県
+                %option{value: "5"} 秋田県
+              %i.fas.fa-chevron-down
+          .form-group
+            %label{for: "city"} 市区町村
+            %span.form-group__require 必須
+            %input.form-group__input{name: "city", placeholder: "例) 横浜市緑区", type: "text"}/
+          .form-group
+            %label{for: "address"} 番地
+            %span.form-group__require 必須
+            %input.form-group__input{name: "address", placeholder: "例)青山1-1-1", type: "text"}/
+          .form-group
+            %label{for: "building"} 建物名
+            %span.form-group__arbitrary 任意
+            %input.form-group__input{name: "building", placeholder: "例) 柳ビル103", type: "text", value: ""}/
+          .form-group
+            %label{for: "tel"} 電話番号
+            -# = f.label :電話番号
+            %span.form-group__require 必須
+            %input.form-group__input{name: "tel", placeholder: "例) 01234567890", type: "text", value: ""}/
+            -# = f.text_field :tel, class: "form-group__input", placeholder: "例) 012-3456-7890", autofocus: "true"
+        .single-main__container__form__content
+          %button.single-main__container__form__content__btn{type: "submit"} 次へ進む
+  = render partial: 'single-footer'

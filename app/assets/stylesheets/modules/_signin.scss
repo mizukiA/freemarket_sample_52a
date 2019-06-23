@@ -60,7 +60,7 @@
         }
         .btn-google{
           margin: 16px 0 0;
-          background: #fff url("google.svg") no-repeat 3px top;
+          background-image: #fff image-url("google.svg") no-repeat 3px top;
           border: #979797 solid 1px;
           color: #333;
           a{
@@ -120,5 +120,5 @@
   }
 }
 .signin-container{
-  height: 1170px !important;
+  height: 1230px !important;
 }

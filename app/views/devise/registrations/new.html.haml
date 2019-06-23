@@ -1,25 +1,65 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname, autofocus: true
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.single-container.sign-up__profiles
+  = render partial: 'single-header'
+  %main.single-main.signup-page__header
+    %section.single-main__container
+      %h2.single-main__container__h2 会員情報入力
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "single-main__container__form"}) do |f|
+        .single-main__container__form__content
+          .form-group
+            = f.label :ニックネーム
+            %span.form-group__require 必須
+            = f.text_field :nickname, class: "form-group__input", placeholder: "例) メルカリ太郎", autofocus: "true"
+          .form-group
+            = f.label :メールアドレス
+            %span.form-group__require 必須
+            = f.email_field :email, class: "form-group__input", placeholder: "PC・携帯どちらでも可", autofocus: "true", autocomplete: "email"
+          .form-group
+            = f.label :パスワード
+            %span.form-group__require 必須
+            = f.password_field :password, class: "form-group__input", placeholder: "6文字以上", autocomplete: "new-password"
+          .form-group
+            = f.label :パスワード（確認）
+            %span.form-group__require 必須
+            = f.password_field :password_confirmation, class: "form-group__input", placeholder: "6文字以上", autocomplete: "new-password"
+          .form-message
+            %h2 本人確認
+            %span 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .form-group
+            = f.label :姓（全角）
+            %span.form-group__require 必須
+            = f.text_field :family_name, class: "form-group__input", placeholder: "例) 山田", autofocus: "true"
+          .form-group
+            = f.label :名（全角）
+            %span.form-group__require 必須
+            = f.text_field :last_name, class: "form-group__input", placeholder: "例) 彩", autofocus: "true"
+          .form-group
+            = f.label :姓カナ（全角）
+            %span.form-group__require 必須
+            = f.text_field :family_name_kana, class: "form-group__input", placeholder: "例) ヤマダ", autofocus: "true"
+          .form-group
+            = f.label :名カナ（全角）
+            %span.form-group__require 必須
+            = f.text_field :last_name_kana, class: "form-group__input", placeholder: "例) アヤ", autofocus: "true"
+          .form-group
+            = f.label :生年月日
+            %span.form-group__require 必須
+            .select-wrap-birth
+              = f.select :birth_year, User.birth_years.keys, {prompt: '--'}, class: "select-wrap-birth__default"
+              %i.fas.fa-chevron-down.signup-profile-down
+              %span.form-group-name 年
+              = f.select :birth_month, User.birth_months.keys, {prompt: '--'}, class: "select-wrap-birth__default"
+              %i.fas.fa-chevron-down.signup-profile-down
+              %span.form-group-name 月
+              = f.select :birth_day, User.birth_days.keys, {prompt: '--'}, class: "select-wrap-birth__default"
+              %i.fas.fa-chevron-down.signup-profile-down
+              %span.form-group-name 日
+            %span.form-message-bottom ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+          .form-group
+            .g-recaptcha.signup-recaptcha
+              -# TODO: reCAPTCHAの実装、現在は代替でイメージを表示
+              = image_tag "20190202205039.png", style: "width:100%;"
+          .form-confirmation 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+          .single-main__container__form__content
+            = f.submit "次へ進む", class: "single-main__container__form__content__btn"
+          .form-information 本人情報の登録について
+  = render partial: 'single-footer'

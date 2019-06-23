@@ -7,10 +7,10 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def create
-    @user = Users.create(user_params)
-    redirect_to root_path
-  end
+  # def create
+  #   @user = Users.create(user_params)
+  #   redirect_to root_path
+  # end
 
   def update
   end
@@ -30,14 +30,26 @@ class UsersController < ApplicationController
   def card
   end
 
+  def addcard
+  end
+
   def sms
   end
 
   def success
   end
-  private
-  def user_params
-    params.require(:user).permit(:nickname, :email)
-  end
-  
+  # private
+  # def user_params
+  #   params.require(:user).permit( :nickname,
+  #                                 :email,
+  #                                 :family_name,
+  #                                 :last_name,
+  #                                 :family_name_kana,
+  #                                 :last_name_kana,
+  #                                 :birth_year,
+  #                                 :birth_month,
+  #                                 :birth_day
+  #                               )
+  # end
+
 end
