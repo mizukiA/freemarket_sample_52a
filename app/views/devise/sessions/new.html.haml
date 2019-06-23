@@ -4,7 +4,7 @@
     .login-panel
       .login-panel__no-account
         %p アカウントをお持ちでない方はこちら
-        %a{:href => "/users/signup"} 新規会員登録
+        = link_to "新規会員登録", "/users/signup"
       .login-panel__form-inner
         %button.single-main__container__inner__content__btn.btn-facebook
           %i.fab.fa-facebook-square
@@ -17,7 +17,7 @@
           .form-group
             = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "form-group__input"
           .form-group
-            %img{:src => "../assets/20190202205039.png", :style => "width:100%;"}/
+            = image_tag "20190202205039.png", style: "width:100%;"
           = f.submit "ログイン", class: "login-panel__form-inner__submit"
-          %a{:href => "#"} パスワードをお忘れの方
+          = link_to "パスワードをお忘れの方", "#"
   = render partial: 'single-footer'

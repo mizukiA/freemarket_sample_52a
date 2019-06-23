@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks"}
-  devise_for :cards
-  devise_for :addresses
-  devise_for :profiles
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'items#index'
@@ -20,8 +17,12 @@ Rails.application.routes.draw do
       get 'profile'
       get 'identification'
       get 'card'
+      get 'addcard'
       get 'sms'
       get 'success'
     end
   end
+
+  resources :addresses, only: [:new, :create]
+  resources :cards, only: [:new, :create]
 end

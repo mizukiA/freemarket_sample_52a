@@ -1,17 +1,25 @@
 class ApplicationController < ActionController::Base
-  before_action :basic_auth, if: :production?  
+  before_action :basic_auth, if: :production?
   protect_from_forgery with: :exception
-  # before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # protected
+  protected
 
-  # def configure_permitted_parameters
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
-  # end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :nickname,
+                                                        :family_name,
+                                                        :last_name,
+                                                        :family_name_kana,
+                                                        :last_name_kana,
+                                                        :birth_year,
+                                                        :birth_month,
+                                                        :birth_day
+                                                      ])
+  end
 
-  # def after_sign_out_path_for(resource)
-  #   root_path # サインアウト後のリダイレクト先URL
-  # end
+  def after_sign_out_path_for(resource)
+    root_path # サインアウト後のリダイレクト先URL
+  end
 
   private
 
@@ -24,4 +32,5 @@ class ApplicationController < ActionController::Base
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
     end
   end
+
 end
