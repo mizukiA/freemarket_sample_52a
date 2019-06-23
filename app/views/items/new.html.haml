@@ -1,11 +1,13 @@
 .single-container
   = render partial: 'single-header'
   %main.single-main
+    %p
+      = flash[:notice]
     %section.single-main__container
       .sell-container
         .sell-container__inner
           %h2.sell-container__inner__h2 商品情報を入力
-          = form_for @item,:html => {:class => "sell-container__inner__form"} do |f|
+          = form_for @item,html: {class: "sell-container__inner__form"} do |f|
             .sell-container__inner__form__uploader-box
               %h3.sell-container__inner__form__uploader-box__h3
                 出品画像
