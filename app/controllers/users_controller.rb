@@ -33,9 +33,6 @@ class UsersController < ApplicationController
   def addcard
   end
 
-  def sms
-  end
-
   def success
   end
   private
