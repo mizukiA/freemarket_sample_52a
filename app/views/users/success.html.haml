@@ -7,5 +7,5 @@
         %p.single-main__container__p
           ありがとうございます。<br>会員登録が完了しました。
         .single-main__container__form__content
-          %button.single-main__container__form__content__btn{type: "submit"} メルカリを始める
+          =link_to "メルカリを始める", root_path, class: "single-main__container__form__content__btn"
   = render partial: 'single-footer'
