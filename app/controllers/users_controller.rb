@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authenticate_user!, except: :signup
+  before_action :authenticate_user!, except: :signup
  
   def show
   end
