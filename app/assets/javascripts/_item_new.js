@@ -22,6 +22,7 @@ $(function(){
         var reader = new FileReader();
         reader.onloadend = (function(file){
           return function(e){
+            var image = `<li class="image-count"> <figure><img src="${e.target.result}"></figure> <div><a  class="border">編集</a><a class="delete1">削除</a></div> </li> `
             $('.image-box-list').append(image)
             $('.sell-container__inner__form__uploader-box__container__item:nth-of-type(2)').css('display','none');
             $('.sell-container__inner__form__uploader-box__container__item:nth-of-type(3)').css({'display':'block','width':'363px'});

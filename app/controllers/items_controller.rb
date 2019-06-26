@@ -19,6 +19,17 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    @items = Item.where(@item.saler_id == params[:id]).limit(12)
+    @comment = Comment.new
+    @comments = @item.comments.includes(:user)
+
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to "/users/#{item.saler_id}"
   end
 
   def buy
