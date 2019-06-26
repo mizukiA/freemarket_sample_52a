@@ -14,8 +14,14 @@
         .login-panel__form-inner
           .form-group
             = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form-group__input"
+            - if resource.errors.messages[:email].present?
+              - resource.errors.messages[:email].each do |message|
+                %p.error= message
           .form-group
             = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "form-group__input"
+            - if resource.errors.messages[:password].present?
+              - resource.errors.messages[:password].each do |message|
+                %p.error= message
           .form-group
             = image_tag "20190202205039.png", style: "width:100%;"
           = f.submit "ログイン", class: "login-panel__form-inner__submit"

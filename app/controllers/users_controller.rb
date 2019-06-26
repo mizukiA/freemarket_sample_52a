@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authenticate_user!, except: :signup
+  before_action :authenticate_user!, except: :signup
  
   def show
   end
@@ -31,9 +31,6 @@ class UsersController < ApplicationController
   end
 
   def addcard
-  end
-
-  def sms
   end
 
   def success
