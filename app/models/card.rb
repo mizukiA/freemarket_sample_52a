@@ -1,5 +1,5 @@
 class Card < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   def self.expiration_years
     min_year = Time.new.year.to_s[2,2].to_i
@@ -11,14 +11,12 @@ class Card < ApplicationRecord
 
   validates :card_number,
     presence: { message: "カード番号を入力してください" },
-    uniqueness: { message: "この番号は既に登録されています。" },
+    uniqueness: { message: "この番号は既に登録されています" },
     format: { with: /\A\d{14,16}\z/, allow_blank: true, message: "この番号は登録できません" }
   validates :expiration_year,
-    presence: true,
-    format: { with: /#{Card.expiration_years.join('|')}/, message: "年を選択してください" }
+    presence: { message: "年を選択してください" }
   validates :expiration_month,
-    presence: true,
-    format: { with: /0[1-9]|1[0-2]/, message: "月を選択してください" }
+    presence: { message: "月を選択してください" }
   validates :security_code,
     presence: { message: "セキュリティコードを選択してください" },
     format: { with: /\A\d{3,4}\z/, allow_blank: true, message: "この番号は登録できません" }

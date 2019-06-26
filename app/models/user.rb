@@ -13,7 +13,7 @@ class User < ApplicationRecord
     presence: { message: "ニックネームを入力してください" }
   validates :email,
     presence: { message: "メールアドレスを入力してください" },
-    uniqueness: { message: "メールアドレスに誤りがあります。ご確認いただき、正しく変更してください" },
+    uniqueness: { message: "既に存在するメールアドレスです" },
     format: { with: /\A[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*[a-zA-Z]+\z/, allow_blank: true, message: "フォーマットが不適切です" }
   validates :password,
     presence: { message: "パスワードを入力してください" },
