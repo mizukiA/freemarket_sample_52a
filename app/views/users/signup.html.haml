@@ -10,6 +10,6 @@
             メールアドレスで登録
           %button.single-main__container__inner__content__btn.btn-facebook
             %i.fab.fa-facebook-square
-            = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path
-          %button.single-main__container__inner__content__btn.btn-google= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path
+            = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post
+          %button.single-main__container__inner__content__btn.btn-google= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
   = render partial: 'single-footer'
