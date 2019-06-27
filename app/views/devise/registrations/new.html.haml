@@ -9,18 +9,30 @@
             = f.label :ニックネーム
             %span.form-group__require 必須
             = f.text_field :nickname, class: "form-group__input", placeholder: "例) メルカリ太郎", autofocus: "true"
+            - if resource.errors.messages[:nickname].present?
+              - resource.errors.messages[:nickname].each do |message|
+                %p.error= message
           .form-group
             = f.label :メールアドレス
             %span.form-group__require 必須
             = f.email_field :email, class: "form-group__input", placeholder: "PC・携帯どちらでも可", autofocus: "true", autocomplete: "email"
+            - if resource.errors.messages[:email].present?
+              - resource.errors.messages[:email].each do |message|
+                %p.error= message
           .form-group
             = f.label :パスワード
             %span.form-group__require 必須
             = f.password_field :password, class: "form-group__input", placeholder: "6文字以上", autocomplete: "new-password"
+            - if resource.errors.messages[:password].present?
+              - resource.errors.messages[:password].each do |message|
+                %p.error= message
           .form-group
             = f.label :パスワード（確認）
             %span.form-group__require 必須
             = f.password_field :password_confirmation, class: "form-group__input", placeholder: "6文字以上", autocomplete: "new-password"
+            - if resource.errors.messages[:password_confirmation].present?
+              - resource.errors.messages[:password_confirmation].each do |message|
+                %p.error= message
           .form-message
             %h2 本人確認
             %span 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
@@ -28,18 +40,30 @@
             = f.label :姓（全角）
             %span.form-group__require 必須
             = f.text_field :family_name, class: "form-group__input", placeholder: "例) 山田", autofocus: "true"
+            - if resource.errors.messages[:family_name].present?
+              - resource.errors.messages[:family_name].each do |message|
+                %p.error= message
           .form-group
             = f.label :名（全角）
             %span.form-group__require 必須
             = f.text_field :last_name, class: "form-group__input", placeholder: "例) 彩", autofocus: "true"
+            - if resource.errors.messages[:last_name].present?
+              - resource.errors.messages[:last_name].each do |message|
+                %p.error= message
           .form-group
             = f.label :姓カナ（全角）
             %span.form-group__require 必須
             = f.text_field :family_name_kana, class: "form-group__input", placeholder: "例) ヤマダ", autofocus: "true"
+            - if resource.errors.messages[:family_name_kana].present?
+              - resource.errors.messages[:family_name_kana].each do |message|
+                %p.error= message
           .form-group
             = f.label :名カナ（全角）
             %span.form-group__require 必須
             = f.text_field :last_name_kana, class: "form-group__input", placeholder: "例) アヤ", autofocus: "true"
+            - if resource.errors.messages[:last_name_kana].present?
+              - resource.errors.messages[:last_name_kana].each do |message|
+                %p.error= message
           .form-group
             = f.label :生年月日
             %span.form-group__require 必須
@@ -53,6 +77,15 @@
               = f.select :birth_day, User.birth_days.keys, {prompt: '--'}, class: "select-wrap-birth__default"
               %i.fas.fa-chevron-down.signup-profile-down
               %span.form-group-name 日
+            - if resource.errors.messages[:birth_year].present?
+              - resource.errors.messages[:birth_year].each do |message|
+                %p.error= message
+            - if resource.errors.messages[:birth_month].present?
+              - resource.errors.messages[:birth_month].each do |message|
+                %p.error= message
+            - if resource.errors.messages[:birth_day].present?
+              - resource.errors.messages[:birth_day].each do |message|
+                %p.error= message
             %span.form-message-bottom ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .form-group
             .g-recaptcha.signup-recaptcha

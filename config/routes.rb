@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+  devise_for :users, controllers: { 
+                                    registrations: "users/registrations",
+                                    confirmations: "users/confirmations",
+                                    sessions: "users/sessions",
+                                    passwords: "users/passwords",
+                                    omniauth_callbacks: "users/omniauth_callbacks"
+                                  }
+
+  devise_scope :user do
+    get 'sms', to: 'users/registrations#sms'
+  end
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'items#index'
@@ -18,7 +28,6 @@ Rails.application.routes.draw do
       get 'identification'
       get 'card'
       get 'addcard'
-      get 'sms'
       get 'success'
     end
   end

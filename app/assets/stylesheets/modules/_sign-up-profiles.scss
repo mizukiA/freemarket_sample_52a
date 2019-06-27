@@ -191,6 +191,9 @@
               margin: 8px 0 0;
               background: #fff;
               position: relative;
+              .field_with_errors{
+                display: inline;
+              }
               &__default{
                 margin: 0 auto;
                 width: 25%;
@@ -256,5 +259,9 @@
   }
 }
 .sign-up__profiles{
-  height: 2111px !important;
+  height: 2425px !important;
+}
+.error{
+  color: $main-red;
+  font-size: 13px;
 }
