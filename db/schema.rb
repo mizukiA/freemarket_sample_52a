@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20190623101556) do
   end
 
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number",      null: false
+    t.string   "card_number",      null: false
     t.string   "expiration_year",  null: false
     t.string   "expiration_month", null: false
     t.string   "security_code",    null: false

@@ -11,7 +11,7 @@
             %p
               本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
         .single-main__container__form__content
-          %button.single-main__container__form__content__btn{type: "submit"} SMSを送信する
+          =link_to "SMSを送信する", new_address_path, class: "single-main__container__form__content__btn"
           %p
             ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
           .form-group__text.phone_number
