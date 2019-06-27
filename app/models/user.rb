@@ -9,10 +9,33 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   
-  validates :nickname, presence: true
-  validates :password, presence: true, length: { minimum: 6 }
-  validates :email, presence: true
-
+  validates :nickname,
+    presence: { message: "ニックネームを入力してください" }
+  validates :email,
+    presence: { message: "メールアドレスを入力してください" },
+    uniqueness: { message: "既に存在するメールアドレスです" },
+    format: { with: /\A[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*[a-zA-Z]+\z/, allow_blank: true, message: "フォーマットが不適切です" }
+  validates :password,
+    presence: { message: "パスワードを入力してください" },
+    confirmation: { message: "パスワードとパスワード（確認）が一致しません" },
+    length: { minimum: 6, message: "パスワードは6文字以上で入力してください" },
+    format: { with: /\A(?=.*[^\d])+/, allow_blank: true, message: "数字のみのパスワードは設定できません" }
+  validates :password_confirmation,
+    presence: { message: "パスワード(確認)を入力してください" }
+  validates :family_name,
+    presence: { message: "姓を入力してください" }
+  validates :last_name,
+    presence: { message: "名を入力してください" }
+  validates :family_name_kana,
+    presence: { message: "姓(カナ)を入力してください" }
+  validates :last_name_kana,
+    presence: { message: "名(カナ)を入力してください" }
+  validates :birth_year,
+    presence: { message: "生年を選択してください" }
+  validates :birth_month,
+    presence: { message: "生年月を選択してください" }
+  validates :birth_day,
+    presence: { message: "生年日を選択してください" }
   
   def self.find_for_google_oauth2(auth)
     user = User.where(email: auth.info.email).first
