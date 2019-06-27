@@ -1,12 +1,16 @@
-%section.items-box
-  = link_to "#", method: :get do
-    %figure.items-box__figure
-      = image_tag "m73628829419_1.jpg", class: "items-box__figure__img"
-    .items-box__text
-      %h3.items-box__text__name ワンピース
-      .items-box__text__num
-        .items-box__text__num__price ¥ 5,000
-        .items-box__text__num__likes
-          %i.far.fa-heart
-          %span 5
-      %p.items-box__text__tax (税込)
+- @items.each do |item|
+  %section.items-box
+    = link_to "/items/#{item.id}", method: :get do
+      %figure.items-box__figure
+        = image_tag item.item_images.first.image_url, class: "items-box__figure__img"
+      .items-box__text
+        %h3.items-box__text__name
+          = item.saler.nickname
+        .items-box__text__num
+          .items-box__text__num__price
+            ¥
+            = item.price
+          .items-box__text__num__likes
+            %i.far.fa-heart
+            %span 5
+        %p.items-box__text__tax (税込)

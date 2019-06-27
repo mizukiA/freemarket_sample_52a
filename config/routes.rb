@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     collection do
       get 'buy'
     end
+    resources :comments, only: [:create,:destroy]
   end
 
   resources :users do

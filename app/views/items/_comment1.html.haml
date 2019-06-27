@@ -1,0 +1,72 @@
+- if @comments && user_signed_in?
+  - @comments.each do |comment|
+    - if comment.user_id != current_user.id
+      %li.item-message__container-comment-li
+        %a.item-message__container-comment-li__user-icon
+          %figure
+            %div
+              = image_tag "member_photo_noimage_thumb"
+            %figcaption
+              = comment.user.nickname
+          - if comment.user_id == @item.saler_id
+            .item-message__container-comment-li__user-icon__saller
+              出品者
+        .item-message__container-comment-li__body
+          .item-message__container-comment-li__body-text
+            = comment.comment
+          .item-message__container-comment-li__body-under
+            %time.item-message__container-comment-li__body-under-left(datetime="#{comment.created_at}")
+              %i.far.fa-clock
+              %span<>
+                = time_ago_in_words(comment.created_at)+"前"
+            .item-message__container-comment-li__body-under-right
+              %i.fas.fa-flag-usa
+              - if @item.saler_id == current_user.id
+                = link_to "/items/#{@item.id}/comments/#{comment.id}", method: :delete do
+                  %i.fas.fa-trash-alt
+    - elsif comment.user_id == current_user.id
+      %li.item-message__container-comment-li-current
+        %a.item-message__container-comment-li-current__user-icon
+          %figure
+            %div
+              = image_tag "member_photo_noimage_thumb"
+            %figcaption
+              = comment.user.nickname
+          - if comment.user_id == @item.saler_id
+            .item-message__container-comment-li-current__user-icon__saller
+              出品者
+        .item-message__container-comment-li-current__body
+          .item-message__container-comment-li-current__body-text
+            = comment.comment
+          .item-message__container-comment-li-current__body__under
+            %time.item-message__container-comment-li-current__body__under-left(datetime="#{comment.created_at}")
+              %i.far.fa-clock
+              %span<>
+                = time_ago_in_words(comment.created_at)+"前"
+            .item-message__container-comment-li-current__body__under-right
+              %i.fas.fa-flag-usa
+              - if @item.saler_id == current_user.id
+                = link_to "/items/#{@item.id}/comments/#{comment.id}", method: :delete do
+                  %i.fas.fa-trash-alt
+- elsif !user_signed_in?
+  - @comments.each do |comment|
+    %li.item-message__container-comment-li
+      %a.item-message__container-comment-li__user-icon
+        %figure
+          %div
+            = image_tag "member_photo_noimage_thumb"
+          %figcaption
+            = comment.user.nickname
+        - if comment.user_id == @item.saler_id
+          .item-message__container-comment-li__user-icon__saller
+            出品者
+      .item-message__container-comment-li__body
+        .item-message__container-comment-li__body-text
+          = comment.comment
+        .item-message__container-comment-li__body-under
+          %time.item-message__container-comment-li__body-under-left(datetime="#{comment.created_at}")
+            %i.far.fa-clock
+            %span<>
+              = time_ago_in_words(comment.created_at)+"前"
+          .item-message__container-comment-li__body-under-right
+            %i.fas.fa-flag-usa
