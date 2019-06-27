@@ -1,22 +1,20 @@
 = render partial: 'header'
 %section.item-box
-  %h1.item-box__h1 ワンピース
+  %h1.item-box__h1 
+    = @item.name
   .item-box__content.clearfix
     .item-box__content__img
-      .item-slide_banner
-        = image_tag "m73628829419_1.jpg", class: "item-slide_banner__main-image"
+      .item-slide_banner#test
+        = image_tag "#{@item.item_images.first.image_url}", class: "item-slide_banner__main-image"
       .item-slide_banner-small
-        = image_tag "m73628829419_1.jpg", class: "item-slide_banner-small__sub"
-        = image_tag "m73628829419_1.jpg", class: "item-slide_banner-small__sub"
-        = image_tag "m73628829419_1.jpg", class: "item-slide_banner-small__sub"
-        = image_tag "m73628829419_1.jpg", class: "item-slide_banner-small__sub"
-        = image_tag "m73628829419_1.jpg", class: "item-slide_banner-small__sub"
+        - @item.item_images.each do |image|
+          = image_tag "#{image.image_url}", class: "item-slide_banner-small__sub"
     %table.item-box__content__table
       %tbody
         %tr
           %th 出品者
           %td
-            = link_to "名前", "#"
+            = link_to "#{@item.saler.nickname}", "#"
             %div
               .item-box__content__table__rating
                 %i.fas.fa-laugh
@@ -50,10 +48,12 @@
           %td M
         %tr
           %th 商品の状態
-          %td 目立った傷なし
+          %td 
+            = @item.condition
         %tr
           %th 配送料の負担
-          %td 送料込み(出品者負担)
+          %td 
+            = @item.delivery_fee
         %tr
           %th 配送の方法
           %td メルカリ便
@@ -61,19 +61,21 @@
           %th 配送元地域
           %td
             = link_to "#" do
-              %div 東京都
+              = @item.area
         %tr
           %th 発送日の目安
           %td 2〜3日で発送
   .item-box__price
-    %span.item-box__price__price ¥ 3,000
+    %span.item-box__price__price 
+      ¥
+      = @item.price
     %span.item-box__price__tax (税込)
     %span.item-box__price__fee 送料込み
   %a.item-box__buy-btn
     購入画面に進む
   .item-box__description
     %p.item-box__description__inner
-      ワンピースです。ご不明点があればコメントよろしくお願いいたします。
+      = @item.description
   .item-box__btn.clearfix
     .item-box__btn__left
       %button.item-box__btn__left__like{name: "like", type: "button"}
@@ -87,14 +89,20 @@
       = link_to "#" do
         %i.fas.fa-lock
         %span あんしん・あんぜんへの取り組み
+- if user_signed_in? && current_user.id == @item.saler_id
+  = render partial: 'delete_or_edit'
 .item-message
   .item-message__container
-    .item-message__container__inner
-      %form.item-message__container__inner__message-form{action: "", method: ""}
-        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-        %textarea.item-message__container__inner__message-form__textarea{name: "body", type: "text"}
-        %button.item-message__container__inner__message-form__submit{type: "submit"}
-          %span コメントする
+    .item-message__container-comment
+      %ul.item-message__container-comment__ul
+        = render partial: 'comment1'
+    - if user_signed_in?
+      .item-message__container__inner
+        = form_for [@item,@comment] do |f|
+          %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          = f.text_area :comment, class:"item-message__container__inner__message-form__textarea"
+          %button.item-message__container__inner__message-form__submit{type: "submit"}
+            %span コメントする
 %ul.item-prev-next.clearfix
   %li.item-prev-next__prev
     = link_to "#" do
@@ -118,10 +126,7 @@
 .item-relation
   %section.item-relation__items__container.clearfix
     %h2.item-relation__items__container__h2
-      = link_to "〇〇さんのその他の出品", "#"
+      = link_to "#{@item.saler.nickname}さんのその他の出品", "#"
     .item-relation__items__container__content.clearfix
-      = render partial: 'item2'
-      = render partial: 'item2'
-      = render partial: 'item2'
       = render partial: 'item2'
 = render partial: 'footer'

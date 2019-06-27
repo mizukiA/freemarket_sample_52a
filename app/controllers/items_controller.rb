@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :destroy]
   def index
     @items = Item.order("created_at DESC")
   end
@@ -19,7 +20,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @items = Item.where(@item.saler_id == params[:id]).limit(12)
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
@@ -27,9 +27,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item = Item.find(params[:id])
-    item.destroy
-    redirect_to "/users/#{item.saler_id}"
+    if @item.destroy
+      redirect_to user_path
+    else  
+      redirect_to action: 'show'
+      flash[:notice] = "削除に失敗しました"
+    end
   end
 
   def buy
@@ -50,6 +53,10 @@ class ItemsController < ApplicationController
                                  :brand_id,
                                  item_images_attributes: [:image_url]
                                  ).merge(saler_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
 

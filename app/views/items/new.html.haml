@@ -43,20 +43,20 @@
                     %span 必須
                   %div
                     .select-wrap
-                      = f.select :category_id,[["---",""],["ベビー・キッズ","3"]],{},class:'select-wrap__default' 
+                      = f.select :category_id,[["---",""],["ベビー・キッズ","ベビー・キッズ"]],{},class:'select-wrap__default' 
                       %i.fas.fa-chevron-down
                     .select-wrap
-                      = f.select :category_id, [["---",""],["トップス","4"],["ジャケット/アウター","5"],["パンツ","6"]],{},class:'select-wrap__default'
+                      = f.select :category_id, [["---",""],["トップス","トップス"],["ジャケット/アウター","ジャケット/アウター"],["パンツ","アンドゥー"]],{},class:'select-wrap__default'
                       %i.fas.fa-chevron-down
                     .select-wrap
-                      = f.select :category_id, [["---",""],["Tシャツ/カットソー(半袖/袖なし)","7"],["Tシャツ/カットソー(七分/長袖)","8"],["シャツ/ブラウス(半袖/袖なし)","9"]],{},class:'select-wrap__default'
+                      = f.select :category_id, [["---",""],["Tシャツ/カットソー(半袖/袖なし)","Tシャツ/カットソー(半袖/袖なし)"],["Tシャツ/カットソー(七分/長袖)","Tシャツ/カットソー(七分/長袖)"],["シャツ/ブラウス(半袖/袖なし)","シャツ/ブラウス(半袖/袖なし)"]],{},class:'select-wrap__default'
                       %i.fas.fa-chevron-down
                 .sell__form-group
                   = f.label :condition do
                     商品の状態
                     %span 必須
                   .select-wrap
-                    = f.select :condition, [["---",""],["新品、未使用","1"],["未使用に近い","2"],["目立った傷や汚れなし","3"]],{},class:'select-wrap__default'
+                    = f.select :condition, [["---",""],["新品、未使用","新品、未使用"],["未使用に近い","未使用に近い"],["目立った傷や汚れなし","目立った傷や汚れなし"]],{},class:'select-wrap__default'
                     %i.fas.fa-chevron-down
             .sell-container__inner__form__content.clearfix
               %h3.sell-container__inner__form__content__h3 配送について
@@ -67,21 +67,21 @@
                     配送料の負担
                     %span 必須
                   .select-wrap
-                    = f.select :delivery_fee, [["---",""],["送料込み(出品者負担)","2"],["着払い(購入者負担)","1"]],{},class:'select-wrap__default'
+                    = f.select :delivery_fee, [["---",""],["送料込み(出品者負担)","送料込み(出品者負担)"],["着払い(購入者負担)","着払い(購入者負担)"]],{},class:'select-wrap__default'
                     %i.fas.fa-chevron-down
                 .sell__form-group
                   = f.label :area do
                     発送元の地域
                     %span 必須
                   .select-wrap
-                    = f.select :area, [["---",""],["北海道","1"],["青森県","2"]],{},class:'select-wrap__default'
+                    = f.select :area, [["---",""],["北海道","北海道"],["青森県","青森県"]],{},class:'select-wrap__default'
                     %i.fas.fa-chevron-down
                 .sell__form-group
                   = f.label :delivery_date do
                     発送までの日数
                     %span 必須
                   .select-wrap
-                    = f.select :delivery_date, [["---",""],["1~2日で発送","1"],["2~3日で発送","2"]],{},class:"select-wrap__default"
+                    = f.select :delivery_date, [["---",""],["1~2日で発送","1~2日で発送"],["2~3日で発送","2~3日で発送"]],{},class:"select-wrap__default"
                     %i.fas.fa-chevron-down
             .sell-container__inner__form__content.clearfix
               %h3.sell-container__inner__form__content__h3 販売価格(300〜9,999,999)

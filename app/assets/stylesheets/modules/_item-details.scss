@@ -314,28 +314,20 @@
     font-size: 16px;
   }
 }
-// .dia{
-//   width: 600px;
-//   margin: 20px auto;
-//   background-color: white;
-//   .message{
-//       color: red;
-//   }
-// }
 
 .item-message{
   width: 700px;
   margin: 8px auto;
   &__container{
-    .item-message__container-comment{
+    &__container-comment{
       padding: 24px;
       background-color: #fff;
-      .item-message__container-comment__ul{
-        .item-message__container-comment__li{
+      &__ul{
+        &__li{
           display: block;
           min-height: 100px;
           margin: 50px 0 30px 0;
-          .item-message__container-comment__user-icon{
+          &__user-icon{
             float: left;
             position: relative;
             top: -20px;
@@ -359,7 +351,7 @@
                 text-overflow: ellipsis;
               }
             }
-            .item-message__container-comment__user-saller{
+            &__user-saller{
               margin: 8px 0 0;
               padding: 4px;
               background: #eef0f4;
@@ -368,7 +360,7 @@
               vertical-align: top;
             }
           }
-          .item-message__container-comment__body{
+          &__body{
             float: right;
             position: relative;
             padding: 16px;
@@ -378,9 +370,9 @@
             word-break: break-all;
             width: 550px;
             margin: 10px;
-            .item-message__container-comment__under{
+            &__under{
               margin: 8px 0 0;
-              .item-message__container-comment__under-left{
+              &__under-left{
                 display: block;
                 color: #aaa;
                 float: left;
@@ -391,7 +383,7 @@
                   vertical-align: middle;
                 }
               }
-              .item-message__container-comment__under-right{
+              &__under-right{
                 display: block;
                 float: right;
                 i{
@@ -400,7 +392,7 @@
               }
             }
           }
-          .item-message__container-comment__body::before{
+          &__body::before{
             content: '';
             position: absolute;
             display: block;
@@ -415,7 +407,7 @@
             border-right: 10px solid transparent;
             border-bottom: 10px solid transparent;
           }
-          .item-message__container-comment__body::after{
+          &__body::after{
             content: '';
             position: absolute;
             display: block;
@@ -431,11 +423,11 @@
             border-bottom: 5px solid transparent;
           }
         }
-        .item-message__container-comment__li-current{
+        &__li-current{
           display: block;
           min-height: 100px;
           margin: 50px 0;
-          .item-message__container-comment__user-icon{
+          &__user-icon{
             float: right;
             position: relative;
             top: -20px;
@@ -459,7 +451,7 @@
                 text-overflow: ellipsis;
               }
             }
-            .item-message__container-comment__user-saller{
+            &__user-saller{
               margin: 8px 0 0;
               padding: 4px;
               background: #fbf0e6;
@@ -468,7 +460,7 @@
               vertical-align: top;
             }
           }
-          .item-message__container-comment__body{
+          &__body{
             float: left;
             position: relative;
             padding: 16px;
@@ -478,9 +470,9 @@
             word-break: break-all;
             width: 550px;
             margin: 10px;
-            .item-message__container-comment__under{
+            &__under{
               margin: 8px 0 0;
-              .item-message__container-comment__under-left{
+              &__under-left{
                 display: block;
                 color: #aaa;
                 float: left;
@@ -491,7 +483,7 @@
                   vertical-align: middle;
                 }
               }
-              .item-message__container-comment__under-right{
+              &__under-right{
                 display: block;
                 float: right;
                 i{
@@ -500,7 +492,7 @@
               }
             }
           }
-          .item-message__container-comment__body::before{
+          %__body::before{
             content: '';
             position: absolute;
             display: block;
@@ -515,7 +507,7 @@
             border-left: 10px solid transparent;
             border-bottom: -2px solid transparent;
           }
-          .item-message__container-comment__body::after{
+          &__body::after{
             content: '';
             position: absolute;
             display: block;
