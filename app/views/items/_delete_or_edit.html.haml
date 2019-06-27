@@ -1,0 +1,25 @@
+.item__delete-or-edit
+  %a.item__edit
+    商品の編集
+  %p or 
+  %a.item__stop
+    出品を一旦停止する
+  %button.item__delete
+    この商品を削除する
+.edit_and_delete  
+  .dia
+    .message
+      %p
+      %span 確認
+      %br
+      削除すると二度と復活できません。
+      %br
+      削除する代わりに停止することもできます。
+      %br
+      %br
+      本当に削除しますか？
+    .btn
+      #cancel
+        キャンセル
+      .delete1
+        = link_to "削除する",item_path,class:"delete2",method: :delete

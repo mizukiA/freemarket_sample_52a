@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
+  before_action :set_item, only: [:show, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  
   def index
     @items = Item.order("created_at DESC")
   end
@@ -22,6 +22,19 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @items = Item.where(saler_id: @item.saler_id).where.not(id: @item.id).limit(12)
+    @comment = Comment.new
+    @comments = @item.comments.includes(:user)
+
+  end
+
+  def destroy
+    if @item.destroy
+      redirect_to user_path
+    else  
+      redirect_to action: 'show'
+      flash[:notice] = "削除に失敗しました"
+    end
   end
 
   def buy
@@ -42,6 +55,10 @@ class ItemsController < ApplicationController
                                  :brand_id,
                                  item_images_attributes: [:image_url]
                                  ).merge(saler_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
 
