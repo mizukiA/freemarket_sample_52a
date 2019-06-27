@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @items = Item.where(@item.saler_id == params[:id]).limit(12)
+    @items = Item.where(saler_id: @item.saler_id).where.not(id: @item.id).limit(12)
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
 
