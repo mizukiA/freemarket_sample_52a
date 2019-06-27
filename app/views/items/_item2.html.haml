@@ -1,6 +1,6 @@
 - @items.each do |item|
   %section.items-box
-    = link_to "/items/#{item.id}", method: :get do
+    = link_to item_path(item.id), method: :get do
       %figure.items-box__figure
         = image_tag item.item_images.first.image_url, class: "items-box__figure__img"
       .items-box__text
