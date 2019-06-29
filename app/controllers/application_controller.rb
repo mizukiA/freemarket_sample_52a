@@ -13,7 +13,9 @@ class ApplicationController < ActionController::Base
                                                         :last_name_kana,
                                                         :birth_year,
                                                         :birth_month,
-                                                        :birth_day
+                                                        :birth_day,
+                                                        :uid,
+                                                        :provider
                                                       ])
   end
 
