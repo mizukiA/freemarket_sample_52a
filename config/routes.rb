@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'items#index'
   resources :items do
-    collection do
+    member do
       get 'buy'
     end
     resources :comments, only: [:create,:destroy]
