@@ -180,6 +180,20 @@
     font-size: 24px;
     text-decoration: none;
   }
+  &__link{
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    margin: 16px 0 0;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    font-size: 24px;
+    text-decoration: none;
+  }
   &__description{
     padding: 32px 0 0;
     line-height: 1.5;

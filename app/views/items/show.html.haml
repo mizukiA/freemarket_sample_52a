@@ -1,6 +1,11 @@
 = render partial: 'header'
 %section.item-box
+<<<<<<< Updated upstream
   %h1.item-box__h1
+=======
+  - breadcrumb :item, @item
+  %h1.item-box__h1 
+>>>>>>> Stashed changes
     = @item.name
   .item-box__content.clearfix
     .item-box__content__img
@@ -72,8 +77,7 @@
       = @item.price
     %span.item-box__price__tax (税込)
     %span.item-box__price__fee 送料込み
-  %a.item-box__buy-btn
-    購入画面に進む
+  = link_to "購入画面に進む", "/items/#{@item.id}/buy", class: "item-box__buy-btn"
   .item-box__description
     %p.item-box__description__inner
       = @item.description
