@@ -1,20 +1,19 @@
 = render partial: 'header'
+- breadcrumb :item, @item
+= render "layouts/breadcrumbs"
 %section.item-box
-<<<<<<< Updated upstream
   %h1.item-box__h1
-=======
-  - breadcrumb :item, @item
-  %h1.item-box__h1 
->>>>>>> Stashed changes
     = @item.name
   .item-box__content.clearfix
     .item-box__content__img
       .item-slide_banner#test
-        = image_tag "#{@item.item_images.first.image_url}", class: "item-slide_banner__main-image"
+        .item-slide_banner-set
+          - @item.item_images.each do |image|
+            .item-slide_banner-set-main
+              = image_tag "#{image.image_url}", class: "item-slide_banner__main-image"
       .item-slide_banner-small
-        - @item.item_images.each_with_index do |image,i|
-          - unless image.image_url.blank?
-            = image_tag "#{image.image_url}", class: "item-slide_banner-small__sub #{i}"
+        - @item.item_images.each do |image|
+          = image_tag "#{image.image_url}", class: "item-slide_banner-small__sub"
     %table.item-box__content__table
       %tbody
         %tr

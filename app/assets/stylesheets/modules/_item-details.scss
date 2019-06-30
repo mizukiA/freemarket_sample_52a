@@ -24,7 +24,21 @@
       .item-slide_banner{
         position: relative;
         height: 300px;
+        width: 300px;
         overflow: hidden;
+        float: left;
+        &-set{
+          position: absolute;
+          &-main{
+            float: left;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            img{
+              display: inline-block;
+            }
+          }
+        }
         &__main-image{
           width: 100%;
         }
