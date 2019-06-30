@@ -231,5 +231,4 @@ $(function(){
                         break;   
                 }
             }
-    var files_array = [];
 });

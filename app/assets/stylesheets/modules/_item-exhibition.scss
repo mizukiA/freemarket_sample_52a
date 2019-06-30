@@ -60,9 +60,11 @@
                     text-align: center;
                     color: #0099e8;
                     cursor: pointer;
+                    float: right;
                   }
                   .border{
                     border-right: 1px solid #eee;
+                    float: left;
                   }
                 }
               }
