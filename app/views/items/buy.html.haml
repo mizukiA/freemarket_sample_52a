@@ -6,12 +6,13 @@
         購入内容の確認
       .single-main__container__inner
         .single-main__container__inner__content
-          = image_tag "m73628829419_1.jpg"
+          = image_tag "#{@item.item_images.first.image_url}"
           %span.single-main__container__inner__content__item-name
-            ワンピース
+            = @item.name
           .single-main__container__inner__content__item-price
             %span.single-main__container__inner__content__item-price__price
-              ¥3,200
+              ¥
+              = @item.price
             %span.single-main__container__inner__content__item-price__price__sub
               送料込み
           .single-main__container__inner__content__point
@@ -20,21 +21,25 @@
             .single-main__container__inner__content__total-price__price
               支払い金額
             %span.single-main__container__inner__content__total-price__price__sub
-              ¥3,200
+              ¥
+              = @item.price
           .single-main__container__inner__content__alert
             配送先と支払い方法の入力を完了してください。
-          %button.single-main__container__inner__content__buy-btn
-            =link_to "購入する", '#', target: "_blank"
+          -# %button.single-main__container__inner__content__buy-btn
+          -# %form{action: :pay, method: :post}
+          %script.single-main__container__inner__content__buy-btn__script{:src => "https://checkout.pay.jp/",
+          :class => "payjp-button",
+          :data_key => "pk_test_888b290dd7df6f40994ae001"}購入する
           .single-main__container__inner__content__address
             配送先
           .single-main__container__inner__content__address__user-address
             大阪府　大阪市
           .single-main__container__inner__content__address__sub
-            =link_to "変更する", '#', target: "_blank"
+            =link_to "変更する", '#'
           .single-main__container__inner__content__pay
             支払い方法
           .single-main__container__inner__content__pay__user-pay
             カード情報
           .single-main__container__inner__content__pay__sub
-            =link_to "変更する", '#', target: "_blank"
+            =link_to "変更する", '/cards/pay'
   = render partial: 'single-footer'

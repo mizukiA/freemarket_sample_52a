@@ -2,7 +2,7 @@
 - breadcrumb :item, @item
 = render "layouts/breadcrumbs"
 %section.item-box
-  %h1.item-box__h1 
+  %h1.item-box__h1
     = @item.name
   .item-box__content.clearfix
     .item-box__content__img
@@ -76,8 +76,7 @@
       = @item.price
     %span.item-box__price__tax (税込)
     %span.item-box__price__fee 送料込み
-  %a.item-box__buy-btn
-    購入画面に進む
+  = link_to "購入画面に進む", "/items/#{@item.id}/buy", class: "item-box__buy-btn"
   .item-box__description
     %p.item-box__description__inner
       = @item.description
