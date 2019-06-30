@@ -22,12 +22,6 @@
                     %pre
                       ドラッグアンドドロップ
                       またはクリックしてファイルをアップロード
-                -# - if @item.errors.any?
-                -#   .alert
-                -#     %ul
-                -#       - @item.errors.full_messages.each do |message|
-                -#         %li
-                -#           = message     
             .sell-container__inner__form__content
               .sell__form-group
                 = f.label :name do

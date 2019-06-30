@@ -24,7 +24,7 @@
                           %div
                             %a.border
                               編集
-                            = link_to '削除', "/items/#{@item.id}/item_images/#{item.id}", method: :delete
+                            = link_to '削除', item_item_image_path(@item.id,item.id), method: :delete
                 = f.fields_for :item_images do |i|
                   = i.label :image_url, class:'sell-container__inner__form__uploader-box__container__item' do
                     = i.file_field :image_url, class:'file'
@@ -127,7 +127,6 @@
                   また、出品をもちまして
                   =link_to "加盟店規約", '#'
                   に同意したことになります。
-              -# %button.sell-btn-box__btn{type: "submit"} 出品する
               =f.submit class: 'sell-btn-box__btn',value:'出品する'
               =link_to "もどる", '#', class: "sell-btn-box__gray-btn"
   = render partial: 'single-footer'
