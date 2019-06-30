@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @items = Item.order("created_at DESC")
@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
     if item.save
       redirect_to root_path
     else 
-      redirect_to action: 'new'
+      redirect_to new_item_path
       flash[:notice] = "出品に失敗しました"
     end
   end
@@ -30,14 +30,25 @@ class ItemsController < ApplicationController
 
   def destroy
     if @item.destroy
-      redirect_to user_path
+      redirect_to user_path(@item.saler_id)
     else  
       redirect_to action: 'show'
       flash[:notice] = "削除に失敗しました"
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @item.saler_id == current_user.id
+      @item.update(item_params)
+      redirect_to item_path(@item.id)
+    end
+  end
+
   def buy
+
   end
 
   private

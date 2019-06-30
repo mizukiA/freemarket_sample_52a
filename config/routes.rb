@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get 'buy'
     end
     resources :comments, only: [:create,:destroy]
+    resources :item_images, only: [:destroy]
   end
 
   resources :users do
@@ -32,6 +33,7 @@ Rails.application.routes.draw do
       get 'success'
     end
   end
+
 
   resources :addresses, only: [:new, :create]
   resources :cards, only: [:new, :create]

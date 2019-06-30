@@ -16,18 +16,21 @@
               .sell-container__inner__form__uploader-box__container.clearfix
                 .image-box
                   %ul.image-box-list
+                    - @item.item_images.each_with_index do |item,i|
+                      - unless item.image_url.blank? 
+                        %li.image-count
+                          %figure
+                            %img{src:"#{item.image_url}"}
+                          %div
+                            %a.border
+                              編集
+                            = link_to '削除', "/items/#{@item.id}/item_images/#{item.id}", method: :delete
                 = f.fields_for :item_images do |i|
                   = i.label :image_url, class:'sell-container__inner__form__uploader-box__container__item' do
                     = i.file_field :image_url, class:'file'
                     %pre
                       ドラッグアンドドロップ
                       またはクリックしてファイルをアップロード
-                -# - if @item.errors.any?
-                -#   .alert
-                -#     %ul
-                -#       - @item.errors.full_messages.each do |message|
-                -#         %li
-                -#           = message     
             .sell-container__inner__form__content
               .sell__form-group
                 = f.label :name do

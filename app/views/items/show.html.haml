@@ -1,14 +1,15 @@
 = render partial: 'header'
 %section.item-box
-  %h1.item-box__h1 
+  %h1.item-box__h1
     = @item.name
   .item-box__content.clearfix
     .item-box__content__img
       .item-slide_banner#test
         = image_tag "#{@item.item_images.first.image_url}", class: "item-slide_banner__main-image"
       .item-slide_banner-small
-        - @item.item_images.each do |image|
-          = image_tag "#{image.image_url}", class: "item-slide_banner-small__sub"
+        - @item.item_images.each_with_index do |image,i|
+          - unless image.image_url.blank?
+            = image_tag "#{image.image_url}", class: "item-slide_banner-small__sub #{i}"
     %table.item-box__content__table
       %tbody
         %tr
