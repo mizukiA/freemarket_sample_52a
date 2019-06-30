@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',function(){
     $('.a').on('click',function(){
         $(this).addClass('active')
         $('.b').removeClass('active')
