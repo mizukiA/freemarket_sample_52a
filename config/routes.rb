@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
   devise_for :users, controllers: { 
+                                    omniauth_callbacks: "users/omniauth_callbacks",
                                     registrations: "users/registrations",
                                     confirmations: "users/confirmations",
                                     sessions: "users/sessions",
-                                    passwords: "users/passwords",
-                                    omniauth_callbacks: "users/omniauth_callbacks"
+                                    passwords: "users/passwords"
                                   }
 
   devise_scope :user do
     get 'sms', to: 'users/registrations#sms'
+    get 'sns', to: 'users/registrations#sns'
   end
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -7,6 +7,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def sms
   end
 
+  def sns
+    @user = User.new(
+      nickname: session[:nickname],
+      email: session[:email],
+      password: session[:password],
+      password_confirmation: session[:password],
+      uid: session[:uid],
+      provider: session[:provider]
+      )
+  end
+
+  # def new
+
+  # end
+
+  def create
+    super
+  end
+
   # GET /resource/sign_up
   # def new
   #   @user = User.new

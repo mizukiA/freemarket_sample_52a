@@ -89,8 +89,6 @@ ActiveRecord::Schema.define(version: 20190623101556) do
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
     t.string   "nickname"
-    t.string   "uid"
-    t.string   "provider"
     t.string   "family_name",                                       null: false
     t.string   "last_name",                                         null: false
     t.string   "family_name_kana",                                  null: false
@@ -99,6 +97,8 @@ ActiveRecord::Schema.define(version: 20190623101556) do
     t.string   "birth_month",                                       null: false
     t.string   "birth_day",                                         null: false
     t.text     "profile",                limit: 65535
+    t.string   "provider"
+    t.string   "uid"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

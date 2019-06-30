@@ -8,8 +8,8 @@
       .login-panel__form-inner
         %button.single-main__container__inner__content__btn.btn-facebook
           %i.fab.fa-facebook-square
-          = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path
-        %button.single-main__container__inner__content__btn.btn-google= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path
+          = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post
+        %button.single-main__container__inner__content__btn.btn-google= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .login-panel__form-inner
           .form-group
