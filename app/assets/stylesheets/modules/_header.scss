@@ -1,6 +1,14 @@
 *{
     text-decoration: none;
 }
+.breadcrumbs{
+    background-color: $white;
+    margin-top: 0;
+    border-top: 1px solid #eee;
+    display: block;
+    padding-left:160px;
+    font-size: 14px; 
+}
 header{
     height: 90px;
     background-color: $white;
