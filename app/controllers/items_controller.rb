@@ -31,6 +31,8 @@ class ItemsController < ApplicationController
   def destroy
     if @item.destroy
       redirect_to user_path(@item.saler_id)
+    elsif @item.saler_id != current_user.id
+      redirect_to item_path(@item.id)
     else  
       redirect_to action: 'show'
       flash[:notice] = "削除に失敗しました"
@@ -38,6 +40,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    if @item.saler_id != current_user.id
+      redirect_to item_path(@item.id)
+    end
   end
 
   def update
