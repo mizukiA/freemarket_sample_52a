@@ -1,4 +1,6 @@
 = render partial: 'header'
+- breadcrumb :card
+= render "layouts/breadcrumbs"
 %main
   = render partial: 'side-bar'
   .right-content
@@ -9,7 +11,7 @@
         クレジットカード一覧
       .right-content-middle__btn
         = link_to addcard_users_path, class: "" do
-          支払い方法
+          クレジットカードを追加する
       .right-content-bottom
         = link_to "#", target: "_blank" do
           %span 支払い方法について

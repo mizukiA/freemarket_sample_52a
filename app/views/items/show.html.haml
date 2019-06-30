@@ -1,4 +1,6 @@
 = render partial: 'header'
+- breadcrumb :item, @item
+= render "layouts/breadcrumbs"
 %section.item-box
   %h1.item-box__h1
     = @item.name
