@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',function(){
     var slideWidth = $('.item-slide_banner-set-main').outerWidth();
     var slideNum = $('.item-slide_banner-set-main').length;
     var slideSetWidth = slideWidth * slideNum;

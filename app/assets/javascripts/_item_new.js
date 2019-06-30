@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',function(){
     $('#item_item_images_attributes_0_image_url').change(function(e){
         var file = e.target.files[0];
         var reader = new FileReader();
