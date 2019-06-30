@@ -232,3 +232,15 @@ $(document).on('turbolinks:load',function(){
                 }
             }
 });
+
+$(function(){
+    $('.l-right__input').on('keyup',function(){
+        var fee = document.getElementById('fee')
+        var profit = document.getElementById('profit')
+        var price = $(this).val();
+        var input = Math.floor(price * 0.1)
+        var gain = price - input
+        fee.innerText = "¥"+input;
+        profit.innerText = "¥"+gain;
+    });
+});

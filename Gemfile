@@ -85,4 +85,11 @@ gem 'omniauth-google-oauth2'
 gem 'rails-i18n'
 gem 'pry-rails'
 gem 'omniauth-rails_csrf_protection'
+<<<<<<< Updated upstream
 gem 'jquery-turbolinks'
+=======
+
+gem 'payjp'
+
+gem "gretel"
+>>>>>>> Stashed changes

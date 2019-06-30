@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :destroy, :edit, :update]
+  before_action :set_item, only: [:show, :destroy, :edit, :update, :buy]
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @items = Item.order("created_at DESC")
@@ -53,7 +53,6 @@ class ItemsController < ApplicationController
   end
 
   def buy
-
   end
 
   private
