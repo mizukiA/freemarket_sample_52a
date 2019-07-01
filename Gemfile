@@ -86,7 +86,7 @@ gem 'rails-i18n'
 gem 'pry-rails'
 gem 'omniauth-rails_csrf_protection'
 gem 'jquery-turbolinks'
+gem 'gretel'
+
 
 gem 'payjp'
-
-gem "gretel"

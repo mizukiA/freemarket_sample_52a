@@ -231,6 +231,9 @@ $(document).on('turbolinks:load',function(){
                         break;   
                 }
             }
+
+});
+
 });
 
 $(function(){
@@ -244,3 +247,4 @@ $(function(){
         profit.innerText = "¥"+gain;
     });
 });
+
