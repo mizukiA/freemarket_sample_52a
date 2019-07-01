@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root 'items#index'
   resources :items do
     member do
+    # collection do
       get 'buy'
     end
     resources :comments, only: [:create,:destroy]
@@ -37,5 +38,12 @@ Rails.application.routes.draw do
 
 
   resources :addresses, only: [:new, :create]
-  resources :cards, only: [:new, :create]
+
+  resources :cards, only: [:new, :create] do
+    collection do
+      get 'pay', to: 'cards#pay'
+      post 'delete', to: 'cards#delete'
+    end
+  end
+
 end

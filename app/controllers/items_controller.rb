@@ -53,7 +53,6 @@ class ItemsController < ApplicationController
   end
 
   def buy
-
   end
 
   private
