@@ -236,7 +236,7 @@ $(document).on('turbolinks:load',function(){
 
 });
 
-$(function(){
+$(document).on('turbolinks:load',function(){
     $('.l-right__input').on('keyup',function(){
         var fee = document.getElementById('fee')
         var profit = document.getElementById('profit')
