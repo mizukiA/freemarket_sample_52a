@@ -18,41 +18,43 @@
               %i.fas.fa-chevron-right
         .user-main__form__group
           %label お名前
-          %p 安藤 みずき
+          %p= "#{@user.family_name} #{@user.last_name}"
         .user-main__form__group
           %label お名前カナ
-          %p アンドウ ミズキ
+          %p= "#{@user.family_name_kana} #{@user.last_name_kana}"
         .user-main__form__group
           %label{for: "birthday"} 生年月日
-          %p 1995/02/24
+          %p= "#{@user.birth_year}/#{@user.birth_month}/#{@user.birth_day}"
         .user-main__form__group
           %label{for: "zip_code"} 郵便番号
           %span.user-main__form__group__form-arbitrary 任意
-          %input.user-main__form__group__input{name: "zip_code", placeholder: "例）1234567", type: "text", value: ""}/
+          %input.user-main__form__group__input{name: "zip_code", placeholder: "例）1234567", type: "text", value: "#{@address.postal_code}"}/
         .user-main__form__group
           %label{for: "prefecture"} 都道府県
           %span.user-main__form__group__form-arbitrary 任意
           .user-main__form__group__select-wrap
-            %select.user-main__form__group__select-default{name: "prefecture"}
+            %select.user-main__form__group__select-default{name: "prefecture", selected: "#{@address.prefecture}"}
+            
               %option --
               %option 北海道
               %option 青森県
               %option 岩手県
               %option 宮城県
               %option 秋田県
+              %option 兵庫県
             %i.fas.fa-chevron-down
         .user-main__form__group
           %label{for: "city"} 市区町村
           %span.user-main__form__group__form-arbitrary 任意
-          %input.user-main__form__group__input{name: "city", placeholder: "例) 横浜市緑区", type: "text", value: ""}/
+          %input.user-main__form__group__input{name: "city", placeholder: "例) 横浜市緑区", type: "text", value: "#{@address.city}"}/
         .user-main__form__group
           %label{for: "address1_label"} 番地
           %span.user-main__form__group__form-arbitrary 任意
-          %input.user-main__form__group__input{name: "address1", placeholder: "例) 青山1−1−1", type: "text", value: ""}/
+          %input.user-main__form__group__input{name: "address1", placeholder: "例) 青山1−1−1", type: "text", value: "#{@address.address}"}/
         .user-main__form__group
           %label{for: "address2_label"} 建物名
           %span.user-main__form__group__form-arbitrary 任意
-          %input.user-main__form__group__input{name: "address2", placeholder: "例) 柳ビル103", type: "text", value: ""}/
+          %input.user-main__form__group__input{name: "address2", placeholder: "例) 柳ビル103", type: "text", value: "#{@address.building}"}/
         %button.user-main__form__btn{type: "submit"} 登録する
         .user-main__form__group.text-right
           %p

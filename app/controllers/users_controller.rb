@@ -22,9 +22,12 @@ class UsersController < ApplicationController
   end
 
   def profile
+    @user = User.find(current_user.id)
   end
 
   def identification
+    @user = User.find(current_user.id)
+    @address = @user.address
   end
 
   def card

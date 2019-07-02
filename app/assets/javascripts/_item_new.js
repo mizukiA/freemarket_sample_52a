@@ -234,8 +234,6 @@ $(document).on('turbolinks:load',function(){
 
 });
 
-});
-
 $(document).on('turbolinks:load',function(){
     $('.l-right__input').on('keyup',function(){
         var fee = document.getElementById('fee')
