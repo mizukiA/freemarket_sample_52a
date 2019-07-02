@@ -22,14 +22,14 @@
             配送先
           .single-main__container-success__inner__content__address__user-postalcode
             〒
-            = @address.postal_code
+            = current_user.postal_code
           .single-main__container-success__inner__content__address__user-address
-            = @address.prefecture
-            = @address.city
-            = @address.address
+            = current_user.prefecture
+            = current_user.city
+            = current_user.address
           .single-main__container-success__inner__content__address__user-name
-            = @user.family_name
-            = @user.last_name
+            = current_user.family_name
+            = current_user.last_name
           .single-main__container-success__inner__content__address__sub
           .single-main__container-success__inner__content__pay
           .single-main__container-success__inner__content__pay__user-pay
