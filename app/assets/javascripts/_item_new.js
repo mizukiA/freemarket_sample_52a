@@ -231,6 +231,7 @@ $(document).on('turbolinks:load',function(){
                         break;   
                 }
             }
+
 });
 
 $(document).on('turbolinks:load',function(){
