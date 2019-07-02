@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :destroy, :edit, :update,:buy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update, :buy, :pay, :success]
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @items = Item.order("created_at DESC")
@@ -53,6 +53,28 @@ class ItemsController < ApplicationController
   end
 
   def buy
+    @address = current_user.address
+    @card = current_user.card
+  end
+
+  def pay
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp::Charge.create(
+      amount: @item.price,
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+    if @item.update(buyer_id: current_user.id)
+      redirect_to success_item_path
+    else
+      redirect_to action: 'buy'
+      flash[:notice] = "削除に失敗しました"
+    end
+    
+  end
+
+  def success
+    @address = current_user.address
   end
 
   private

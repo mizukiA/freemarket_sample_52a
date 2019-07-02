@@ -1,0 +1,82 @@
+.single-container
+  = render partial: 'single-header-pay'
+  %main.single-main
+    %section.single-main__container
+      %h2.single-main__container__h2
+        クレジットカード情報入力
+      = form_tag('/cards/purchase', method:"POST", id: "payment-form", class: "single-main__container__form") do
+
+        %span.single-main__container__form
+        .single-main__container__form__content
+
+          .form-group
+            %label{for: "payment_card_no"} カード番号
+            %span.form-group__require 必須
+            %input.form-group__input-card_number{maxlength: "16", class: "card_number", name: "card_number", placeholder: "半角数字のみ", type: "text"}
+            %ul.form-group__ul
+              %li
+                = image_tag "visa.svg", size: "49x20"
+              %li
+                = image_tag "master-card.svg", size: "34x20"
+              %li
+                = image_tag "saison-card.svg", size: "30x20"
+              %li
+                = image_tag "jcb.svg", size: "32x20"
+              %li
+                = image_tag "american_express.svg", size: "21x20"
+              %li
+                = image_tag "dinersclub.svg", size: "32x20"
+              %li
+                = image_tag "discover.svg", size: "32x20"
+
+          .form-group
+            %label{for: "limit"} 有効期限
+            %span.form-group__require 必須
+            %br
+            .select-wrap
+              %select.select-wrap__default-month{type: "text", maxlength: "2", class: "expiration_month", name: "expiration_month"}
+                %option{value: "1"} 01
+                %option{value: "2"} 02
+                %option{value: "3"} 03
+                %option{value: "4"} 04
+                %option{value: "5"} 05
+                %option{value: "6"} 06
+                %option{value: "7"} 07
+                %option{value: "8"} 08
+                %option{value: "9"} 09
+                %option{value: "10"} 10
+                %option{value: "11"} 11
+                %option{value: "12"} 12
+              %i.fas.fa-chevron-down
+            %span
+              月
+            %ul
+            .select-wrap
+              %select.select-wrap__default-year{maxlength: "4", class: "expiration_year", name: "expiration_year", type: "text", }
+                %option{value: "1"} 19
+                %option{value: "2"} 20
+                %option{value: "3"} 21
+                %option{value: "4"} 22
+                %option{value: "5"} 23
+                %option{value: "6"} 24
+                %option{value: "7"} 25
+                %option{value: "8"} 26
+                %option{value: "9"} 27
+                %option{value: "10"} 28
+                %option{value: "11"} 29
+              %i.fas.fa-chevron-down
+            %span
+              年
+          .form-group
+            %label{for: "security_code"} セキュリティコード
+            %span.form-group__require 必須
+            %input.form-group__input-security_code{maxlength: "3", class: "security_code", name: "security_code", placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}/
+            .form-group__text
+              %span.form-ghroup__info-question>
+                ？
+              カード裏面の番号とは？
+        .single-main__container__form__content
+          %input.single-main__container__form__content__btn
+          登録する
+
+  = render partial: 'single-footer'
