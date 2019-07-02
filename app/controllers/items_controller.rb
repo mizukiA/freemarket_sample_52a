@@ -53,6 +53,28 @@ class ItemsController < ApplicationController
   end
 
   def buy
+    @item = Item.find(params[:id])
+    @user = User.find(current_user.id)
+    @address = @user.address
+    @card = @user.card
+  end
+
+  def pay
+    Payjp.api_key = 'sk_test_1ba16c05f634b7dc2b1be72e'
+    @item = Item.find(params[:id])
+    Payjp::Charge.create(
+      amount: @item.price,
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+    @item.update(buyer_id: current_user.id)
+    redirect_to success_item_path
+  end
+
+  def success
+    @item = Item.find(params[:id])
+    @user = User.find(current_user.id)
+    @address = @user.address
   end
 
   private

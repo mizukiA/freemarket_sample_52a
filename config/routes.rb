@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     member do
     # collection do
       get 'buy'
+      post 'pay'
+      get 'success'
     end
     resources :comments, only: [:create,:destroy]
     resources :item_images, only: [:destroy]
@@ -42,7 +44,8 @@ Rails.application.routes.draw do
   resources :cards, only: [:new, :create] do
     collection do
       get 'pay', to: 'cards#pay'
-      post 'delete', to: 'cards#delete'
+      post 'purchase', to: 'cards#purchase'
+      # post 'delete', to: 'cards#delete'
     end
   end
 
