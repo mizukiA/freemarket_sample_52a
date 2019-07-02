@@ -10,9 +10,6 @@
         購入が完了しました
         .single-main__container-success__inner__content
           = image_tag "#{@item.item_images.first.image_url}"
-        -# .figcaption
-        -#   %div.item-sold-out-badge
-        -#   SOLD
           %span.single-main__container-success__inner__content__item-name
             = @item.name
           .single-main__container-success__inner__content__item-price
@@ -21,19 +18,6 @@
               = @item.price
             %span.single-main__container-success__inner__content__item-price__price__sub
               送料込み
-          -# .single-main__container__inner__content__point
-          -#   ポイントはありません
-          -# .single-main__container__inner__content__total-price
-          -#   .single-main__container__inner__content__total-price__price
-          -#     支払い金額
-          -#   %span.single-main__container__inner__content__total-price__price__sub
-          -#     ¥
-          -#     = @item.price
-          -# .single-main__container__inner__content__alert
-          -#   配送先と支払い方法の入力を完了してください。
-          -#   = form_tag action: :pay, method: :post do
-          -#     :plain
-          -#       <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_888b290dd7df6f40994ae001"></script>
           .single-main__container-success__inner__content__address
             配送先
           .single-main__container-success__inner__content__address__user-postalcode
