@@ -53,8 +53,8 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    # @address = current_user.address
-    # @card = current_user.card
+    @address = current_user.address
+    @card = current_user.card
   end
 
   def pay

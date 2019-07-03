@@ -31,20 +31,20 @@
           .single-main__container__inner__content__address
             配送先
           .single-main__container__inner__content__address__user-address
-            -# = @address.postal_code
-            -# = @address.prefecture
-            -# = @address.city
-            -# = @address.address
+            = @address.postal_code
+            = @address.prefecture
+            = @address.city
+            = @address.address
           .single-main__container__inner__content__address__sub
             =link_to "変更する", ''
           .single-main__container__inner__content__pay
             支払い方法
           .single-main__container__inner__content__pay__user-pay
-            -# = @card.card_number
-            -# = @card.expiration_year
-            -# 年
-            -# = @card.expiration_month
-            -# 月
+            = @card.card_number
+            = @card.expiration_year
+            年
+            = @card.expiration_month
+            月
           .single-main__container__inner__content__pay__sub
             =link_to "変更する", ''
 
