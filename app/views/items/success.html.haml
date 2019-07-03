@@ -4,11 +4,13 @@
     %section.single-main__container-success
       %h2.single-main__container-success__h2.i.far.fa-clock
         発送をお待ちください
-        .single-main__container-success__h2__inner
+        %h3.single-main__container-success__h3
           出品者からの発送通知をお待ちください
       .single-main__container-success__inner
         購入が完了しました
         .single-main__container-success__inner__content
+          %br
+          %br
           = image_tag "#{@item.item_images.first.image_url}"
           %span.single-main__container-success__inner__content__item-name
             = @item.name
@@ -23,6 +25,7 @@
           .single-main__container-success__inner__content__address__user-postalcode
             〒
             = @address.postal_code
+          %br
           .single-main__container-success__inner__content__address__user-address
             = @address.prefecture
             = @address.city
@@ -30,6 +33,8 @@
           .single-main__container-success__inner__content__address__user-name
             = @user.family_name
             = @user.last_name
+            様
+          %br
           .single-main__container-success__inner__content__address__sub
           .single-main__container-success__inner__content__pay
           .single-main__container-success__inner__content__pay__user-pay
@@ -50,6 +55,7 @@
               購入代金が出品者に振り込まれます。
               %br
               評価後に取引は完了です。
+              %br
               %br
               %br
             = link_to "マイページへもどる", root_path
