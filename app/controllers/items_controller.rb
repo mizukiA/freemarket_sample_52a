@@ -53,8 +53,10 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    @address = current_user.address
-    @card = current_user.card
+    @item = Item.find(params[:id])
+    @user = User.find(current_user.id)
+    @address = @user.address
+    @card = @user.card
   end
 
   def pay
