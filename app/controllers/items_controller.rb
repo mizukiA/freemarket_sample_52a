@@ -74,6 +74,7 @@ class ItemsController < ApplicationController
   end
 
   def success
+    @user = User.find(current_user.id)
     @address = current_user.address
   end
 
