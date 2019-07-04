@@ -15,7 +15,7 @@ class Address < ApplicationRecord
     presence: { message: "電話番号を入力してください" },
     length: { maximum: 11, message: "11文字で入力して下さい" },
     uniqueness: { message: "この電話番号は既に登録されています" },
-    format: { with: /\A\d{11}\z/, message: "この電話番号は登録できません" }
+    format: { with: /\A\d{10,11}\z/, message: "この電話番号は登録できません" }
 
   enum prefectures: [ :"北海道", :"青森県", :"岩手県", :"宮城県", :"秋田県", :"山形県", :"福島県", :"茨城県", :"栃木県", :"群馬県",
                       :"埼玉県", :"千葉県", :"東京都", :"神奈川県", :"新潟県", :"富山県", :"石川県", :"福井県", :"山梨県", :"長野県",
