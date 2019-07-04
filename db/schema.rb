@@ -32,13 +32,15 @@ ActiveRecord::Schema.define(version: 20190629103444) do
   end
 
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number",      null: false
+    t.string   "card_number",      null: false
     t.string   "expiration_year",  null: false
     t.string   "expiration_month", null: false
     t.string   "security_code",    null: false
     t.integer  "user_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "customer"
+    t.integer  "token"
   end
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

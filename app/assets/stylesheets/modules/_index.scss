@@ -61,6 +61,35 @@ main{
                 transition: opacity .3s;
                 vertical-align: middle;
               }
+              figcaption{
+                display: block;
+                .item-sold-out-badge{
+                  div{
+                    top: 20px;
+                    font-size: 26px;
+                    z-index: 3;
+                    color: $white;
+                    transform: rotate(-45deg);
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                  }
+                }
+                .item-sold-out-badge:after{
+                  border-width: 100px 100px 0 0;
+                  border-color: #ea352d transparent transparent transparent;
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 2;
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                }
+              }
             }
             .items-box__text{
               padding: 16px;

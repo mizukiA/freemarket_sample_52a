@@ -6,6 +6,10 @@ class CardsController < ApplicationController
     @years = Card.expiration_years
   end
 
+  def pay
+    @item = Item.find(params[:id])
+  end
+
   def create
     @card = Card.new(card_params)
     if @card.save

@@ -1,0 +1,63 @@
+.single-container.buy-container
+  = render partial: 'single-header'
+  %main.single-main
+    %section.single-main__container-success
+      %h2.single-main__container-success__h2.i.far.fa-clock
+        発送をお待ちください
+        %h3.single-main__container-success__h3
+          出品者からの発送通知をお待ちください
+      .single-main__container-success__inner
+        購入が完了しました
+        .single-main__container-success__inner__content
+          %br
+          %br
+          = image_tag "#{@item.item_images.first.image_url}"
+          %span.single-main__container-success__inner__content__item-name
+            = @item.name
+          .single-main__container-success__inner__content__item-price
+            %span.single-main__container-success__inner__content__item-price__price
+              ¥
+              = @item.price
+            %span.single-main__container-success__inner__content__item-price__price__sub
+              送料込み
+          .single-main__container-success__inner__content__address
+            配送先
+          .single-main__container-success__inner__content__address__user-postalcode
+            〒
+            = @address.postal_code
+          %br
+          .single-main__container-success__inner__content__address__user-address
+            = @address.prefecture
+            = @address.city
+            = @address.address
+          .single-main__container-success__inner__content__address__user-name
+            = @user.family_name
+            = @user.last_name
+            様
+          %br
+          .single-main__container-success__inner__content__address__sub
+          .single-main__container-success__inner__content__pay
+          .single-main__container-success__inner__content__pay__user-pay
+          .single-main__container-success__inner__content__pay__sub
+            %h3
+              発送通知後の流れ
+            %br
+            %i.fas.fa-laugh
+            %i.fas.fa-meh
+            %i.fas.fa-frown
+            %br
+            %br
+            %a
+              商品を受け取ったら
+              %br
+              出品者の評価をしましょう。
+              %br
+              購入代金が出品者に振り込まれます。
+              %br
+              評価後に取引は完了です。
+              %br
+              %br
+              %br
+            = link_to "マイページへもどる", root_path
+
+  = render partial: 'single-footer'

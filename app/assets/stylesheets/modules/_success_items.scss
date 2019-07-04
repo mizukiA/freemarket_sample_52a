@@ -1,0 +1,104 @@
+.single-container {
+  padding: 0;
+  .single-main{
+    display: block;
+    &__container-success{
+      width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      &__h2{
+        background-color: bisque;
+        width: 100%;
+        line-height: 1.5;
+        text-align: center;
+        padding: 32px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: $main-red;
+        i{
+          font-size: 22px;
+        }
+      }  
+      &__h3{
+        background-color: bisque;
+        text-align: center;
+        font-size: 15px;
+        padding-bottom: 32px;
+      }
+
+        &__inner{
+          font-size: 22px;
+          border-top: 1px solid #f5f5f5;
+          padding: 64px;
+          text-align: center;
+          &__content{
+            max-width: 320px;
+            margin: 0 auto;
+            text-align: center;
+            img{
+              width: 148px;
+              height: 160px;
+              margin: 0 auto;
+            }
+            &__item-name{
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 15px;
+              border: 1px solid transparent;
+              text-decoration: none;
+              font-weight: bold;
+            }
+            &__item-price{
+              display: block;
+              line-height: 48px;
+              border: 1px solid transparent;
+              &__price{
+                font-size: 22px;
+                &__sub{
+                  font-size: 12px;
+                  float: right;
+                  margin:0 60px 0 0;
+                }
+              }
+            }
+            &__address{
+              width: 100%;
+              border-top: 1px solid #f5f5f5;
+              margin: 30px 0 0 0;
+              height: 100px;
+              text-align: left;
+              position: relative;
+              &__user-postalcode{
+                font-size: 12px;
+                position: absolute;
+              }
+              &__user-address{
+                a{
+                  color: #0099e8;
+                  display: block;
+                  margin-bottom: 20px;
+                }
+                font-size: 14px;
+                float: left;
+              }
+              &__user-name{
+                font-size: 14px;
+                float: right;
+              }
+          }
+        }
+    }
+  }
+}
+.buy-container{
+  height: 1445px !important;
+}
+.single-main__container-success__inner__content__pay__sub{
+  margin: 70px 0;
+  font-size: 18px;
+  a{
+    width: 100%;
+  }
+}
+}

@@ -25,21 +25,27 @@
               = @item.price
           .single-main__container__inner__content__alert
             配送先と支払い方法の入力を完了してください。
-          -# %button.single-main__container__inner__content__buy-btn
-          -# %form{action: :pay, method: :post}
-          = form_tag action: :pay, method: :post do
-            :plain
-              <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_f8bb33f933892e9514924add"></script>
+            = form_tag action: :pay, method: :post do
+              :plain
+                <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_888b290dd7df6f40994ae001"></script>
           .single-main__container__inner__content__address
             配送先
           .single-main__container__inner__content__address__user-address
-            大阪府　大阪市
+            = @address.postal_code
+            = @address.prefecture
+            = @address.city
+            = @address.address
           .single-main__container__inner__content__address__sub
-            =link_to "変更する", '#'
+            =link_to "変更する", ''
           .single-main__container__inner__content__pay
             支払い方法
           .single-main__container__inner__content__pay__user-pay
-            カード情報
+            = @card.card_number
+            = @card.expiration_year
+            年
+            = @card.expiration_month
+            月
           .single-main__container__inner__content__pay__sub
-            =link_to "変更する", '/cards/pay'
+            =link_to "変更する", ''
+
   = render partial: 'single-footer'

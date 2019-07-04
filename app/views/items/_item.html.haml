@@ -2,6 +2,11 @@
   = link_to item_path(item.id), method: :get do
     %figure.items-box__figure
       = image_tag item.item_images.first.image_url, class: "items-box__figure__img"
+      -if item.buyer_id.present?
+        %figcaption
+          %div.item-sold-out-badge
+            %div.sold
+              SOLD
     .items-box__text
       %h3.items-box__text__name= item.name
       .items-box__text__num
