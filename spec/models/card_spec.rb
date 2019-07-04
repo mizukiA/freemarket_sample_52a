@@ -37,13 +37,13 @@ describe Card do
       expect(card.errors[:security_code]).to include("セキュリティコードを選択してください")
     end
 
-    # 登録不可能(一意性)
-    it "is invalid with a duplicate card_number" do
-      card = create(:card)
-      another_card = build(:card, card_number: card.card_number)
-      another_card.valid?
-      expect(another_card.errors[:card_number]).to include("この番号は既に登録されています")
-    end
+    # # 登録不可能(一意性)
+    # it "is invalid with a duplicate card_number" do
+    #   card = create(:card)
+    #   another_card = build(:card, card_number: card.card_number)
+    #   another_card.valid?
+    #   expect(another_card.errors[:card_number]).to include("この番号は既に登録されています")
+    # end
 
     # 登録不可能（フォーマットエラー：カード番号、数字以外が含まれている）
     it "is invalid with wrong card_number format(contains non-numeric characters)" do

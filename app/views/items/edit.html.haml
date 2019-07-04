@@ -15,22 +15,24 @@
               %p 最大10枚までアップロードできます
               .sell-container__inner__form__uploader-box__container.clearfix
                 .image-box
-                  %ul.image-box-list
-                    - @item.item_images.each_with_index do |item,i|
-                      - unless item.image_url.blank? 
-                        %li.image-count
-                          %figure
-                            %img{src:"#{item.image_url}"}
-                          %div
-                            %a.border
-                              編集
-                            = link_to '削除', item_item_image_path(@item.id,item.id), method: :delete
-                = f.fields_for :item_images do |i|
-                  = i.label :image_url, class:'sell-container__inner__form__uploader-box__container__item' do
-                    = i.file_field :image_url, class:'file'
-                    %pre
-                      ドラッグアンドドロップ
-                      またはクリックしてファイルをアップロード
+                  = f.fields_for :item_images do |i|
+                    .hidden-box{data: { index: i.index }}
+                      = i.check_box :_destroy, data: { index: i.index }, class: 'hidden-destroy js-destroy'
+                      = i.file_field :image_url, data: { index: i.index }, class: 'file'
+                  %ul.image-box-list.edit
+                    - @item.item_images.each_with_index do |image,i|
+                      %li.image-count.edit-image{data: {index: i}}
+                        %figure
+                          = image_tag image.image_url, class:"img#{i}"
+                        %div
+                          = label_tag :image, '', class: 'border' do
+                            編集
+                          %span{class: 'js-remove', data: { index: i }} 削除
+                    = label_tag :image_url, class:'sell-container__inner__form__uploader-box__container__item js-label', for: "item_item_images_attributes_#{@item.item_images.length}_imageurl" do
+                      = file_field_tag :image_url,data: {index: @item.item_images.length}, class:'file',name: "item[item_images_attributes][#{@item.item_images.length}][image_url]", id: "item_item_images_attributes_#{@item.item_images.length}_imageurl"
+                      %pre
+                        ドラッグアンドドロップ
+                        またはクリックしてファイルをアップロード
             .sell-container__inner__form__content
               .sell__form-group
                 = f.label :name do
@@ -108,10 +110,10 @@
                           = f.text_field :price, class: 'l-right__input', placeholder: "例)300"
                   %li.clearfix
                     .l-left 販売手数料 (10%)
-                    .l-right -
+                    .l-right#fee
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .l-right -
+                    .l-right#profit
             .sell-container__inner__form__content.sell-btn-box
               %div
                 %p

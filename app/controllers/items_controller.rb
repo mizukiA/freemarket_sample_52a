@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :destroy, :edit, :update, :buy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update, :buy,:pay]
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @items = Item.order("created_at DESC")
@@ -12,13 +12,11 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item = Item.new(item_params)
-    if item.save
+    @item = Item.new(item_params)
+      
+      @item.save!
       redirect_to root_path
-    else 
-      redirect_to new_item_path
-      flash[:notice] = "出品に失敗しました"
-    end
+    
   end
 
   def show
@@ -46,13 +44,38 @@ class ItemsController < ApplicationController
   end
 
   def update
+    # image_urls = params[:item_image][:image_url].select { |url| url != '' }
+    # image_urls.each do |url|
+    #   item_image = @item.item_images.new(image_url: url)
+    #   item_image.save!
+    # end
+
+    # params[:item][:item_images_attributes].each do |image|
+    #   image.delete(:image_url) if image[:image_url] == ''
+    # end
+
+    # binding.pry
+    # # @item_images = ItemImage.new(image_params)
+    # @item.attributes = item_params
+    # binding.pry
     if @item.saler_id == current_user.id
-      @item.update(item_params)
+      # binding.pry
+      @item.update!(item_params)
+    #   # @item_images.save!()
       redirect_to item_path(@item.id)
     end
   end
 
   def buy
+  end
+  def pay
+    Payjp.api_key = 'sk_test_2f12bb24e66370173189ccb6'
+    Payjp::Charge.create(
+      amount: @item.price, # 決済する値段
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+    @item.update(buyer_id: current_user.id)
   end
 
   private
@@ -68,10 +91,12 @@ class ItemsController < ApplicationController
                                  :size,
                                  :category_id,
                                  :brand_id,
-                                 item_images_attributes: [:image_url]
+                                 item_images_attributes: [:image_url, :id, :_destroy]
                                  ).merge(saler_id: current_user.id)
   end
-
+  def image_params
+    params.require(:item_image).permit(image_url: []).merge(item_id: params[:id])
+  end
   def set_item
     @item = Item.find(params[:id])
   end

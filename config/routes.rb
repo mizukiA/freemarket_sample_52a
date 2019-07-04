@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     member do
     # collection do
       get 'buy'
+      post 'pay'
     end
     resources :comments, only: [:create,:destroy]
     resources :item_images, only: [:destroy]
