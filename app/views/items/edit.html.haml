@@ -25,9 +25,9 @@
                         %figure
                           = image_tag image.image_url, class:"img#{i}"
                         %div
-                          = label_tag :image, '', class: 'border' do
+                          %a.border
                             編集
-                          %span{class: 'js-remove', data: { index: i }} 削除
+                          %a{class: 'js-remove', data: { index: i }} 削除
                     = label_tag :image_url, class:'sell-container__inner__form__uploader-box__container__item js-label', for: "item_item_images_attributes_#{@item.item_images.length}_imageurl" do
                       = file_field_tag :image_url,data: {index: @item.item_images.length}, class:'file',name: "item[item_images_attributes][#{@item.item_images.length}][image_url]", id: "item_item_images_attributes_#{@item.item_images.length}_imageurl"
                       %pre
