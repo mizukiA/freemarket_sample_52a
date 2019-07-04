@@ -93,15 +93,6 @@ class ItemsController < ApplicationController
     @user = User.find(current_user.id)
     @address = current_user.address
   end
-  def pay
-    Payjp.api_key = 'sk_test_2f12bb24e66370173189ccb6'
-    Payjp::Charge.create(
-      amount: @item.price, # 決済する値段
-      card: params['payjp-token'],
-      currency: 'jpy'
-    )
-    @item.update(buyer_id: current_user.id)
-  end
 
   private
   def item_params
