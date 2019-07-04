@@ -1,0 +1,27 @@
+.file{
+    display: none;
+}
+.js-destroy{
+    display: none;
+}
+.image-box-list.edit{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.edit-image{
+    width:20%;
+    margin: 0!important;
+    color: #0099e8;
+    .border{
+        margin: 0 11px;
+        
+    }
+    .js-remove{
+        margin: 0 11px;
+    }
+}
+.js-label{
+    flex-grow: 1;
+    width: auto!important;
+}
