@@ -14,13 +14,9 @@ $(document).on('turbolinks:load',function(){
         var reader = new FileReader();
         reader.onloadend = (function(file){
             return function(e){
-                console.log(number)
-                var image = `<li class="image-count edit-image"> <figure><img src="${e.target.result}"></figure> <div><label class="border">編集</label><span data-index="${number}" class="js-remove delete">削除</span></div> </li> `
+                var image = `<li class="image-count edit-image"> <figure><img src="${e.target.result}"></figure> <div><a class="border">編集</a><a data-index="${number}" class="js-remove delete">削除</a></div> </li> `
                 $('.js-label').before(image)
                 var image_length = $('.image-count').length
-                // if (){
-
-                // }
                 if (image_length >= 10){
                     $('.js-label').hide();
                 } 

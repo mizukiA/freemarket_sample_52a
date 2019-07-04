@@ -22,9 +22,6 @@
                     %pre
                       ドラッグアンドドロップ
                       またはクリックしてファイルをアップロード
-                  -# - if @item.errors.messages[:image_url].present?
-                  -#   - @item.errors.messages[:image_url].each do |message|
-                  -#     %p.error= message
             .sell-container__inner__form__content
               .sell__form-group
                 = f.label :name do

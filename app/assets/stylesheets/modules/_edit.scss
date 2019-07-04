@@ -11,14 +11,15 @@
 }
 .edit-image{
     width:20%;
-    margin: 0!important;
     color: #0099e8;
-    .border{
-        margin: 0 11px;
-        
-    }
-    .js-remove{
-        margin: 0 11px;
+    div{
+        margin:  0 auto;
+        .border{
+            cursor: pointer;
+        }
+        .js-remove{
+            cursor: pointer;
+        }
     }
 }
 .js-label{
