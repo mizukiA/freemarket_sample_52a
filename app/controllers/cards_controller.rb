@@ -19,7 +19,7 @@ class CardsController < ApplicationController
       render :new
     end
   end
-  
+
   private
   def card_params
     params.require(:card).permit(:card_number, :expiration_month, :expiration_year, :security_code).merge(user_id: current_user.id)
